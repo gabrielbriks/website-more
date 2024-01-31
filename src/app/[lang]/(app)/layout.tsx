@@ -20,7 +20,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
 					<h1 className="text-2xl font-semibold uppercase">Click More</h1>
 				</span>
 				<nav className=" flex gap-4 pt-2">
-					<Link href="/" className="uppercase">
+					<Link href="/home" className="uppercase">
 						Home
 					</Link>
 					<Link href="/who-we-are" className="uppercase">
