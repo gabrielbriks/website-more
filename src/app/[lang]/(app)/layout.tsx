@@ -8,14 +8,29 @@ interface AppLayoutProps {
 }
 
 export const metadata: Metadata = {
-	title: "Home",
-	description: "Pagina inicial",
+	// metadataBase: new URL("https://clickmore.com"),
+	title: {
+		default: "Click More",
+		template: "%s | clickmore.com",
+	},
+	alternates: {
+		canonical: "/",
+		languages: {
+			en: "/en",
+			ja: "/ja",
+			pt: "/pt",
+		},
+	},
+	// openGraph: {
+	//   images: "/og-image.png",
+	// },
+	// keywords: ['Next.js', 'React', 'JavaScript'],
 };
 
 export default function AppLayout({ children }: AppLayoutProps) {
 	return (
 		<>
-			<header className="flex min-w-full flex-1 justify-between gap-4 p-4 px-16">
+			<header className=" font-kanit flex min-w-full flex-1 justify-between gap-4 p-4 px-16">
 				<span>
 					<h1 className="text-2xl font-semibold uppercase">Click More</h1>
 				</span>

@@ -1,9 +1,26 @@
 import "@/app/globals.css";
 import { i18n, type Locale } from "@/i18n-config";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Kanit, Nunito, Open_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({
+	subsets: ["latin"],
+	variable: "--font-nunito",
+	display: "swap",
+});
+
+const kanit = Kanit({
+	subsets: ["latin"],
+	variable: "--font-kanit",
+	display: "swap",
+	weight: ["800", "700", "600", "500", "400"],
+});
+
+const opens_sans = Open_Sans({
+	subsets: ["latin"],
+	variable: "--font-opens-sans",
+	display: "swap",
+});
 
 export const metadata: Metadata = {
 	// metadataBase: new URL("https://clickmore.com"),
@@ -38,7 +55,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body
+				className={`${nunito.variable} ${kanit.variable} ${opens_sans.variable}`}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }
