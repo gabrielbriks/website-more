@@ -1,7 +1,7 @@
-import "@/app/globals.css";
-import { Metadata } from "next";
-import Link from "next/link";
-import { ReactNode } from "react";
+import '@/app/globals.css';
+import { Header } from '@/components/layout/header';
+import { Metadata } from 'next';
+import { ReactNode } from 'react';
 
 interface AppLayoutProps {
 	children: ReactNode;
@@ -10,15 +10,15 @@ interface AppLayoutProps {
 export const metadata: Metadata = {
 	// metadataBase: new URL("https://clickmore.com"),
 	title: {
-		default: "Click More",
-		template: "%s | clickmore.com",
+		default: 'Click More',
+		template: '%s | clickmore.com',
 	},
 	alternates: {
-		canonical: "/",
+		canonical: '/',
 		languages: {
-			en: "/en",
-			ja: "/ja",
-			pt: "/pt",
+			en: '/en',
+			ja: '/ja',
+			pt: '/pt',
 		},
 	},
 	// openGraph: {
@@ -30,7 +30,8 @@ export const metadata: Metadata = {
 export default function AppLayout({ children }: AppLayoutProps) {
 	return (
 		<>
-			<header className=" font-kanit flex min-w-full flex-1 justify-between gap-4 p-4 px-16">
+			<Header />
+			{/* <header className="absolute z-10 flex min-w-full flex-1 justify-between gap-4 p-4 px-16 font-kanit">
 				<span>
 					<h1 className="text-2xl font-semibold uppercase">Click More</h1>
 				</span>
@@ -51,10 +52,8 @@ export default function AppLayout({ children }: AppLayoutProps) {
 				<div>
 					<button>Create Account</button>
 				</div>
-			</header>
-			<main className="mt-12 flex h-full min-h-full w-full flex-col">
-				{children}
-			</main>
+			</header> */}
+			<main className="flex h-full min-h-full w-full flex-col">{children}</main>
 		</>
 	);
 }
