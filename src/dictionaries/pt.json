@@ -1,9 +1,14 @@
 {
-  "server-component": {
-    "welcome": "Bem-vindo"
-  },
-  "counter": {
-    "increment": "Incrementar",
-    "decrement": "Decrementar"
-  }
+	"home-page": {
+		"heroTitle": "TRANSFORMANDO CLIQUES EM OPORTUNIDADES DE NEGÓCIOS",
+		"heroSubtitleTop": "SOLUÇÃO ÚNICA PARA EMPRESAS",
+		"heroTextDescription": "Bem-vindo à ClickMore, seu parceiro de confiança para alcançar visibilidade e sucesso no mundo digital. Se você está pronto para levar sua empresa para o próximo nível, você está no lugar certo. Estamos aqui para apresentar soluções inovadoras que superem as expectativas, colocando sua marca no centro das atenções e impulsionando o crescimento do negócio"
+	},
+	"server-component": {
+		"welcome": "Bem-vindo"
+	},
+	"counter": {
+		"increment": "Incrementar",
+		"decrement": "Decrementar"
+	}
 }

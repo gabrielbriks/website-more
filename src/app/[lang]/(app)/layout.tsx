@@ -1,5 +1,6 @@
 import '@/app/globals.css';
 import { Header } from '@/components/layout/header';
+import { i18n, type Locale } from '@/i18n-config';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
@@ -27,32 +28,22 @@ export const metadata: Metadata = {
 	// keywords: ['Next.js', 'React', 'JavaScript'],
 };
 
-export default function AppLayout({ children }: AppLayoutProps) {
+export async function generateStaticParams() {
+	return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default function AppLayout({
+	children,
+	params,
+}: Readonly<{
+	children: React.ReactNode;
+	params: { lang: Locale };
+}>) {
+	// const locale = useLocale();
+
 	return (
 		<>
-			<Header />
-			{/* <header className="absolute z-10 flex min-w-full flex-1 justify-between gap-4 p-4 px-16 font-kanit">
-				<span>
-					<h1 className="text-2xl font-semibold uppercase">Click More</h1>
-				</span>
-				<nav className=" flex gap-4 pt-2">
-					<Link href="/home" className="uppercase">
-						Home
-					</Link>
-					<Link href="/who-we-are" className="uppercase">
-						Who we are
-					</Link>
-					<Link href="/plans" className="uppercase">
-						Plans
-					</Link>
-					<Link href="/contact" className="uppercase">
-						Contacts
-					</Link>
-				</nav>
-				<div>
-					<button>Create Account</button>
-				</div>
-			</header> */}
+			<Header lang={params.lang} />
 			<main className="flex h-full min-h-full w-full flex-col">{children}</main>
 		</>
 	);

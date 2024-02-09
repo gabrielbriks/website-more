@@ -1,39 +1,39 @@
-import "@/app/globals.css";
-import { i18n, type Locale } from "@/i18n-config";
-import type { Metadata } from "next";
-import { Kanit, Nunito, Open_Sans } from "next/font/google";
+import '@/app/globals.css';
+import { i18n, type Locale } from '@/i18n-config';
+import type { Metadata } from 'next';
+import { Kanit, Nunito, Open_Sans } from 'next/font/google';
 
 const nunito = Nunito({
-	subsets: ["latin"],
-	variable: "--font-nunito",
-	display: "swap",
+	subsets: ['latin'],
+	variable: '--font-nunito',
+	display: 'swap',
 });
 
 const kanit = Kanit({
-	subsets: ["latin"],
-	variable: "--font-kanit",
-	display: "swap",
-	weight: ["800", "700", "600", "500", "400"],
+	subsets: ['latin'],
+	variable: '--font-kanit',
+	display: 'swap',
+	weight: ['800', '700', '600', '500', '400'],
 });
 
 const opens_sans = Open_Sans({
-	subsets: ["latin"],
-	variable: "--font-opens-sans",
-	display: "swap",
+	subsets: ['latin'],
+	variable: '--font-opens-sans',
+	display: 'swap',
 });
 
 export const metadata: Metadata = {
 	// metadataBase: new URL("https://clickmore.com"),
 	title: {
-		default: "Click More",
-		template: "%s | clickmore.com",
+		default: 'Click More',
+		template: '%s | clickmore.com',
 	},
 	alternates: {
-		canonical: "/",
+		canonical: '/',
 		languages: {
-			en: "/en",
-			ja: "/ja",
-			pt: "/pt",
+			en: '/en',
+			ja: '/ja',
+			pt: '/pt',
 		},
 	},
 	// openGraph: {
@@ -54,7 +54,7 @@ export default function RootLayout({
 	params: { lang: Locale };
 }>) {
 	return (
-		<html lang="en">
+		<html lang={params.lang.toString()}>
 			<body
 				className={`${nunito.variable} ${kanit.variable} ${opens_sans.variable}`}
 			>
