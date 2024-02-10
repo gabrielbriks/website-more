@@ -1,9 +1,12 @@
 import bgColorFull from '@/assets/colorful-background.svg';
+import CardServices from '@/components/card-services';
+import { Button } from '@/components/ui/button';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
+import { ArrowUpRight } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import SVGIMG from '../../../../assets/colorful-background.svg';
+import BgColorFullHero from '../../../../assets/colorful-background.svg';
 import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
 
 interface HomeProps {
@@ -25,10 +28,10 @@ export default async function Home({
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex w-full flex-col max-md:max-w-full">
-				<div className="relative flex min-h-[777px] w-full flex-col overflow-hidden px-16 pb-12 pt-8 max-md:max-w-full max-md:px-5">
+				<div className="relative flex min-h-[777px] w-full flex-col overflow-hidden pb-12 pt-8 max-md:max-w-full max-md:px-5 lg:px-16">
 					<Image
 						priority
-						src={SVGIMG}
+						src={BgColorFullHero}
 						alt={''}
 						className="absolute inset-0 size-full object-cover"
 					/>
@@ -41,28 +44,29 @@ export default async function Home({
 							className="aspect-[1.01] w-full"
 						/>
 					</div>
-					<div className="relative mb-10 mt-1 max-md:max-w-full">
+
+					<div className="relative mb-10 mt-1 max-md:mt-20 max-md:max-w-full">
 						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="relative z-10 flex flex-col text-base font-medium max-md:max-w-full">
-									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800">
-										<Image
-											alt="any"
-											loading="lazy"
-											src={LeftArrowClickPhrase} //"https://cdn.builder.io/api/v1/image/assets/TEMP/9a1ebe4e0fb1dab7af0402423b499b223b872e4b0c02c4193d0d4e08e899c17c?"
-											className="aspect-square w-5"
-										/>
-										<div className="my-auto grow">
+									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800 max-md:w-full ">
+										<h2 className="max my-auto flex grow gap-1 max-md:justify-center max-md:text-center">
+											<Image
+												alt="any"
+												loading="lazy"
+												src={LeftArrowClickPhrase} //"https://cdn.builder.io/api/v1/image/assets/TEMP/9a1ebe4e0fb1dab7af0402423b499b223b872e4b0c02c4193d0d4e08e899c17c?"
+												className="aspect-square w-5"
+											/>
 											{dictionary['home-page'].heroSubtitleTop}
 											{/* One Stop Solution for business */}
-										</div>
+										</h2>
 									</div>
-									<div className="mt-4 text-6xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-10">
+									<h1 className="mt-4 text-6xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full max-md:justify-center max-md:text-center max-md:text-4xl max-md:leading-10">
 										{dictionary['home-page'].heroTitle}
 										{/* Turning Clicks into <br />
 										Business Opportunities */}
-									</div>
-									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
+									</h1>
+									<p className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:justify-center max-md:text-center">
 										{dictionary['home-page'].heroTextDescription}
 										{/* Welcome to ClickMore, your trusted partner in achieving
 										visibility and success in the digital world. If you're ready
@@ -70,29 +74,34 @@ export default async function Home({
 										place. We're here to present innovative solutions that
 										exceed expectations, putting your brand in the spotlight and
 										driving business growth. */}
-									</div>{' '}
+									</p>
+
 									<div className="mt-8 flex justify-between gap-5 self-start whitespace-nowrap uppercase">
-										<div className="flex justify-between gap-2.5 rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-8 py-5 text-white max-md:px-5">
-											<div className="my-auto grow">Learn More</div>{' '}
-											<img
-												alt="any"
-												loading="lazy"
-												src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-												className="aspect-square w-5"
+										<Button
+											variant="outline"
+											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+										>
+											<span className="uppercase">Learn More</span>
+											<ArrowUpRight
+												size={20}
+												className="stroke-white transition duration-700"
 											/>
-										</div>{' '}
-										<div className="flex justify-between gap-2.5 rounded-[45px] border border-solid border-[color:var(--CC-Grad,text-pink-600)] px-8 py-5 text-pink-600 max-md:px-5">
-											<div className="my-auto grow">Hire now</div>{' '}
-											<img
-												alt="any"
-												loading="lazy"
-												src="https://cdn.builder.io/api/v1/image/assets/TEMP/feaea49ee5b1654de24d1dd8eb513b905a5825248af00943e56bbf9f80066dff?"
-												className="aspect-square w-5"
+										</Button>
+
+										<Button
+											variant="outline"
+											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-transparent px-8 py-5 text-pink-600 transition duration-500 hover:bg-transparent max-md:px-5"
+										>
+											<span className="uppercase">Hire now</span>
+											<ArrowUpRight
+												size={20}
+												className="stroke-pink-600 transition duration-700 group-hover:stroke-black"
 											/>
-										</div>
+										</Button>
 									</div>
 								</div>
-							</div>{' '}
+							</div>
+
 							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="relative mt-5 flex grow flex-col max-md:max-w-full">
 									<div className="flex w-[488px] max-w-full items-start justify-between gap-5 self-end whitespace-nowrap text-slate-800 max-md:flex-wrap">
@@ -101,12 +110,12 @@ export default async function Home({
 											loading="lazy"
 											src="https://cdn.builder.io/api/v1/image/assets/TEMP/98c87d022ef7dc2057245eb843cbc73d947926eafa2fbaf3288e04a27841e662?"
 											className="mt-9 aspect-square w-[54px] self-end"
-										/>{' '}
+										/>
 										<div className="flex flex-col self-start rounded-[36.69px] bg-white px-5 pb-2.5 pt-4 shadow-lg">
 											<div className="flex flex-col px-3.5 py-px">
 												<div className="text-base font-bold leading-loose">
 													New Traffic
-												</div>{' '}
+												</div>
 												<div className="mt-5 flex gap-3.5 self-center">
 													<div className="text-sm font-bold leading-4">
 														11,756
@@ -168,7 +177,8 @@ export default async function Home({
 							</div>
 						</div>
 					</div>
-				</div>{' '}
+				</div>
+
 				<div className="flex w-full flex-col justify-center bg-slate-100 px-16 py-12 max-md:max-w-full max-md:px-5">
 					<div className="flex items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
 						<img
@@ -176,7 +186,7 @@ export default async function Home({
 							loading="lazy"
 							src="https://cdn.builder.io/api/v1/image/assets/TEMP/8dadfe7e6e70258506788ce4fd43f16d19bc12dff64a9680c65be00b4b532c14?"
 							className="my-auto aspect-[2.94] w-[122px] max-w-full self-stretch"
-						/>{' '}
+						/>
 						<img
 							alt="any"
 							loading="lazy"
@@ -203,197 +213,95 @@ export default async function Home({
 						/>
 					</div>
 				</div>
-			</div>{' '}
-			<div className="z-10 mt-24 flex w-full flex-col items-end px-12 max-md:mt-10 max-md:max-w-full max-md:px-5">
-				<img
-					alt="any"
-					loading="lazy"
-					src="https://cdn.builder.io/api/v1/image/assets/TEMP/79895db067e321e3f33e480d95d96a1ac8fbb345fd12eb03b0841bb1386ab5a2?"
-					className="aspect-[1.25] w-[680px] max-w-full self-start"
-				/>{' '}
-				<div className="z-10 ml-40 mt-0 flex gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800 max-md:mt-0">
+			</div>
+
+			<div className="container z-10 mt-24 flex w-full items-center gap-14 max-lg:flex-col max-md:mt-10 max-md:max-w-full max-md:px-5 lg:px-12">
+				<div className="w-full min-w-[380px]">
 					<img
 						alt="any"
 						loading="lazy"
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e02b7ceeacdfde81ab2746bc5369238ad5429edc9013167db33890c4651d003?"
-						className="aspect-square w-5"
-					/>{' '}
-					<div className="my-auto grow">Our values</div>
-				</div>{' '}
-				<div className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:mr-2 max-md:max-w-full">
-					Values That Define Us
-				</div>{' '}
-				<div className="mt-6 w-[564px] text-lg leading-7 text-neutral-600 max-md:mr-2 max-md:max-w-full">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s, when an unknown printer took a galley of type and
-					scrambled it to make a type specimen book. It has survived not only
-					five centuries, but also the leap into electronic typesetting,
-					remaining essentially unchanged.
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/79895db067e321e3f33e480d95d96a1ac8fbb345fd12eb03b0841bb1386ab5a2?"
+						className="aspect-[1.25] w-full max-w-[680px] self-start"
+					/>
 				</div>
+
+				<div className="mb-20 flex h-full w-full flex-col items-center justify-center">
+					<div className="h-full w-full max-lg:text-center">
+						<span className="z-10 mt-0 flex justify-start gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800 max-md:mt-0">
+							<h4 className="max-lg:justify-content my-auto flex w-full grow gap-2 max-lg:justify-center ">
+								<img
+									alt="any"
+									loading="lazy"
+									src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e02b7ceeacdfde81ab2746bc5369238ad5429edc9013167db33890c4651d003?"
+									className="aspect-square w-5"
+								/>
+								Our values
+							</h4>
+						</span>
+						<h2 className="text-5xl font-bold uppercase text-gray-800 max-lg:w-full max-lg:justify-center max-lg:text-center max-md:mr-2 max-md:max-w-full">
+							Values That Define Us
+						</h2>
+
+						<p className="mt-6 w-[564px] text-lg leading-7 text-neutral-600 max-lg:w-full max-lg:text-center max-md:mr-2 max-md:max-w-full">
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged.
+						</p>
+					</div>
+				</div>
+
 				<img
 					alt="any"
 					loading="lazy"
 					src="https://cdn.builder.io/api/v1/image/assets/TEMP/2cd5416aeb42460204ee3846304bae6694a26b16ca1ec3c03c143235e206aecf?"
-					className="mt-36 aspect-square w-[54px] max-md:mt-10"
+					className="absolute z-10 mt-36 aspect-square w-[54px] max-md:mt-10"
 				/>
 			</div>
-			<div className="-mt-3 flex w-full max-w-[985px] items-start justify-between gap-5 self-center max-md:max-w-full max-md:flex-wrap">
+
+			<div className="-mt-3 flex w-full max-w-[985px] items-start justify-between self-center max-md:max-w-full max-md:flex-wrap lg:gap-5">
 				<img
 					alt="any"
 					loading="lazy"
 					src="https://cdn.builder.io/api/v1/image/assets/TEMP/76564161ebe71a26c0e1c53d524200686aac22436c5688ae5944a0beb25f83fd?"
-					className="aspect-square w-[54px] self-start"
+					className="absolute aspect-square w-[54px] self-start"
 				/>
 				<div className="mt-6 flex flex-col self-end max-md:max-w-full">
-					<div className="flex gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800">
+					<h4 className="flex gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800">
 						<img
 							alt="any"
 							loading="lazy"
 							src="https://cdn.builder.io/api/v1/image/assets/TEMP/8166fcd3004dfbe088a729de6ed9379b26f5e1c445166c3e414d74924eb0711d?"
 							className="aspect-square w-5"
 						/>
-						<div className="my-auto grow">Our Services</div>
-					</div>
-					<div className="mt-4 text-center text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full">
+						Our Services
+					</h4>
+
+					<h2 className="mt-4 text-center text-5xl font-bold uppercase text-gray-800 max-md:max-w-full">
 						Our Tailored Digital Services
-					</div>
-					<div className="mt-6 text-center text-lg leading-7 text-neutral-600 max-md:max-w-full">
+					</h2>
+					<p className="mt-6 text-center text-lg leading-7 text-neutral-600 max-md:max-w-full">
 						From innovative solutions to transformative strategies, we craft
 						success through tailored and dynamic offerings. Explore limitless
 						possibilities with us.
-					</div>
+					</p>
 				</div>
 			</div>
+
 			<div className="mt-12 flex w-full flex-col max-md:mt-10 max-md:max-w-full">
-				<div className="z-10 flex w-full flex-col pl-6 pr-16 max-md:max-w-full max-md:px-5">
-					<div className="ml-10 flex items-end justify-between gap-4 max-md:max-w-full max-md:flex-wrap">
-						<div className="mt-16 flex flex-1 flex-col items-center rounded-xl bg-white px-4 pb-1 pt-8 shadow-lg max-md:mt-10">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/79bb963534f4b34b43cde66169dd04adc533a9b20bab26ffa7a05131d0f19ea4?"
-								className="aspect-[1.22] w-[66px]"
-							/>
-							<div className="mt-8 text-2xl font-bold text-gray-800">
-								ClickAdsense
-							</div>
-							<div className="mt-6 self-stretch text-center text-lg leading-7 text-neutral-500">
-								ClickAdsense elevates your online presence, captivate audiences,
-								ensuring your brand is the first choice.
-							</div>
-							<div className="mt-14 flex justify-center gap-2.5 whitespace-nowrap rounded-[45px] bg-button-gradient px-6 py-3.5 text-base font-medium uppercase text-white max-md:mt-10 max-md:px-5">
-								<div className="my-auto grow">Learn More</div>
-								<img
-									alt="any"
-									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-									className="aspect-square w-5"
-								/>
-							</div>
-						</div>
-						<div className="flex flex-1 flex-col items-center self-start rounded-xl bg-white px-4 py-8 shadow-lg">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/abd2ed400c6e2e23515fe8c2b700b04d4898f8386e6be25121c23caa73aa2a1c?"
-								className="aspect-[1.27] w-[68px]"
-							/>
-							<div className="mt-8 text-2xl font-bold text-gray-800">
-								ClickMedia
-							</div>
-							<div className="mt-6 self-stretch text-center text-lg leading-7 text-neutral-500">
-								ClickAdsense elevates your online presence, captivate audiences,
-								ensuring your brand is the first choice.
-							</div>
-							<div className="mt-8 flex justify-center gap-2.5 whitespace-nowrap rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-6 py-3.5 text-base font-medium uppercase text-white max-md:px-5">
-								<div className="my-auto grow">Learn More</div>
-								<img
-									alt="any"
-									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-									className="aspect-square w-5"
-								/>
-							</div>
-						</div>
-						<div className="mt-16 flex flex-1 flex-col items-center rounded-xl bg-white px-4 py-8 shadow-lg max-md:mt-10">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/eacfe9131b071455c9acabc4b1e70914f1375d76c8c03ad1818471b52ee3174f?"
-								className="aspect-[1.27] w-[68px]"
-							/>
-							<div className="mt-8 text-2xl font-bold text-gray-800">
-								ClickPages
-							</div>
-							<div className="mt-6 self-stretch text-center text-lg leading-7 text-neutral-500">
-								ClickAdsense elevates your online presence, captivate audiences,
-								ensuring your brand is the first choice.
-							</div>
-							<div className="mt-8 flex justify-center gap-2.5 whitespace-nowrap rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-6 py-3.5 text-base font-medium uppercase text-white max-md:px-5">
-								<div className="my-auto grow">Learn More</div>
-								<img
-									alt="any"
-									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-									className="aspect-square w-5"
-								/>
-							</div>
-						</div>
-						<div className="flex flex-1 flex-col items-center self-start rounded-xl bg-white px-4 py-8 shadow-lg">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/1961e7f01fec72290053f3c4dea9a1dda93237d3db3bcbab943b5883b0f014cd?"
-								className="aspect-[1.27] w-[68px]"
-							/>
-							<div className="mt-8 text-2xl font-bold text-gray-800">
-								ClickWeb
-							</div>
-							<div className="mt-6 self-stretch text-center text-lg leading-7 text-neutral-500">
-								ClickAdsense elevates your online presence, captivate audiences,
-								ensuring your brand is the first choice.
-							</div>
-							<div className="mt-8 flex justify-center gap-2.5 whitespace-nowrap rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-6 py-3.5 text-base font-medium uppercase text-white max-md:px-5">
-								<div className="my-auto grow">Learn More</div>
-								<img
-									alt="any"
-									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-									className="aspect-square w-5"
-								/>
-							</div>
-						</div>
-						<div className="mt-16 flex flex-1 flex-col items-center rounded-xl bg-white px-4 py-8 shadow-lg max-md:mt-10">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/29e416c95e207b051d8a493046c3dfdee5dfc62b4676a6be6ee132741cbc7ab0?"
-								className="aspect-[1.27] w-[68px]"
-							/>
-							<div className="mt-8 text-2xl font-bold text-gray-800">
-								ClickEcom
-							</div>
-							<div className="mt-6 self-stretch text-center text-lg leading-7 text-neutral-500">
-								ClickAdsense elevates your online presence, captivate audiences,
-								ensuring your brand is the first choice.
-							</div>
-							<div className="mt-8 flex justify-center gap-2.5 whitespace-nowrap rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-6 py-3.5 text-base font-medium uppercase text-white max-md:px-5">
-								<div className="my-auto grow">Learn More</div>
-								<img
-									alt="any"
-									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-									className="aspect-square w-5"
-								/>
-							</div>
-						</div>
+				<div className="z-10 flex w-full min-w-full flex-col items-center justify-center ">
+					{/*pl-6 pr-16 max-md:px-5*/}
+					<div className="container flex h-full min-w-full items-center justify-center">
+						<CardServices />
 					</div>
+
 					<img
 						alt="any"
 						loading="lazy"
 						src={bgColorFull}
-						className="ml-10 mt-24 aspect-[2.27] w-full rounded-[32px] max-md:mt-10 max-md:max-w-full"
+						className=" mt-24 aspect-[2.27] w-full rounded-[32px] max-md:mt-10 max-md:max-w-full"
 					/>
 					<div className="ml-10 mt-24 max-md:mt-10 max-md:max-w-full">
 						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
@@ -532,6 +440,7 @@ export default async function Home({
 						</div>
 					</div>
 				</div>
+				ClickAdsense
 				<div className="relative flex min-h-[757px] w-full flex-col overflow-hidden px-16 pt-12 max-md:max-w-full max-md:px-5">
 					<img
 						alt="any"
