@@ -1,16 +1,22 @@
 import bgColorFull from '@/assets/colorful-background.svg';
 import CardServices from '@/components/card-services';
 import Faq from '@/components/faq';
+import { NavBarLinks } from '@/components/layout/nav-bar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import VideoComponent from '@/components/video-component';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
 import { ArrowUpRight } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import BgColorFullHero from '../../../../assets/colorful-background.svg';
+import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
 import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
+import OurMissionPhoto from '../../../../assets/our-mission-photo.svg';
+import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
+import PointerClickRight from '../../../../assets/pointer-click-right.svg';
 
 interface HomeProps {
 	lang: Locale;
@@ -36,7 +42,7 @@ export default async function Home({
 						priority
 						src={BgColorFullHero}
 						alt={''}
-						className="absolute inset-0 size-full object-cover"
+						className="absolute inset-0 size-full object-cover opacity-70"
 					/>
 
 					<div className="relative ml-40 mt-12 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10">
@@ -69,7 +75,7 @@ export default async function Home({
 										{/* Turning Clicks into <br />
 										Business Opportunities */}
 									</h1>
-									<p className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:justify-center max-md:text-center">
+									<p className="mt-6 font-nunito text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:justify-center max-md:text-center">
 										{dictionary['home-page'].heroTextDescription}
 										{/* Welcome to ClickMore, your trusted partner in achieving
 										visibility and success in the digital world. If you're ready
@@ -299,22 +305,28 @@ export default async function Home({
 					<div className="container flex h-full min-w-full items-center justify-center">
 						<CardServices />
 					</div>
+					{/* Start Area PlayVideo */}
+					<div className="mb-20 ">
+						<VideoComponent />
+					</div>
 
-					<img
+					{/* End Area PlayVideo */}
+
+					{/* <img
 						alt="any"
 						loading="lazy"
 						src={bgColorFull}
 						className=" mt-24 aspect-[2.27] w-full rounded-[32px] max-md:mt-10 max-md:max-w-full"
-					/>
-					<div className="ml-10 mt-24 max-md:mt-10 max-md:max-w-full">
+					/> */}
+					<div className="ml-10 mt-24 max-md:mt-10 max-md:max-w-full lg:mt-32">
 						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="mt-10 flex flex-col max-md:mt-10 max-md:max-w-full">
-									<img
+									<Image
 										alt="any"
 										loading="lazy"
-										src="https://cdn.builder.io/api/v1/image/assets/TEMP/492e26773f4bf6b8d95bc737bd691936ab4d0a0cf66f547b06ad703e5c47bc00?"
-										className="aspect-square w-[54px] self-end"
+										src={PointerClickLeft}
+										className="aspect-square w-[54px] self-end opacity-70"
 									/>
 									<div className="mt-7 flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
 										<img
@@ -339,43 +351,38 @@ export default async function Home({
 								</div>
 							</div>
 							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-								<img
+								<Image
 									alt="any"
 									loading="lazy"
-									src={bgColorFull}
+									src={OurMissionPhoto}
 									className="aspect-[1.37] w-full grow max-md:mt-10 max-md:max-w-full"
 								/>
 							</div>
 						</div>
 					</div>
 					<div className="mt-24 max-md:mt-10 max-md:max-w-full">
-						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
-							<div className="flex w-[42%] flex-col max-md:ml-0 max-md:w-full">
+						<div className="max-md: container flex gap-5 max-md:flex-col max-md:gap-0">
+							<div className="flex w-[46%] flex-col max-md:ml-0 max-md:w-full">
 								<div className="mt-3 flex grow flex-col max-md:mt-10 max-md:max-w-full">
-									<img
+									<Image
 										alt="any"
 										loading="lazy"
-										src="https://cdn.builder.io/api/v1/image/assets/TEMP/927a0cb5bea08523b9ad307d1996857ef56e9a845cc11946961a51cb3f6089fa?"
-										className="mr-10 aspect-square w-[54px] self-end max-md:mr-2.5"
+										src={PointerClickRight}
+										className="aspect-square w-[54px] self-end opacity-70"
 									/>
-									<div className="relative mt-3.5 flex min-h-[611px] w-full flex-col items-start overflow-hidden px-11 pb-12 max-md:max-w-full max-md:px-5">
-										<img
+									{/* Japanese FAQ */}
+									<div className="relative mt-3.5 flex min-h-[611px] w-full flex-col items-start overflow-hidden px-2 pb-6 max-md:max-w-full max-md:items-end max-md:px-5 max-md:pb-8">
+										<Image
 											alt="any"
 											loading="lazy"
-											src={bgColorFull}
-											className="absolute inset-0 size-full object-cover"
-										/>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/61ab0bd55d7249ba9485d4835d986f923512491726a5816c6cfe8bd75174cad7?"
-											className="z-10 mb-96 mt-0 aspect-[0.98] w-[136px] max-w-full max-md:mb-10"
+											src={JapaneseFAQImage}
+											className="z-10 mb-96 mt-0 aspect-[0.98] h-full max-h-[600px] w-full max-w-full max-md:mb-10"
 										/>
 									</div>
 								</div>
 							</div>
 
-							<div className="ml-5 flex w-[58%] flex-col max-md:ml-0 max-md:w-full">
+							<div className="ml-5 flex w-[54%] flex-col max-md:ml-0 max-md:w-full">
 								<Faq />
 							</div>
 						</div>
@@ -480,18 +487,19 @@ export default async function Home({
 										<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
 											<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 												<div className="flex grow flex-col max-md:mt-10">
-													<div className="text-2xl font-semibold text-gray-800">
+													<h4 className="text-2xl font-semibold text-gray-800">
 														Phone
-													</div>
+													</h4>
 													<div className="mt-6 text-lg leading-7 text-neutral-600">
 														090-8321-8676
 														<br />
 														080-6369-2395
 													</div>
-													<div className="mt-11 self-start text-2xl font-semibold text-gray-800 max-md:mt-10">
+													<h4 className="mt-11 self-start text-2xl font-semibold text-gray-800 max-md:mt-10">
 														Follow us
-													</div>
+													</h4>
 													<div className="mt-6 flex gap-4 self-start pr-1.5">
+														RedesSociais
 														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
 															<img
 																alt="any"
@@ -543,7 +551,8 @@ export default async function Home({
 						</div>
 					</div>
 				</div>
-				<div className="mt-24 flex w-full flex-col justify-end rounded-[40px_40px_0px_0px] bg-slate-950 pt-12 max-md:mt-10 max-md:max-w-full">
+
+				<footer className="mt-24 flex w-full flex-col justify-end rounded-[40px_40px_0px_0px] bg-slate-950 pt-12 max-md:mt-10 max-md:max-w-full">
 					<div className="mt-6 flex w-full max-w-screen-xl items-center justify-center self-center px-16 max-md:max-w-full max-md:px-5">
 						<div className="flex w-[544px] max-w-full flex-col items-center">
 							<img
@@ -558,23 +567,22 @@ export default async function Home({
 								from Clickmore
 							</div>
 							<div className="mt-10 flex justify-between gap-2 self-stretch whitespace-nowrap max-md:max-w-full max-md:flex-wrap">
-								<div className="flex justify-between gap-2.5 rounded-[35px] border border-solid border-white border-opacity-20 px-6 py-4 text-sm leading-5 text-white text-opacity-70 max-md:px-5">
-									<img
-										alt="any"
-										loading="lazy"
-										src="https://cdn.builder.io/api/v1/image/assets/TEMP/e76dc092ab7628a8a6a060dedab5122a1e4d31e49b3e57ec2d832bc1aa2563a2?"
-										className="aspect-square w-5"
+								<div className="flex w-full max-w-md items-center justify-center gap-3 space-x-2">
+									<Input
+										type="email"
+										placeholder="Enter your email"
+										className="rounded-full  border-slate-500 bg-transparent text-white focus-visible:border-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 									/>
-									<div className="grow">Enter your email</div>
-								</div>
-								<div className="flex justify-between gap-2.5 rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-8 py-4 text-base font-medium uppercase text-white max-md:px-5">
-									<div className="my-auto grow">Subscribe</div>
-									<img
-										alt="any"
-										loading="lazy"
-										src="https://cdn.builder.io/api/v1/image/assets/TEMP/d57328880a976390a902064e78ed8489cdc73ddfc18d5eb1ccff7498dec13c4b?"
-										className="aspect-square w-5"
-									/>
+									<Button
+										type="submit"
+										className="h-11 gap-1 rounded-full bg-button-gradient uppercase"
+									>
+										Subscribe
+										<ArrowUpRight
+											size={20}
+											className="stroke-white transition duration-700 group-hover:stroke-black"
+										/>
+									</Button>
 								</div>
 							</div>
 							<div className="mt-10 flex gap-4">
@@ -604,15 +612,12 @@ export default async function Home({
 								</div>
 							</div>
 							<div className="mt-10 flex justify-between gap-5 text-base uppercase text-neutral-300">
-								<div className="grow font-medium text-pink-600">Home</div>
-								<div>Who we are </div>
-								<div>Plans</div>
-								<div className="grow">Contact</div>
+								<NavBarLinks showInFooter={true} />
 							</div>
 						</div>
 					</div>
 					<div className="mt-16 min-h-[8px] w-full bg-purple-800 max-md:mt-10 max-md:max-w-full" />
-				</div>
+				</footer>
 			</div>
 		</div>
 	);

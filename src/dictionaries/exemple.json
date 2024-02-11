@@ -1,0 +1,20 @@
+{
+	"layout": {
+		"header": {},
+		"footer": {},
+		"buttons": {},
+		"inputs": {}
+	},
+	"pages": {
+		"home": {
+			"heroTitle": "TURNING CLICKS INTO BUSINESS OPPORTUNITIES",
+			"heroSubtitleTop": "ONE STOP SOLUTION FOR BUSINESS",
+			"heroTextDescription": "Welcome to ClickMore, your trusted partner in achieving visibility and success in the digital world. If you're ready to take your business to the next level, you're in the right place. We're here to present innovative solutions that exceed expectations, putting your brand in the spotlight and driving business growth."
+		},
+		"clickAdsense": {},
+		"clickMedia": {},
+		"clickPages": {},
+		"clickWeb": {},
+		"clickEcom": {}
+	}
+}

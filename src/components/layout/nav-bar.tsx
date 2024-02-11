@@ -1,14 +1,24 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 
-export function NavBarLinks() {
+interface NavBarLinksProps {
+	showInFooter?: boolean;
+}
+
+export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 	const pathname = usePathname();
 
 	return (
-		<nav className="my-auto flex justify-between gap-5 self-stretch text-gray-800">
+		<nav
+			className={cn(
+				'my-auto flex justify-between gap-5 self-stretch',
+				!showInFooter ? 'text-gray-800' : 'text-gray-500',
+			)}
+		>
 			<Link
 				href="/home"
 				className={twMerge(
