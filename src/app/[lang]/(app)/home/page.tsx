@@ -1,6 +1,9 @@
 import bgColorFull from '@/assets/colorful-background.svg';
 import CardServices from '@/components/card-services';
+import Faq from '@/components/faq';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
 import { ArrowUpRight } from 'lucide-react';
@@ -54,7 +57,7 @@ export default async function Home({
 											<Image
 												alt="any"
 												loading="lazy"
-												src={LeftArrowClickPhrase} //"https://cdn.builder.io/api/v1/image/assets/TEMP/9a1ebe4e0fb1dab7af0402423b499b223b872e4b0c02c4193d0d4e08e899c17c?"
+												src={LeftArrowClickPhrase}
 												className="aspect-square w-5"
 											/>
 											{dictionary['home-page'].heroSubtitleTop}
@@ -371,76 +374,14 @@ export default async function Home({
 									</div>
 								</div>
 							</div>
+
 							<div className="ml-5 flex w-[58%] flex-col max-md:ml-0 max-md:w-full">
-								<div className="flex w-full grow flex-col rounded-[32px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-11 py-12 text-xl font-medium text-gray-800 max-md:mt-10 max-md:max-w-full max-md:px-5">
-									<div className="mt-12 flex w-[54px] gap-1 whitespace-nowrap text-base uppercase text-white max-md:mt-10">
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9d0eea3000d8deaaedd53acc827818f93569a5635eb28ffa45e4726f2073596?"
-											className="aspect-square w-full flex-1 shrink-0"
-										/>
-										<div className="my-auto grow">faq</div>
-									</div>
-									<div className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-white max-md:max-w-full">
-										Frequently asked questions
-									</div>
-									<div className="mt-11 flex justify-between gap-5 rounded-lg bg-white px-4 py-6 max-md:mt-10 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex-auto">Which plan is best for me?</div>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/c917b098f604744390b6ab72075646554d7e414d180913e73c5fc177b933ff99?"
-											className="my-auto aspect-[1.85] w-[13px] stroke-neutral-800 stroke-[1.606px]"
-										/>
-									</div>
-									<div className="ml-8 mt-4 self-start text-lg leading-7 text-neutral-300 max-md:max-w-full">
-										Choose based on your goals and budget.
-									</div>
-									<div className="mt-4 flex justify-between gap-5 rounded-lg bg-white px-4 py-6 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex-auto">Do plans include support?</div>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/c917b098f604744390b6ab72075646554d7e414d180913e73c5fc177b933ff99?"
-											className="my-auto aspect-[1.85] w-[13px] stroke-neutral-800 stroke-[1.606px]"
-										/>
-									</div>
-									<div className="mt-4 flex justify-between gap-5 rounded-lg bg-white px-4 py-6 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex-auto">Can I adjust my plan?</div>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/c917b098f604744390b6ab72075646554d7e414d180913e73c5fc177b933ff99?"
-											className="my-auto aspect-[1.85] w-[13px] stroke-neutral-800 stroke-[1.606px]"
-										/>
-									</div>
-									<div className="mt-4 flex justify-between gap-5 rounded-lg bg-white px-4 py-6 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex-auto">
-											Do plan prices include all fees?
-										</div>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/c917b098f604744390b6ab72075646554d7e414d180913e73c5fc177b933ff99?"
-											className="my-auto aspect-[1.85] w-[13px] stroke-neutral-800 stroke-[1.606px]"
-										/>
-									</div>
-									<div className="mt-4 flex justify-between gap-5 rounded-lg bg-white px-4 py-6 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex-auto">How do I cancel my plan?</div>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/c917b098f604744390b6ab72075646554d7e414d180913e73c5fc177b933ff99?"
-											className="my-auto aspect-[1.85] w-[13px] stroke-neutral-800 stroke-[1.606px]"
-										/>
-									</div>
-								</div>
+								<Faq />
 							</div>
 						</div>
 					</div>
 				</div>
-				ClickAdsense
+
 				<div className="relative flex min-h-[757px] w-full flex-col overflow-hidden px-16 pt-12 max-md:max-w-full max-md:px-5">
 					<img
 						alt="any"
@@ -451,7 +392,7 @@ export default async function Home({
 					<div className="relative mt-12 max-md:mt-10 max-md:max-w-full">
 						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-								<div className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
+								<form className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
 									<div className="mt-3 flex gap-1 self-start whitespace-nowrap font-medium uppercase text-purple-800">
 										<img
 											alt="any"
@@ -459,40 +400,63 @@ export default async function Home({
 											src="https://cdn.builder.io/api/v1/image/assets/TEMP/b521be8c6bf1b04ba68eeeeb5ecaf26d1d08033afc51ae3353ac3e0c15d5c38d?"
 											className="aspect-square w-5"
 										/>
-										<div className="my-auto grow">Have any questions</div>
+										<h3 className="my-auto grow">Have any questions</h3>
 									</div>
-									<div className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full">
-										Send A MEssage
-									</div>
-									<div className="mt-11 justify-center whitespace-nowrap border-b border-solid border-b-slate-200 py-5 max-md:mt-10 max-md:max-w-full">
-										Name
-									</div>
-									<div className="mt-11 flex justify-between gap-5 whitespace-nowrap max-md:mt-10 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex flex-1 flex-col justify-center">
-											<div className="justify-center border-b border-solid border-b-slate-200 py-5">
-												Email
-											</div>
-										</div>
-										<div className="flex flex-1 flex-col justify-center">
-											<div className="justify-center border-b border-solid border-b-slate-200 py-5">
-												Phone
-											</div>
-										</div>
-									</div>
-									<div className="mt-11 self-start border-b border-solid border-b-slate-200 pb-20 pt-4 max-md:mt-10">
-										Tell us about your query
-									</div>
-									<div className="mt-12 flex justify-center gap-2.5 self-start whitespace-nowrap rounded-[45px] bg-[linear-gradient(134deg,#6E07AD_2.81%,#CB457A_75.03%,#E85A6A_95.48%)] px-8 py-5 font-medium uppercase text-white max-md:mt-10 max-md:px-5">
-										<div className="my-auto grow">Get in touch</div>
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/13c8188bb935f3c80f18ef0feb38225398da4f41d254bbd5a29d1237bb5cd785?"
-											className="aspect-square w-5"
+
+									<h1 className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full">
+										Send A Message
+									</h1>
+
+									<div className="mt-11 justify-center whitespace-nowrap border-b border-solid border-b-slate-200 max-md:mt-10 max-md:max-w-full">
+										<Input
+											placeholder="Name"
+											className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 										/>
 									</div>
-								</div>
+
+									<div className="mt-11 flex justify-between gap-5 whitespace-nowrap max-md:mt-10 max-md:max-w-full max-md:flex-wrap">
+										<div className="flex flex-1 flex-col justify-center">
+											<div className="justify-center border-b border-solid border-b-slate-200">
+												<Input
+													placeholder="Email"
+													className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
+												/>
+											</div>
+										</div>
+
+										<div className="flex flex-1 flex-col justify-center">
+											<div className="justify-center border-b border-solid border-b-slate-200">
+												<Input
+													placeholder="Phone"
+													className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div className="mt-11 w-full self-start border-b border-solid border-b-slate-200 max-md:mt-10">
+										<Textarea
+											placeholder="Tell us about your query"
+											className="min-w-full border-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
+										/>
+										{/* Tell us about your query */}
+									</div>
+
+									<div className="flex w-full items-start justify-start">
+										<Button
+											type="submit"
+											className="mt-10 h-11 gap-1 rounded-full bg-button-gradient uppercase"
+										>
+											Get in touch
+											<ArrowUpRight
+												size={20}
+												className="stroke-white transition duration-700 group-hover:stroke-black"
+											/>
+										</Button>
+									</div>
+								</form>
 							</div>
+
 							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="relative my-auto flex flex-col self-stretch max-md:mt-10 max-md:max-w-full">
 									<div className="flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
@@ -555,6 +519,7 @@ export default async function Home({
 													</div>
 												</div>
 											</div>
+
 											<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 												<div className="flex flex-col text-2xl font-semibold text-gray-800 max-md:mt-10">
 													<div>Address</div>
