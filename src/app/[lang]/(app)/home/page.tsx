@@ -1,7 +1,9 @@
 import bgColorFull from '@/assets/colorful-background.svg';
+import AreaLogosPlatforms from '@/components/area-logos-platforms';
 import CardServices from '@/components/card-services';
 import Faq from '@/components/faq';
 import { NavBarLinks } from '@/components/layout/nav-bar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,6 +16,7 @@ import Image from 'next/image';
 import BgColorFullHero from '../../../../assets/colorful-background.svg';
 import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
 import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
+import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.svg';
 import OurMissionPhoto from '../../../../assets/our-mission-photo.svg';
 import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
 import PointerClickRight from '../../../../assets/pointer-click-right.svg';
@@ -37,7 +40,7 @@ export default async function Home({
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex w-full flex-col max-md:max-w-full">
-				<div className="relative flex min-h-[777px] w-full flex-col overflow-hidden pb-12 pt-8 max-md:max-w-full max-md:px-5 lg:px-16">
+				<div className="relative flex w-full flex-col pb-12 pt-8 max-lg:px-10 max-md:h-auto max-md:max-w-full max-md:px-5 lg:min-h-[788px] lg:overflow-hidden lg:px-16">
 					<Image
 						priority
 						src={BgColorFullHero}
@@ -54,8 +57,8 @@ export default async function Home({
 						/>
 					</div>
 
-					<div className="relative mb-10 mt-1 max-md:mt-20 max-md:max-w-full">
-						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
+					<div className="relative mt-1 max-md:mt-20 max-md:max-w-full  lg:mb-0 lg:pb-0">
+						<div className="flex min-h-full gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="relative z-10 flex flex-col text-base font-medium max-md:max-w-full">
 									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800 max-md:w-full ">
@@ -111,9 +114,9 @@ export default async function Home({
 								</div>
 							</div>
 
-							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-								<div className="relative mt-5 flex grow flex-col max-md:max-w-full">
-									<div className="flex w-[488px] max-w-full items-start justify-between gap-5 self-end whitespace-nowrap text-slate-800 max-md:flex-wrap">
+							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full lg:mb-0 lg:min-h-[650px] lg:pb-0">
+								<div className="relative flex grow flex-col max-md:mt-5 max-md:max-w-full">
+									<div className="flex max-w-full items-start justify-between gap-5 self-end whitespace-nowrap text-slate-800 max-md:absolute max-md:w-full max-md:flex-wrap lg:w-[488px]">
 										<img
 											alt="any"
 											loading="lazy"
@@ -122,66 +125,71 @@ export default async function Home({
 										/>
 										<div className="flex flex-col self-start rounded-[36.69px] bg-white px-5 pb-2.5 pt-4 shadow-lg">
 											<div className="flex flex-col px-3.5 py-px">
-												<div className="text-base font-bold leading-loose">
+												<div className="w-full text-base font-bold leading-loose">
 													New Traffic
 												</div>
-												<div className="mt-5 flex gap-3.5 self-center">
+												<hr className="min-w-full bg-slate-500" />
+
+												<div className="mt-1 flex gap-3.5 self-center">
 													<div className="text-sm font-bold leading-4">
 														11,756
-													</div>{' '}
+													</div>
 													<div className="my-auto flex gap-0 text-xs font-medium leading-tight">
 														<img
 															alt="any"
 															loading="lazy"
 															src="https://cdn.builder.io/api/v1/image/assets/TEMP/be9bf481ee0d1150337abdad42f941397d7206cad3637f1b2acbc84bd9312b76?"
 															className="aspect-square w-[3px] self-start fill-green-600"
-														/>{' '}
-														<div className="grow">23%</div>
+														/>
+														<div className="grow font-bold">23%</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>{' '}
-									<div className="mt-48 flex w-44 max-w-full flex-col rounded-lg bg-white pb-7 pl-6 pt-3 shadow-lg max-md:mt-10 max-md:pl-5">
+									</div>
+
+									<div className="absolute bottom-0 left-0 z-10 flex w-44 max-w-full flex-col rounded-lg bg-white pb-7 pl-6 pt-3 shadow-lg max-md:mt-10 max-md:pl-5">
 										<img
 											alt="any"
 											loading="lazy"
 											src="https://cdn.builder.io/api/v1/image/assets/TEMP/07970124becef53e8ed85d68cf50c18c36eb580032d68f6fe7e90c5c6b1a19a6?"
 											className="mr-3 aspect-square w-[18px] self-end max-md:mr-2.5"
-										/>{' '}
+										/>
 										<div className="mt-1.5 self-center text-center text-3xl font-bold leading-9 tracking-normal text-slate-800">
 											45K+
-										</div>{' '}
-										<div className="mt-3 self-center whitespace-nowrap text-center text-sm leading-4 tracking-wide text-slate-800">
+										</div>
+										<div className="mt-3 self-center whitespace-nowrap text-center font-nunito text-sm font-semibold leading-4 tracking-wide text-slate-800">
 											Happy Customers
-										</div>{' '}
-										<div className="mt-5 flex justify-between gap-1.5">
-											<img
-												alt="any"
-												loading="lazy"
-												src={bgColorFull}
-												className="aspect-[1.03] w-9 rounded-full"
-											/>{' '}
-											<img
-												alt="any"
-												loading="lazy"
-												src={bgColorFull}
-												className="aspect-[1.03] w-9 rounded-full"
-											/>{' '}
-											<img
-												alt="any"
-												loading="lazy"
-												src={bgColorFull}
-												className="aspect-square w-[35px] rounded-full"
-											/>{' '}
-											<img
-												alt="any"
-												loading="lazy"
-												src={bgColorFull}
-												className="aspect-[0.74] w-[26px] rounded-full"
-											/>
+										</div>
+										<div className="mt-5 flex justify-between gap-1.5 overflow-hidden">
+											<Avatar>
+												<AvatarImage src="https://github.com/shadcn.png" />
+												<AvatarFallback>CN</AvatarFallback>
+											</Avatar>
+
+											<Avatar>
+												<AvatarImage src="https://github.com/shadcn.png" />
+												<AvatarFallback>CN</AvatarFallback>
+											</Avatar>
+
+											<Avatar>
+												<AvatarImage src="https://github.com/shadcn.png" />
+												<AvatarFallback>CN</AvatarFallback>
+											</Avatar>
+
+											<Avatar>
+												<AvatarImage src="https://github.com/shadcn.png" />
+												<AvatarFallback>CN</AvatarFallback>
+											</Avatar>
 										</div>
 									</div>
+
+									<Image
+										src={MenPhotoTopHero}
+										loading="lazy"
+										alt=""
+										className="max-md:h-full  max-md:h-full max-md:max-h-[700px] max-md:w-full max-md:max-w-[600px] md:lg:min-h-[820px] lg:absolute lg:right-0 lg:top-0 lg:min-h-[820px]"
+									/>
 								</div>
 							</div>
 						</div>
@@ -189,38 +197,7 @@ export default async function Home({
 				</div>
 
 				<div className="flex w-full flex-col justify-center bg-slate-100 px-16 py-12 max-md:max-w-full max-md:px-5">
-					<div className="flex items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-						<img
-							alt="any"
-							loading="lazy"
-							src="https://cdn.builder.io/api/v1/image/assets/TEMP/8dadfe7e6e70258506788ce4fd43f16d19bc12dff64a9680c65be00b4b532c14?"
-							className="my-auto aspect-[2.94] w-[122px] max-w-full self-stretch"
-						/>
-						<img
-							alt="any"
-							loading="lazy"
-							src={bgColorFull}
-							className="my-auto aspect-[2.13] w-[107px] max-w-full self-stretch"
-						/>{' '}
-						<img
-							alt="any"
-							loading="lazy"
-							src={bgColorFull}
-							className="aspect-[2.94] w-[163px] max-w-full self-stretch"
-						/>{' '}
-						<img
-							alt="any"
-							loading="lazy"
-							src={bgColorFull}
-							className="my-auto aspect-[3.03] w-[104px] max-w-full self-stretch"
-						/>{' '}
-						<img
-							alt="any"
-							loading="lazy"
-							src={bgColorFull}
-							className="my-auto aspect-[3.33] w-[148px] max-w-full self-stretch"
-						/>
-					</div>
+					<AreaLogosPlatforms />
 				</div>
 			</div>
 
