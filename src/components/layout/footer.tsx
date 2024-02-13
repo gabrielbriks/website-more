@@ -1,7 +1,8 @@
+import { FacebookFill, InstagramFill, TwitterFill } from 'akar-icons';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
-import { NavBarLinks } from './nav-bar';
+import { NavBarLinks } from './nav-bar-links';
 
 interface FooterProps {}
 
@@ -42,28 +43,13 @@ export default function Footer(params: FooterProps) {
 					</div>
 					<div className="mt-10 flex gap-4">
 						<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-white border-opacity-20 bg-white bg-opacity-10 px-2.5">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/eca97086b0e70083102c647e7b8f06809a1c76d437d35f8f9e68f5b61b647126?"
-								className="aspect-square w-full"
-							/>
+							<InstagramFill width={20} height={20} color="#d6d6d6" />
 						</div>
 						<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-white border-opacity-20 bg-white bg-opacity-10 px-2.5">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8870e43769571c35702bebcb35ce152320c3d99c3e4e91ed140a08844628986?"
-								className="aspect-square w-full"
-							/>
+							<FacebookFill width={20} height={20} color="#d6d6d6" />
 						</div>
 						<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-white border-opacity-20 bg-white bg-opacity-10 px-2.5">
-							<img
-								alt="any"
-								loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/607c884601d04ebf0b4f1ce7d5933754c7548f26e1c9500f5e70c3e56fb4b89a?"
-								className="aspect-square w-full"
-							/>
+							<TwitterFill width={20} height={20} color="#d6d6d6" />
 						</div>
 					</div>
 					<div className="mt-10 flex justify-between gap-5 text-base uppercase text-neutral-300">

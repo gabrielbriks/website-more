@@ -22,7 +22,7 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 			<Link
 				href="/home"
 				className={twMerge(
-					pathname.endsWith('home')
+					pathname.includes('home')
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
@@ -32,7 +32,7 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 			<Link
 				href="/who-we-are"
 				className={twMerge(
-					pathname.endsWith('who-we-are')
+					pathname.includes('who-we-are')
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
@@ -42,7 +42,7 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 			<Link
 				href="/plans"
 				className={twMerge(
-					pathname.endsWith('plans')
+					pathname.includes('plans')
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
@@ -52,7 +52,7 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 			<Link
 				href="/contact"
 				className={twMerge(
-					pathname.endsWith('contact')
+					pathname.includes('contact')
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}

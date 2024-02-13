@@ -29,6 +29,9 @@ dependencies:
   '@react-spring/web':
     specifier: ^9.7.3
     version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
+  akar-icons:
+    specifier: ^1.9.30
+    version: 1.9.30(react@18.2.0)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -3219,6 +3222,15 @@ packages:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
     dev: true
+
+  /akar-icons@1.9.30(react@18.2.0):
+    resolution: {integrity: sha512-c32PUYu1ES2UmwrKcpfZnotvz8GUxkRdyADdbpBRO7wmuDJa/Yg994Z2SJpbF5OZxAo9Vd6ehwV7kqDsDv+dyQ==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /anser@1.4.10:
     resolution: {integrity: sha512-hCv9AqTQ8ycjpSd3upOJd7vFwW1JaoYQ7tpham03GJ1ca8/65rqn0RpaWpItOAd6ylW9wAw6luXYPJIyPFVOww==}

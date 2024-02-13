@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import VideoComponent from '@/components/video-component';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
+import { FacebookFill, InstagramFill, TwitterFill } from 'akar-icons';
 import { ArrowUpRight } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -48,7 +49,7 @@ export default async function Home({
 						className="absolute inset-0 size-full object-cover opacity-70"
 					/>
 
-					<div className="relative ml-40 mt-12 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10">
+					<div className="absolute ml-40 mt-48 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10">
 						<img
 							alt="any"
 							loading="lazy"
@@ -57,12 +58,12 @@ export default async function Home({
 						/>
 					</div>
 
-					<div className="relative mt-1 max-md:mt-20 max-md:max-w-full  lg:mb-0 lg:pb-0">
-						<div className="flex min-h-full gap-5 max-md:flex-col max-md:gap-0">
-							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+					<div className="relative mt-20 max-md:mt-20 max-md:max-w-full  lg:mb-0 lg:pb-0">
+						<div className="flex min-h-full gap-5 max-md:mt-24 max-md:flex-col max-md:gap-0">
+							<div className="mt-10 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="relative z-10 flex flex-col text-base font-medium max-md:max-w-full">
-									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800 max-md:w-full ">
-										<h2 className="max my-auto flex grow gap-1 max-md:justify-center max-md:text-center">
+									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800 max-md:w-full max-md:items-center max-md:justify-center ">
+										<h2 className="flex gap-1 max-md:justify-center max-md:text-center">
 											<Image
 												alt="any"
 												loading="lazy"
@@ -201,7 +202,10 @@ export default async function Home({
 				</div>
 			</div>
 
-			<div className="container z-10 mt-24 flex w-full items-center gap-14 max-lg:flex-col max-md:mt-10 max-md:max-w-full max-md:px-5 lg:px-12">
+			<section
+				id="who-we-are"
+				className="container z-10 mt-24 flex w-full items-center gap-14 max-lg:flex-col max-md:mt-10 max-md:max-w-full max-md:px-5 lg:px-12"
+			>
 				<div className="w-full min-w-[380px]">
 					<img
 						alt="any"
@@ -245,9 +249,12 @@ export default async function Home({
 					src="https://cdn.builder.io/api/v1/image/assets/TEMP/2cd5416aeb42460204ee3846304bae6694a26b16ca1ec3c03c143235e206aecf?"
 					className="absolute z-10 mt-36 aspect-square w-[54px] max-md:mt-10"
 				/>
-			</div>
+			</section>
 
-			<div className="-mt-3 flex w-full max-w-[985px] items-start justify-between self-center max-md:max-w-full max-md:flex-wrap lg:gap-5">
+			<section
+				id="services"
+				className="-mt-3 flex w-full max-w-[985px] items-start justify-between self-center max-md:max-w-full max-md:flex-wrap lg:gap-5"
+			>
 				<img
 					alt="any"
 					loading="lazy"
@@ -274,7 +281,7 @@ export default async function Home({
 						possibilities with us.
 					</p>
 				</div>
-			</div>
+			</section>
 
 			<div className="mt-12 flex w-full flex-col max-md:mt-10 max-md:max-w-full">
 				<div className="z-10 flex w-full min-w-full flex-col items-center justify-center ">
@@ -373,7 +380,10 @@ export default async function Home({
 						src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d233a0220a01bb640550de61c2aa054617df9cb8565a0f03792586ad9e46f6a?"
 						className="absolute inset-0 size-full object-cover"
 					/>
-					<div className="relative mt-12 max-md:mt-10 max-md:max-w-full">
+					<section
+						id="contact"
+						className="relative mt-12 max-md:mt-10 max-md:max-w-full"
+					>
 						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<form className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
@@ -478,27 +488,24 @@ export default async function Home({
 													<div className="mt-6 flex gap-4 self-start pr-1.5">
 														RedesSociais
 														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
-															<img
-																alt="any"
-																loading="lazy"
-																src="https://cdn.builder.io/api/v1/image/assets/TEMP/c48cb2927a8be5a0df4b15650a5067344bc108217a425dfa6dcd8fa1335cb6de?"
-																className="aspect-square w-full"
+															<InstagramFill
+																width={20}
+																height={20}
+																color="#1f242f"
 															/>
 														</div>
 														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
-															<img
-																alt="any"
-																loading="lazy"
-																src="https://cdn.builder.io/api/v1/image/assets/TEMP/c743cc814befe879b2c3279289168bccbe744234fb5af049c876942b800946a6?"
-																className="aspect-square w-full"
+															<FacebookFill
+																width={20}
+																height={20}
+																color="#1f242f"
 															/>
 														</div>
 														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
-															<img
-																alt="any"
-																loading="lazy"
-																src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1816e1398626731b545516ded9ef847971d6789a174d5a2b6ceca2074ec2df1?"
-																className="aspect-square w-full"
+															<TwitterFill
+																width={20}
+																height={20}
+																color="#1f242f"
 															/>
 														</div>
 													</div>
@@ -526,7 +533,7 @@ export default async function Home({
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
 
 				<Footer />

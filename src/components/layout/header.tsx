@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, ShoppingCart } from 'lucide-react';
-import { NavBarLinks } from './nav-bar';
+import { NavBarLinks } from './nav-bar-links';
 
 import { Locale } from '@/i18n-config';
 import LocaleSwitcher from '../locale-switcher';
