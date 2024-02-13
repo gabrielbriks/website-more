@@ -188,7 +188,7 @@ export default async function Home({
 										src={MenPhotoTopHero}
 										loading="lazy"
 										alt=""
-										className="max-md:h-full  max-md:h-full max-md:max-h-[700px] max-md:w-full max-md:max-w-[600px] md:lg:min-h-[820px] lg:absolute lg:right-0 lg:top-0 lg:min-h-[820px]"
+										className="max-md:bottom-0 max-md:h-full max-md:max-h-[700px] max-md:w-full max-md:max-w-full md:lg:min-h-[820px] lg:absolute lg:right-0 lg:top-0 lg:min-h-[820px]"
 									/>
 								</div>
 							</div>
@@ -196,7 +196,7 @@ export default async function Home({
 					</div>
 				</div>
 
-				<div className="flex w-full flex-col justify-center bg-slate-100 px-16 py-12 max-md:max-w-full max-md:px-5">
+				<div className="flex w-full flex-col justify-center bg-slate-100 px-16 py-8 max-md:max-w-full max-md:px-5">
 					<AreaLogosPlatforms />
 				</div>
 			</div>

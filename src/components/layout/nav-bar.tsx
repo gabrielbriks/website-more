@@ -15,7 +15,7 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 	return (
 		<nav
 			className={cn(
-				'my-auto flex justify-between gap-5 self-stretch',
+				'my-auto flex gap-5 max-md:justify-center lg:justify-between',
 				!showInFooter ? 'text-gray-800' : 'text-gray-500',
 			)}
 		>

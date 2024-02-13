@@ -31,6 +31,8 @@ export default async function IndexPage({
 				</span>
 			</p>
 			<Counter dictionary={dictionary.counter} />
+
+			<div className="my-20 flex min-h-screen min-w-full items-center justify-center bg-pink-50"></div>
 		</div>
 	);
 }

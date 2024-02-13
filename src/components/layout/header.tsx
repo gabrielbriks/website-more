@@ -12,7 +12,7 @@ interface HeaderProps {
 
 export function Header({ lang }: HeaderProps) {
 	return (
-		<header className="absolute z-10 flex w-full items-center justify-between gap-5 px-16 pt-8 text-base uppercase max-md:max-w-full max-md:flex-wrap">
+		<header className="absolute z-10 flex w-full items-center gap-5 px-16 pt-8 text-base uppercase max-md:max-w-full max-md:flex-col max-md:flex-wrap max-md:justify-center lg:justify-between">
 			<img
 				alt="any"
 				loading="lazy"
