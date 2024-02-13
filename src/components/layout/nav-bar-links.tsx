@@ -2,7 +2,8 @@
 
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface NavBarLinksProps {
@@ -10,7 +11,16 @@ interface NavBarLinksProps {
 }
 
 export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
-	const pathname = usePathname();
+	const pathname_hook = usePathname();
+	const searchParams = useSearchParams();
+	const [pathname, setPathname] = useState(pathname_hook);
+
+	useEffect(() => {
+		console.log(pathname_hook, ' >> ' + window.location.hash);
+		window !== undefined
+			? setPathname(window.location.hash)
+			: setPathname(pathname_hook);
+	}, [pathname_hook, searchParams]);
 
 	return (
 		<nav
@@ -22,7 +32,7 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 			<Link
 				href="/home"
 				className={twMerge(
-					pathname.includes('home')
+					pathname == ''
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
@@ -30,9 +40,9 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 				Home
 			</Link>
 			<Link
-				href="/who-we-are"
+				href="#who-we-are"
 				className={twMerge(
-					pathname.includes('who-we-are')
+					pathname === '#who-we-are'
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
@@ -40,9 +50,9 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 				Who we are
 			</Link>
 			<Link
-				href="/plans"
+				href="#services"
 				className={twMerge(
-					pathname.includes('plans')
+					pathname === '#services'
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
@@ -50,9 +60,9 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 				Plans
 			</Link>
 			<Link
-				href="/contact"
+				href="#contact"
 				className={twMerge(
-					pathname.includes('contact')
+					pathname === '#contact'
 						? 'grow font-medium text-pink-600'
 						: 'hover:text-pink-600',
 				)}
