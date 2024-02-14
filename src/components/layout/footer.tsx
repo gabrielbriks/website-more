@@ -1,5 +1,9 @@
-import { FacebookFill, InstagramFill, TwitterFill } from 'akar-icons';
-import { ArrowUpRight } from 'lucide-react';
+import {
+	ArrowUpRight,
+	FacebookFill,
+	InstagramFill,
+	TwitterFill,
+} from 'akar-icons';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { NavBarLinks } from './nav-bar-links';
@@ -23,7 +27,7 @@ export default function Footer(params: FooterProps) {
 						from Clickmore
 					</div>
 					<div className="mt-10 flex justify-between gap-2 self-stretch whitespace-nowrap max-md:max-w-full max-md:flex-wrap">
-						<div className="flex w-full max-w-md items-center justify-center gap-3 space-x-2">
+						<div className="flex min-w-full max-w-md items-center justify-center gap-3 space-x-2">
 							<Input
 								type="email"
 								placeholder="Enter your email"
