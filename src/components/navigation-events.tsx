@@ -9,7 +9,7 @@ export function NavigationEvents() {
 
 	useEffect(() => {
 		const url = `${pathname}?${searchParams}`;
-		console.log(pathname, ' >> ' + window.location.hash);
+		console.log('NavigationEvents' + pathname, ' >> ' + window.location.hash);
 		// You can now use the current URL
 		// ...
 	}, [pathname, window.location.hash]);

@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -13,20 +13,43 @@ interface NavBarLinksProps {
 export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 	const pathname_hook = usePathname();
 	const searchParams = useSearchParams();
+	const navigation = useRouter();
 	const [pathname, setPathname] = useState(pathname_hook);
 
+	const [withPhotoInBackground, setWithPhotoInBackground] = useState<
+		boolean | null
+	>(null);
+
 	useEffect(() => {
-		console.log(pathname_hook, ' >> ' + window.location.hash);
-		window !== undefined
-			? setPathname(window.location.hash)
-			: setPathname(pathname_hook);
+		if (window === undefined) {
+			return;
+		}
+
+		let hashURL = window.location.hash;
+
+		if (hashURL !== '') {
+			setPathname(window.location.hash);
+		} else {
+			setPathname(pathname_hook);
+		}
+
+		if (hashURL === '#plan') {
+			setWithPhotoInBackground(true);
+		} else {
+			setWithPhotoInBackground(false);
+		}
 	}, [pathname_hook, searchParams]);
 
 	return (
 		<nav
 			className={cn(
 				'my-auto flex gap-5 max-md:justify-center lg:justify-between',
-				!showInFooter ? 'text-gray-800' : 'text-gray-500',
+				!showInFooter &&
+					(withPhotoInBackground === null || !withPhotoInBackground)
+					? 'text-slate-800'
+					: withPhotoInBackground
+						? 'text-white'
+						: 'text-zinc-300',
 			)}
 		>
 			<Link

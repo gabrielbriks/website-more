@@ -35,7 +35,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
-		urlTarget: '/click-adsense',
+		urlTarget: '/click-adsense#plan',
 	},
 	{
 		icon: Click_MediaSVG,
@@ -67,7 +67,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
-		urlTarget: '/click-ecom',
+		urlTarget: '/click-ecom#plan',
 	},
 ];
 
@@ -88,13 +88,12 @@ export default function CardServices(params: CardServicesProps) {
 		setCurrent(api.selectedScrollSnap() + 1);
 
 		api.on('select', () => {
-			console.log('current');
 			setCurrent(api.selectedScrollSnap() + 1);
 		});
 	}, [api]);
 
 	return (
-		//TODO: remover border
+		//TODO: remover border ??
 		<div className="container max-w-screen-2xl rounded-lg border">
 			<Carousel className="h-full min-w-full max-w-screen-lg rounded-lg border-red-600">
 				<CarouselContent className="min-w-full">
@@ -125,7 +124,9 @@ export default function CardServices(params: CardServicesProps) {
 										<Button
 											variant="outline"
 											className="flex h-14 justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
-											onClick={() => navigation.push(item.urlTarget)}
+											onClick={() =>
+												navigation.push(item.urlTarget, { scroll: true })
+											}
 										>
 											<span className="uppercase">{item.buttonName}</span>
 											<ArrowUpRight

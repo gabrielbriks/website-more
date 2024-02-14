@@ -72,7 +72,7 @@ export default async function Home({
 												alt="any"
 												loading="lazy"
 												src={LeftArrowClickPhrase}
-												className="aspect-square w-5"
+												className="aspect-square h-auto w-5"
 											/>
 											{dictionary['home-page'].heroSubtitleTop}
 											{/* One Stop Solution for business */}

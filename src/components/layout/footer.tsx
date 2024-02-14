@@ -27,7 +27,7 @@ export default function Footer(params: FooterProps) {
 						from Clickmore
 					</div>
 					<div className="mt-10 flex justify-between gap-2 self-stretch whitespace-nowrap max-md:max-w-full max-md:flex-wrap">
-						<div className="flex min-w-full max-w-md items-center justify-center gap-3 space-x-2">
+						<div className="flex min-w-full max-w-md items-center justify-center gap-3 space-x-2 max-sm:flex-col max-sm:px-5">
 							<Input
 								type="email"
 								placeholder="Enter your email"
@@ -61,7 +61,7 @@ export default function Footer(params: FooterProps) {
 					</div>
 				</div>
 			</div>
-			<div className="mt-16 min-h-[8px] w-full bg-purple-800 max-md:mt-10 max-md:max-w-full" />
+			<div className="mt-16 min-h-[8px] w-full bg-pink-500 max-md:mt-10 max-md:max-w-full" />
 		</footer>
 	);
 }

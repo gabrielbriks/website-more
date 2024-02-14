@@ -22,7 +22,6 @@ export default function LocaleSwitcher({ langCurrent }: LocaleSwitcherParams) {
 	const navigate = useRouter();
 
 	const redirectedPathName = (locale: Locale) => {
-		console.log('redirectedPathName', locale);
 		if (!pathName) return '/';
 		const segments = pathName.split('/');
 		segments[1] = locale;

@@ -17,16 +17,6 @@ interface CardPlanProps {
 	typePlan?: 'start' | 'max' | 'pro';
 }
 
-const planInfo = {
-	namePlan: 'ClickStart',
-	valuePlan: '¥35,000',
-	periodSubscription: '/MONTH',
-	items: ['Google and Meta advertising campaigns', 'Reports every 15 days'],
-	urlTarget: '/click-adsense',
-	nameButton: 'hire',
-	typePlan: 'start',
-};
-
 export default function CardPlanIdea1(params: CardPlanProps) {
 	const navigation = useRouter();
 
@@ -91,7 +81,7 @@ export default function CardPlanIdea1(params: CardPlanProps) {
 					<div className="mt-20 flex w-full items-start justify-center gap-5 pr-1.5 uppercase text-white max-md:mt-10">
 						<Button
 							onClick={() => navigation.push(params.urlTarget)}
-							className=" flex h-14 min-w-full max-w-[200px] justify-center gap-2.5 rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+							className=" text-whit flex h-14 min-w-full max-w-[200px] transform justify-center gap-2.5 rounded-[45px] border-pink-600 border-purple-700/50 bg-button-gradient px-8 py-5 tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50 max-md:px-5"
 						>
 							<span className="uppercase">{params.nameButton}</span>
 							<ArrowUpRight

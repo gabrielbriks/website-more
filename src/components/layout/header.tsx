@@ -1,9 +1,12 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Locale } from '@/i18n-config';
+import { cn } from '@/lib/utils';
 import { ArrowUpRight, Cart } from 'akar-icons';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
+import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
 import LocaleSwitcher from '../locale-switcher';
 import { NavBarLinks } from './nav-bar-links';
 
@@ -12,12 +15,34 @@ interface HeaderProps {
 }
 
 export function Header({ lang }: HeaderProps) {
+	const [withPhotoInBackground, setWithPhotoInBackground] = useState<
+		boolean | null
+	>(null);
+
+	useEffect(() => {
+		if (window === undefined) {
+			return;
+		}
+
+		const hashURL = window.location.hash;
+
+		if (hashURL === '#plan') {
+			setWithPhotoInBackground(true);
+		} else {
+			setWithPhotoInBackground(false);
+		}
+	}, []);
+
 	return (
 		<header className="absolute z-10 flex w-full flex-wrap items-center gap-5 overflow-hidden px-16 pt-8 text-base uppercase max-md:max-w-full max-md:flex-col max-md:justify-center lg:justify-between">
 			<Image
 				alt="Logo click more purple "
 				loading="lazy"
-				src={ClickMoreLogoPurple} //"https://cdn.builder.io/api/v1/image/assets/TEMP/257c8423ead96b0f8bc54adb8d5087d640a15d0783ec2955b954bf5a86816ae9?"
+				src={
+					withPhotoInBackground !== null && withPhotoInBackground
+						? ClickMoreLogoWhite
+						: ClickMoreLogoPurple
+				}
 				className="my-auto aspect-[4.76] w-64 max-w-full self-stretch"
 			/>
 			<NavBarLinks />
@@ -25,18 +50,27 @@ export function Header({ lang }: HeaderProps) {
 				<div>
 					<Cart className="my-auto self-stretch stroke-pink-600" size={20} />
 				</div>
-
 				<LocaleSwitcher langCurrent={lang} />
 
 				<Button
 					variant="outline"
-					className="group flex items-center justify-between gap-2.5 self-stretch rounded-[45px] border border-solid border-pink-600 bg-transparent px-8 py-6 transition duration-700 hover:bg-button-gradient hover:text-white hover:transition-colors hover:duration-1000 max-md:px-5"
+					className={cn(
+						' flex items-center justify-between gap-2.5 self-stretch rounded-[45px] border border-solid  px-8 py-6 max-md:px-5',
+						withPhotoInBackground !== null && withPhotoInBackground
+							? 'transform border-purple-700/50 bg-button-gradient tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50'
+							: 'group border-pink-600 bg-transparent transition duration-700 hover:bg-button-gradient hover:text-white hover:transition-colors hover:duration-1000',
+					)}
 				>
 					<span className="uppercase">Create Account</span>
 					<ArrowUpRight
 						size={20}
 						color="#db2777"
-						className="transition duration-700 group-hover:stroke-white"
+						className={cn(
+							'transition duration-700',
+							withPhotoInBackground !== null && withPhotoInBackground
+								? 'stroke-white hover:stroke-pink-100'
+								: 'group-hover:stroke-white',
+						)}
 					/>
 				</Button>
 			</div>

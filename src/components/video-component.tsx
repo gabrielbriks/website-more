@@ -11,7 +11,7 @@ export default function VideoComponent() {
 							alt="Video play image test"
 							loading="lazy"
 							src={VideoPlayImage}
-							className="left-0 top-0 aspect-[1.28] w-full self-stretch max-md:-mt-10 max-md:ml-2 max-md:max-w-full sm:-mt-10 lg:-ml-4 lg:-mt-14"
+							className="left-0 top-0 aspect-[1.28] h-auto w-full self-stretch max-md:-mt-10 max-md:ml-2 max-md:max-w-full sm:-mt-10 lg:-ml-4 lg:-mt-14"
 						/>
 					</div>
 					<div className="flex w-[34%] flex-col max-md:mb-10 max-md:ml-0 max-md:w-full max-md:items-center lg:ml-5">
