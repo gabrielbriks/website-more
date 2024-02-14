@@ -2,7 +2,16 @@
 const nextConfig = {
 	images: {
 		dangerouslyAllowSVG: true,
-		domains: ['e7.pngegg.com', 'logosmarcas.net'],
+		remotePatterns: [
+			{
+				hostname: 'e7.pngegg.com',
+				protocol: 'https',
+			},
+			{
+				hostname: 'logosmarcas.net',
+				protocol: 'https',
+			},
+		],
 	},
 };
 
