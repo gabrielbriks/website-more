@@ -3,6 +3,7 @@
 import { type CarouselApi } from '@/components/ui/carousel';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Click_AdsenseSVG from '../assets/icons-services/click-adsense.svg';
 import Click_EcomSVG from '../assets/icons-services/click-ecom.svg';
@@ -24,6 +25,7 @@ type CardInfoService = {
 	nameService: string;
 	descriptionService: string;
 	buttonName: string;
+	urlTarget: string;
 };
 
 const InfoServices: CardInfoService[] = [
@@ -33,6 +35,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
+		urlTarget: '/click-adsense',
 	},
 	{
 		icon: Click_MediaSVG,
@@ -40,6 +43,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
+		urlTarget: '/click-media',
 	},
 	{
 		icon: Click_PagesSVG,
@@ -47,6 +51,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
+		urlTarget: '/click-pages',
 	},
 	{
 		icon: Click_WebSVG,
@@ -54,6 +59,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
+		urlTarget: '/click-web',
 	},
 	{
 		icon: Click_EcomSVG,
@@ -61,6 +67,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
+		urlTarget: '/click-ecom',
 	},
 ];
 
@@ -70,6 +77,7 @@ export default function CardServices(params: CardServicesProps) {
 	const [api, setApi] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
 	const [count, setCount] = useState(0);
+	const navigation = useRouter();
 
 	useEffect(() => {
 		if (!api) {
@@ -117,6 +125,7 @@ export default function CardServices(params: CardServicesProps) {
 										<Button
 											variant="outline"
 											className="flex h-14 justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											onClick={() => navigation.push(item.urlTarget)}
 										>
 											<span className="uppercase">{item.buttonName}</span>
 											<ArrowUpRight

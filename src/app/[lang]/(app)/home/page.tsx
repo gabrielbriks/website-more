@@ -10,8 +10,12 @@ import { Textarea } from '@/components/ui/textarea';
 import VideoComponent from '@/components/video-component';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
-import { FacebookFill, InstagramFill, TwitterFill } from 'akar-icons';
-import { ArrowUpRight } from 'lucide-react';
+import {
+	ArrowUpRight,
+	FacebookFill,
+	InstagramFill,
+	TwitterFill,
+} from 'akar-icons';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import BgColorFullHero from '../../../../assets/colorful-background.svg';
