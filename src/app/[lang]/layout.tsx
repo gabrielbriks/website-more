@@ -3,6 +3,7 @@ import { i18n, type Locale } from '@/i18n-config';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Kanit, Nunito, Open_Sans } from 'next/font/google';
+import { Suspense } from 'react';
 
 const nunito = Nunito({
 	subsets: ['latin'],
@@ -47,6 +48,14 @@ export async function generateStaticParams() {
 	return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
+//TODO: move for new component
+const FallbackLoading = () => (
+	<div className="flex min-h-screen min-w-full flex-1 items-center justify-center ">
+		<h1 className="flex w-full animate-pulse text-center font-nunito text-2xl font-semibold text-pink-800">
+			Loading ...
+		</h1>
+	</div>
+);
 export default function RootLayout({
 	children,
 	params,
@@ -59,8 +68,10 @@ export default function RootLayout({
 			<body
 				className={`${nunito.variable} ${kanit.variable} ${opens_sans.variable}`}
 			>
-				{children}
-				<SpeedInsights />
+				<Suspense fallback={<FallbackLoading />}>
+					{children}
+					<SpeedInsights />
+				</Suspense>
 			</body>
 		</html>
 	);
