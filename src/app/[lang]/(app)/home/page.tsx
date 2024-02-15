@@ -1,4 +1,3 @@
-import bgColorFull from '@/assets/colorful-background.svg';
 import AreaLogosPlatforms from '@/components/area-logos-platforms';
 import CardServices from '@/components/card-services';
 import Faq from '@/components/faq';
@@ -13,14 +12,18 @@ import { Locale } from '@/i18n-config';
 import {
 	ArrowUpRight,
 	FacebookFill,
+	Heart,
 	InstagramFill,
 	TwitterFill,
 } from 'akar-icons';
+import { ArrowBigUpDash } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import BgColorFullHero from '../../../../assets/colorful-background.svg';
+import ValuesClickMOre from '../../../../assets/image-values.svg';
 import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
 import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
+import MapWorldDoted from '../../../../assets/map-world-dotted.svg';
 import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.svg';
 import OurMissionPhoto from '../../../../assets/our-mission-photo.svg';
 import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
@@ -54,12 +57,12 @@ export default async function Home({
 					/>
 
 					<div className="absolute ml-40 mt-48 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10">
-						<img
+						{/* <Image
 							alt="any"
 							loading="lazy"
 							src={bgColorFull}
 							className="aspect-[1.01] w-full"
-						/>
+						/> */}
 					</div>
 
 					<div className="relative mt-20 max-md:mt-20 max-md:max-w-full  lg:mb-0 lg:pb-0">
@@ -122,10 +125,10 @@ export default async function Home({
 							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full lg:mb-0 lg:min-h-[650px] lg:pb-0">
 								<div className="relative flex grow flex-col max-md:mt-5 max-md:max-w-full">
 									<div className="flex max-w-full items-start justify-between gap-5 self-end whitespace-nowrap text-slate-800 max-md:absolute max-md:w-full max-md:flex-wrap lg:w-[488px]">
-										<img
-											alt="any"
+										<Image
+											alt="icon click left"
 											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/98c87d022ef7dc2057245eb843cbc73d947926eafa2fbaf3288e04a27841e662?"
+											src={PointerClickLeft}
 											className="mt-9 aspect-square w-[54px] self-end"
 										/>
 										<div className="flex flex-col self-start rounded-[36.69px] bg-white px-5 pb-2.5 pt-4 shadow-lg">
@@ -140,12 +143,17 @@ export default async function Home({
 														11,756
 													</div>
 													<div className="my-auto flex gap-0 text-xs font-medium leading-tight">
-														<img
+														<ArrowBigUpDash
+															size={12}
+															color=""
+															className="fill-green-600 stroke-green-600"
+														/>
+														{/* <Image
 															alt="any"
 															loading="lazy"
-															src="https://cdn.builder.io/api/v1/image/assets/TEMP/be9bf481ee0d1150337abdad42f941397d7206cad3637f1b2acbc84bd9312b76?"
+															setS="https://cdn.builder.io/api/v1/image/assets/TEMP/be9bf481ee0d1150337abdad42f941397d7206cad3637f1b2acbc84bd9312b76?"
 															className="aspect-square w-[3px] self-start fill-green-600"
-														/>
+														/> */}
 														<div className="grow font-bold">23%</div>
 													</div>
 												</div>
@@ -154,12 +162,14 @@ export default async function Home({
 									</div>
 
 									<div className="absolute bottom-0 left-0 z-10 flex w-44 max-w-full flex-col rounded-lg bg-white pb-7 pl-6 pt-3 shadow-lg max-md:mt-10 max-md:pl-5">
-										<img
-											alt="any"
-											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/07970124becef53e8ed85d68cf50c18c36eb580032d68f6fe7e90c5c6b1a19a6?"
-											className="mr-3 aspect-square w-[18px] self-end max-md:mr-2.5"
-										/>
+										<div className="flex w-full items-end justify-end px-4">
+											<Heart
+												size={20}
+												color=""
+												className="self-end fill-red-600 stroke-red-600"
+											/>
+										</div>
+
 										<div className="mt-1.5 self-center text-center text-3xl font-bold leading-9 tracking-normal text-slate-800">
 											45K+
 										</div>
@@ -211,10 +221,10 @@ export default async function Home({
 				className="container z-10 mt-24 flex w-full items-center gap-14 max-lg:flex-col max-md:mt-10 max-md:max-w-full max-md:px-5 lg:px-12"
 			>
 				<div className="w-full min-w-[380px]">
-					<img
+					<Image
 						alt="any"
 						loading="lazy"
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/79895db067e321e3f33e480d95d96a1ac8fbb345fd12eb03b0841bb1386ab5a2?"
+						src={ValuesClickMOre}
 						className="aspect-[1.25] w-full max-w-[680px] self-start"
 					/>
 				</div>
@@ -223,10 +233,10 @@ export default async function Home({
 					<div className="h-full w-full max-lg:text-center">
 						<span className="z-10 mt-0 flex justify-start gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800 max-md:mt-0">
 							<h4 className="max-lg:justify-content my-auto flex w-full grow gap-2 max-lg:justify-center ">
-								<img
+								<Image
 									alt="any"
 									loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e02b7ceeacdfde81ab2746bc5369238ad5429edc9013167db33890c4651d003?"
+									src={LeftArrowClickPhrase}
 									className="aspect-square w-5"
 								/>
 								Our values
@@ -247,10 +257,10 @@ export default async function Home({
 					</div>
 				</div>
 
-				<img
+				<Image
 					alt="any"
 					loading="lazy"
-					src="https://cdn.builder.io/api/v1/image/assets/TEMP/2cd5416aeb42460204ee3846304bae6694a26b16ca1ec3c03c143235e206aecf?"
+					src={PointerClickRight}
 					className="absolute z-10 mt-36 aspect-square w-[54px] max-md:mt-10"
 				/>
 			</section>
@@ -259,18 +269,18 @@ export default async function Home({
 				id="services"
 				className="-mt-3 flex w-full max-w-[985px] items-start justify-between self-center max-md:max-w-full max-md:flex-wrap lg:gap-5"
 			>
-				<img
+				<Image
 					alt="any"
 					loading="lazy"
-					src="https://cdn.builder.io/api/v1/image/assets/TEMP/76564161ebe71a26c0e1c53d524200686aac22436c5688ae5944a0beb25f83fd?"
+					src={PointerClickLeft}
 					className="absolute aspect-square w-[54px] self-start"
 				/>
 				<div className="mt-6 flex flex-col self-end max-md:max-w-full">
 					<h4 className="flex gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800">
-						<img
+						<Image
 							alt="any"
 							loading="lazy"
-							src="https://cdn.builder.io/api/v1/image/assets/TEMP/8166fcd3004dfbe088a729de6ed9379b26f5e1c445166c3e414d74924eb0711d?"
+							src={LeftArrowClickPhrase}
 							className="aspect-square w-5"
 						/>
 						Our Services
@@ -300,7 +310,7 @@ export default async function Home({
 
 					{/* End Area PlayVideo */}
 
-					{/* <img
+					{/* <Image
 						alt="any"
 						loading="lazy"
 						src={bgColorFull}
@@ -317,10 +327,10 @@ export default async function Home({
 										className="aspect-square w-[54px] self-end opacity-70"
 									/>
 									<div className="mt-7 flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
-										<img
+										<Image
 											alt="any"
 											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6d7c37bd57d608796de75592d6439efa4f43f801cdf524694baa16f1aa93cec?"
+											src={LeftArrowClickPhrase}
 											className="aspect-square w-5"
 										/>
 										<div className="my-auto grow">Our mission</div>
@@ -378,10 +388,10 @@ export default async function Home({
 				</div>
 
 				<div className="relative flex min-h-[757px] w-full flex-col overflow-hidden px-16 pt-12 max-md:max-w-full max-md:px-5">
-					<img
+					<Image
 						alt="any"
 						loading="lazy"
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d233a0220a01bb640550de61c2aa054617df9cb8565a0f03792586ad9e46f6a?"
+						src={MapWorldDoted}
 						className="absolute inset-0 size-full object-cover"
 					/>
 					<section
@@ -392,10 +402,10 @@ export default async function Home({
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<form className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
 									<div className="mt-3 flex gap-1 self-start whitespace-nowrap font-medium uppercase text-purple-800">
-										<img
+										<Image
 											alt="any"
 											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/b521be8c6bf1b04ba68eeeeb5ecaf26d1d08033afc51ae3353ac3e0c15d5c38d?"
+											src={LeftArrowClickPhrase}
 											className="aspect-square w-5"
 										/>
 										<h3 className="my-auto grow">Have any questions</h3>
@@ -458,10 +468,10 @@ export default async function Home({
 							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="relative my-auto flex flex-col self-stretch max-md:mt-10 max-md:max-w-full">
 									<div className="flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
-										<img
+										<Image
 											alt="any"
 											loading="lazy"
-											src="https://cdn.builder.io/api/v1/image/assets/TEMP/15fbb5a901b3008ff9924eed664c9a3cdf687d9e38d18e7caa35c2566045280b?"
+											src={LeftArrowClickPhrase}
 											className="aspect-square w-5"
 										/>
 										<div className="my-auto grow">Contact us</div>

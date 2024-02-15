@@ -11,6 +11,10 @@ const nextConfig = {
 				hostname: 'logosmarcas.net',
 				protocol: 'https',
 			},
+			{
+				hostname: 'cdn.builder.io',
+				protocol: 'https',
+			},
 		],
 	},
 };

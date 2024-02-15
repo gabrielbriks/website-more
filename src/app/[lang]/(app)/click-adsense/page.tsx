@@ -6,6 +6,7 @@ import VideoComponent from '@/components/video-component';
 import { ArrowUpRight } from 'akar-icons';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import ArrowRightSitemap from '../../../../assets/arrow-right-sitemap.svg';
 import ClickAdSenseHeader from '../../../../assets/click-adsense-bg-header.svg';
 import clickMoreSedePhoto from '../../../../assets/click-more-sede-photo.svg';
 import BGCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.svg';
@@ -44,9 +45,10 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 					</h1>
 					<div className="relative mt-2.5 flex gap-3.5 self-center text-lg leading-5">
 						<div className="grow">Home</div>
-						<img
+						<Image
+							alt=""
 							loading="lazy"
-							src="https://cdn.builder.io/api/v1/image/assets/TEMP/e744c98d59ee115b5f58304f72ef08a5df50ed0e72578039b77b8832f54959b1?"
+							src={ArrowRightSitemap}
 							className="my-auto aspect-square w-[15px]"
 						/>
 						<div className="grow">ClickAdsense</div>
