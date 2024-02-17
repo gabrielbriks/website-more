@@ -1,9 +1,10 @@
 'use client';
 
 import { type CarouselApi } from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Click_AdsenseSVG from '../assets/icons-services/click-adsense.svg';
 import Click_EcomSVG from '../assets/icons-services/click-ecom.svg';
@@ -35,7 +36,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
-		urlTarget: '/click-adsense#plan',
+		urlTarget: '/click-adsense',
 	},
 	{
 		icon: Click_MediaSVG,
@@ -67,7 +68,7 @@ const InfoServices: CardInfoService[] = [
 		descriptionService:
 			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
 		buttonName: 'Learn More',
-		urlTarget: '/click-ecom#plan',
+		urlTarget: '/click-ecom',
 	},
 ];
 
@@ -76,8 +77,7 @@ interface CardServicesProps {}
 export default function CardServices(params: CardServicesProps) {
 	const [api, setApi] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
-	const [count, setCount] = useState(0);
-	const navigation = useRouter();
+	const [count, setCount] = useState(InfoServices.length);
 
 	useEffect(() => {
 		if (!api) {
@@ -93,9 +93,11 @@ export default function CardServices(params: CardServicesProps) {
 	}, [api]);
 
 	return (
-		//TODO: remover border ??
 		<div className="container max-w-screen-2xl rounded-lg border">
-			<Carousel className="h-full min-w-full max-w-screen-lg rounded-lg border-red-600">
+			<Carousel
+				setApi={setApi}
+				className="h-full min-w-full max-w-screen-lg rounded-lg border-red-600"
+			>
 				<CarouselContent className="min-w-full">
 					{InfoServices.map((item, index) => (
 						<CarouselItem
@@ -121,28 +123,45 @@ export default function CardServices(params: CardServicesProps) {
 										</div>
 									</CardContent>
 									<CardFooter className="flex h-full w-full items-center justify-center">
-										<Button
-											variant="outline"
-											className="flex h-14 justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
-											onClick={() =>
-												navigation.push(item.urlTarget, { scroll: true })
-											}
+										<Link
+											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											href={{ pathname: item.urlTarget, hash: 'plan' }}
 										>
-											<span className="uppercase">{item.buttonName}</span>
+											<span className="h-auto uppercase">
+												{item.buttonName}
+											</span>
 											<ArrowUpRight
 												size={20}
 												className="stroke-white transition duration-700"
 											/>
-										</Button>
+										</Link>
 									</CardFooter>
 								</Card>
 							</div>
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
+				<CarouselPrevious className="bg-button-gradient" />
+				<CarouselNext className="bg-button-gradient" />
 			</Carousel>
+			<div className="z-10 my-6 flex justify-center gap-2 transition duration-700">
+				{Array.from({ length: count }).map((_, indexDot) => (
+					<Button
+						key={indexDot}
+						variant="outline"
+						role="tab"
+						aria-selected={current - 1 === indexDot ? 'true' : 'false'}
+						aria-label={`Slide ${indexDot + 1}}`}
+						onClick={() => api?.scrollTo(indexDot)}
+						className={cn(
+							'h-2 w-4 rounded-full transition duration-700 ',
+							current - 1 === indexDot
+								? 'bg-button-gradient'
+								: 'border border-purple-500/30 bg-slate-100/40',
+						)}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }
