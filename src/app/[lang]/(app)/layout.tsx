@@ -46,11 +46,11 @@ export default function AppLayout({
 		<>
 			<Suspense>
 				<Header lang={params.lang} />
-				<main className="flex h-full min-h-full w-full flex-col">
+				<div className="flex h-full min-h-full w-full flex-col">
 					{children}
 
 					<SpeedInsights />
-				</main>
+				</div>
 			</Suspense>
 		</>
 	);

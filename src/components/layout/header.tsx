@@ -61,7 +61,7 @@ export function Header({ lang }: HeaderProps) {
 							: 'group border-pink-600 bg-transparent transition duration-700 hover:bg-button-gradient hover:text-white hover:transition-colors hover:duration-1000',
 					)}
 				>
-					<span className="uppercase">Create Account</span>
+					<span className="uppercase">Client Area</span>
 					<ArrowUpRight
 						size={20}
 						color="#db2777"

@@ -20,6 +20,7 @@ import { ArrowBigUpDash } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import BgColorFullHero from '../../../../assets/colorful-background.svg';
+import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.svg';
 import ValuesClickMOre from '../../../../assets/image-values.svg';
 import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
 import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
@@ -30,7 +31,7 @@ import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
 import PointerClickRight from '../../../../assets/pointer-click-right.svg';
 
 interface HomeProps {
-	lang: Locale;
+	params: { lang: Locale };
 }
 
 export const metadata: Metadata = {
@@ -38,39 +39,28 @@ export const metadata: Metadata = {
 	description: '',
 };
 
-export default async function Home({
-	params: { lang },
-}: {
-	params: { lang: Locale };
-}) {
-	const dictionary = await getDictionary(lang);
+export default async function Home(props: HomeProps) {
+	const dictionary = await getDictionary(props.params.lang);
 
 	return (
-		<div className="flex flex-col bg-white">
-			<div className="flex w-full flex-col max-md:max-w-full">
+		<main className="flex flex-col bg-white">
+			<section className="flex w-full flex-col max-md:max-w-full">
 				<div className="relative flex w-full flex-col pb-12 pt-8 max-lg:px-10 max-md:h-auto max-md:max-w-full max-md:px-5 lg:min-h-[788px] lg:overflow-hidden lg:px-16">
 					<Image
-						priority
+						priority={true}
 						src={BgColorFullHero}
 						alt={''}
 						className="absolute inset-0 size-full object-cover opacity-70"
 					/>
 
-					<div className="absolute ml-40 mt-48 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10">
-						{/* <Image
-							alt="any"
-							loading="lazy"
-							src={bgColorFull}
-							className="aspect-[1.01] w-full"
-						/> */}
-					</div>
+					<div className="absolute ml-40 mt-48 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10"></div>
 
 					<div className="relative mt-20 max-md:mt-20 max-md:max-w-full  lg:mb-0 lg:pb-0">
-						<div className="flex min-h-full gap-5 max-md:mt-24 max-md:flex-col max-md:gap-0">
-							<div className="mt-10 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-								<div className="relative z-10 flex flex-col text-base font-medium max-md:max-w-full">
-									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800 max-md:w-full max-md:items-center max-md:justify-center ">
-										<h2 className="flex gap-1 max-md:justify-center max-md:text-center">
+						<div className="flex min-h-full gap-5 max-lg:flex-col max-md:mt-24 max-md:gap-0">
+							<div className="mt-10 flex w-6/12 flex-col max-lg:w-full max-md:ml-0">
+								<div className="relative z-10 flex flex-col text-base font-medium max-lg:max-w-full">
+									<div className="flex gap-1 self-start whitespace-nowrap uppercase text-purple-800 max-lg:w-full max-lg:items-center max-lg:justify-center ">
+										<h2 className="flex gap-1 max-lg:justify-center max-lg:text-center">
 											<Image
 												alt="any"
 												loading="lazy"
@@ -81,12 +71,12 @@ export default async function Home({
 											{/* One Stop Solution for business */}
 										</h2>
 									</div>
-									<h1 className="mt-4 text-6xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full max-md:justify-center max-md:text-center max-md:text-4xl max-md:leading-10">
+									<h1 className="mt-4 text-6xl font-bold uppercase leading-[58px] text-gray-800 max-lg:max-w-full max-lg:justify-center max-lg:text-center max-md:text-4xl max-md:leading-10">
 										{dictionary['home-page'].heroTitle}
 										{/* Turning Clicks into <br />
 										Business Opportunities */}
 									</h1>
-									<p className="mt-6 font-nunito text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:justify-center max-md:text-center">
+									<p className="mt-6 font-nunito text-lg leading-7 text-neutral-600 max-lg:max-w-full max-lg:justify-center max-lg:text-center">
 										{dictionary['home-page'].heroTextDescription}
 										{/* Welcome to ClickMore, your trusted partner in achieving
 										visibility and success in the digital world. If you're ready
@@ -96,7 +86,7 @@ export default async function Home({
 										driving business growth. */}
 									</p>
 
-									<div className="mt-8 flex justify-between gap-5 self-start whitespace-nowrap uppercase">
+									<div className="mt-8 flex justify-between gap-5 whitespace-nowrap uppercase max-lg:mb-10 max-lg:w-full max-lg:justify-center lg:self-start">
 										<Button
 											variant="outline"
 											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
@@ -122,18 +112,18 @@ export default async function Home({
 								</div>
 							</div>
 
-							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full lg:mb-0 lg:min-h-[650px] lg:pb-0">
+							<div className="ml-5 flex flex-col max-md:ml-0 max-md:w-full lg:mb-0 lg:min-h-[650px] lg:w-6/12 lg:pb-0">
 								<div className="relative flex grow flex-col max-md:mt-5 max-md:max-w-full">
-									<div className="flex max-w-full items-start justify-between gap-5 self-end whitespace-nowrap text-slate-800 max-md:absolute max-md:w-full max-md:flex-wrap lg:w-[488px]">
+									<div className="absolute flex max-w-full items-start justify-between gap-5 self-end whitespace-nowrap text-slate-800 max-lg:w-full max-md:flex-wrap lg:w-[488px]">
 										<Image
 											alt="icon click left"
 											loading="lazy"
 											src={PointerClickLeft}
-											className="mt-9 aspect-square w-[54px] self-end"
+											className="z-10 mt-32 aspect-square w-[54px] self-end opacity-50 max-lg:ml-36 max-md:ml-28 max-sm:ml-5 max-sm:w-11"
 										/>
-										<div className="flex flex-col self-start rounded-[36.69px] bg-white px-5 pb-2.5 pt-4 shadow-lg">
-											<div className="flex flex-col px-3.5 py-px">
-												<div className="w-full text-base font-bold leading-loose">
+										<div className="absolute right-20 z-10 mt-24 flex flex-col justify-self-end rounded-[36.69px] bg-white px-5 pb-2.5 pt-4 shadow-lg max-lg:ml-11 max-md:right-16 max-[639px]:right-0 sm:right-24 md:right-0">
+											<div className="flex flex-col py-px md:px-3.5 ">
+												<div className="w-full text-center text-base font-bold leading-loose max-sm:text-sm">
 													New Traffic
 												</div>
 												<hr className="min-w-full bg-slate-500" />
@@ -148,12 +138,6 @@ export default async function Home({
 															color=""
 															className="fill-green-600 stroke-green-600"
 														/>
-														{/* <Image
-															alt="any"
-															loading="lazy"
-															setS="https://cdn.builder.io/api/v1/image/assets/TEMP/be9bf481ee0d1150337abdad42f941397d7206cad3637f1b2acbc84bd9312b76?"
-															className="aspect-square w-[3px] self-start fill-green-600"
-														/> */}
 														<div className="grow font-bold">23%</div>
 													</div>
 												</div>
@@ -161,49 +145,54 @@ export default async function Home({
 										</div>
 									</div>
 
-									<div className="absolute bottom-0 left-0 z-10 flex w-44 max-w-full flex-col rounded-lg bg-white pb-7 pl-6 pt-3 shadow-lg max-md:mt-10 max-md:pl-5">
-										<div className="flex w-full items-end justify-end px-4">
+									<div className="absolute bottom-0 left-0 z-10 flex w-44 max-w-full flex-col rounded-lg bg-white pb-7 pl-6 pt-3 shadow-lg max-md:mt-10 max-md:pl-5 max-sm:mt-3 max-sm:w-32 max-sm:pl-0">
+										<span className="flex w-full items-end justify-end px-4">
 											<Heart
 												size={20}
 												color=""
 												className="self-end fill-red-600 stroke-red-600"
 											/>
-										</div>
+										</span>
 
-										<div className="mt-1.5 self-center text-center text-3xl font-bold leading-9 tracking-normal text-slate-800">
+										<span className="mt-1.5 self-center text-center font-bold leading-9 tracking-normal text-slate-800 max-md:text-2xl md:text-3xl">
 											45K+
-										</div>
-										<div className="mt-3 self-center whitespace-nowrap text-center font-nunito text-sm font-semibold leading-4 tracking-wide text-slate-800">
+										</span>
+										<span className="mt-3 self-center text-center font-nunito text-sm font-semibold leading-4 tracking-wide text-slate-800 max-sm:px-2 md:whitespace-nowrap">
 											Happy Customers
-										</div>
-										<div className="mt-5 flex justify-between gap-1.5 overflow-hidden">
-											<Avatar>
+										</span>
+										<div className="mt-5 flex justify-between gap-1.5 overflow-hidden max-sm:mt-3 max-sm:hidden">
+											<Avatar className="max-sm:h-8 max-sm:w-8">
 												<AvatarImage src="https://github.com/shadcn.png" />
 												<AvatarFallback>CN</AvatarFallback>
 											</Avatar>
 
-											<Avatar>
+											<Avatar className="max-sm:h-8 max-sm:w-8">
 												<AvatarImage src="https://github.com/shadcn.png" />
 												<AvatarFallback>CN</AvatarFallback>
 											</Avatar>
 
-											<Avatar>
+											<Avatar className="max-sm:h-8 max-sm:w-8">
 												<AvatarImage src="https://github.com/shadcn.png" />
 												<AvatarFallback>CN</AvatarFallback>
 											</Avatar>
 
-											<Avatar>
+											<Avatar className="max-sm:h-8 max-sm:w-8">
 												<AvatarImage src="https://github.com/shadcn.png" />
 												<AvatarFallback>CN</AvatarFallback>
 											</Avatar>
 										</div>
 									</div>
-
+									<Image
+										alt="any"
+										loading="lazy"
+										src={IconCircleGraphBlue}
+										className="absolute z-10 ml-20 mt-12 aspect-[1.01] w-20 max-lg:ml-44 max-lg:hidden max-sm:ml-4 max-sm:mt-5"
+									/>
 									<Image
 										src={MenPhotoTopHero}
 										loading="lazy"
 										alt=""
-										className="max-md:bottom-0 max-md:h-full max-md:max-h-[700px] max-md:w-full max-md:max-w-full md:lg:min-h-[820px] lg:absolute lg:right-0 lg:top-0 lg:min-h-[820px]"
+										className="max-lg:bottom-0 max-lg:-mb-[105px] max-lg:h-full max-lg:max-h-[700px] max-lg:w-full max-lg:max-w-full max-sm:-mb-24 max-[639px]:-mb-[88px] lg:absolute lg:right-0 lg:top-0 lg:min-h-[820px] "
 									/>
 								</div>
 							</div>
@@ -214,7 +203,7 @@ export default async function Home({
 				<div className="flex w-full flex-col justify-center bg-slate-100 px-16 py-8 max-md:max-w-full max-md:px-5">
 					<AreaLogosPlatforms />
 				</div>
-			</div>
+			</section>
 
 			<section
 				id="who-we-are"
@@ -297,12 +286,13 @@ export default async function Home({
 				</div>
 			</section>
 
-			<div className="mt-12 flex w-full flex-col max-md:mt-10 max-md:max-w-full">
+			<section className="mt-12 flex w-full flex-col max-md:mt-10 max-md:max-w-full">
 				<div className="z-10 flex w-full min-w-full flex-col items-center justify-center ">
 					{/*pl-6 pr-16 max-md:px-5*/}
 					<div className="container flex h-full min-w-full items-center justify-center">
 						<CardServices />
 					</div>
+
 					{/* Start Area PlayVideo */}
 					<div className="mb-20 ">
 						<VideoComponent />
@@ -316,7 +306,7 @@ export default async function Home({
 						src={bgColorFull}
 						className=" mt-24 aspect-[2.27] w-full rounded-[32px] max-md:mt-10 max-md:max-w-full"
 					/> */}
-					<div className="ml-10 mt-24 max-md:mt-10 max-md:max-w-full lg:mt-32">
+					<section className="ml-10 mt-24 max-md:mt-10 max-md:max-w-full lg:mt-32">
 						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
 								<div className="mt-10 flex flex-col max-md:mt-10 max-md:max-w-full">
@@ -357,8 +347,9 @@ export default async function Home({
 								/>
 							</div>
 						</div>
-					</div>
-					<div className="mt-24 max-md:mt-10 max-md:max-w-full">
+					</section>
+
+					<section className="mt-24 max-md:mt-10 max-md:max-w-full">
 						<div className="max-md: container flex gap-5 max-md:flex-col max-md:gap-0">
 							<div className="flex w-[46%] flex-col max-md:ml-0 max-md:w-full">
 								<div className="mt-3 flex grow flex-col max-md:mt-10 max-md:max-w-full">
@@ -380,11 +371,14 @@ export default async function Home({
 								</div>
 							</div>
 
-							<div className="ml-5 flex w-[54%] flex-col max-md:ml-0 max-md:w-full">
+							<div
+								aria-roledescription="Frequently asked questions"
+								className="ml-5 flex w-[54%] flex-col max-md:ml-0 max-md:w-full"
+							>
 								<Faq />
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
 
 				<div className="relative flex min-h-[757px] w-full flex-col overflow-hidden px-16 pt-12 max-md:max-w-full max-md:px-5">
@@ -447,7 +441,6 @@ export default async function Home({
 											placeholder="Tell us about your query"
 											className="min-w-full border-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 										/>
-										{/* Tell us about your query */}
 									</div>
 
 									<div className="flex w-full items-start justify-start">
@@ -551,7 +544,7 @@ export default async function Home({
 				</div>
 
 				<Footer />
-			</div>
-		</div>
+			</section>
+		</main>
 	);
 }
