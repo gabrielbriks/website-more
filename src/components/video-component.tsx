@@ -15,7 +15,7 @@ export default function VideoComponent() {
 						/>
 					</div>
 					<div className="flex w-[34%] flex-col max-md:mb-10 max-md:ml-0 max-md:w-full max-md:items-center lg:ml-5">
-						<div className="my-auto self-stretch font-bold leading-9 text-white max-md:mt-10 max-md:w-full max-md:items-center max-md:text-center max-md:text-2xl lg:text-3xl">
+						<div className="my-auto self-stretch font-bold leading-9 text-white max-lg:text-2xl max-md:mt-10 max-md:w-full max-md:items-center max-md:text-center lg:text-3xl">
 							A New Way to Hire a Marketing Agency for Your Company
 						</div>
 					</div>

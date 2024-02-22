@@ -15,13 +15,13 @@ interface FooterProps {}
 export default function Footer(params: FooterProps) {
 	return (
 		<footer className="mt-24 flex w-full flex-col justify-end rounded-[40px_40px_0px_0px] bg-slate-950 pt-12 max-md:mt-10 max-md:max-w-full">
-			<div className="mt-6 flex w-full max-w-screen-xl items-center justify-center self-center px-16 max-md:max-w-full max-md:px-5">
+			<div className="mt-6 flex w-full max-w-screen-xl items-center justify-center self-center max-lg:px-5 max-md:max-w-full lg:px-8">
 				<div className="flex w-[544px] max-w-full flex-col items-center">
 					<Image
 						alt="click more logo"
 						loading="lazy"
 						src={Logo}
-						className="aspect-[4.76] w-[230px] max-w-full"
+						className="aspect-[4.76] max-w-full self-start max-lg:w-[200px] max-sm:w-[195px] lg:w-[255px]"
 					/>
 					<div className="mt-4 self-stretch text-center text-3xl font-semibold uppercase leading-9 text-white max-md:max-w-full">
 						Get Latest Updates, News & Offers

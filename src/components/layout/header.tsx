@@ -4,6 +4,7 @@ import { Locale } from '@/i18n-config';
 import { cn } from '@/lib/utils';
 import { ArrowUpRight, Cart } from 'akar-icons';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
 import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
@@ -15,6 +16,7 @@ interface HeaderProps {
 }
 
 export function Header({ lang }: HeaderProps) {
+	const params = useSearchParams();
 	const [withPhotoInBackground, setWithPhotoInBackground] = useState<
 		boolean | null
 	>(null);
@@ -24,14 +26,9 @@ export function Header({ lang }: HeaderProps) {
 			return;
 		}
 
-		const hashURL = window.location.hash;
-
-		if (hashURL === '#plan') {
-			setWithPhotoInBackground(true);
-		} else {
-			setWithPhotoInBackground(false);
-		}
-	}, []);
+		const currentHash = window.location.hash.replace('#', '');
+		console.log(currentHash);
+	}, [params]);
 
 	return (
 		<header className="absolute z-10 flex w-full flex-wrap items-center gap-5 overflow-hidden px-16 pt-8 text-base uppercase max-md:max-w-full max-md:flex-col max-md:justify-center lg:justify-between">

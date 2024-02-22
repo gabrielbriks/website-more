@@ -306,10 +306,10 @@ export default async function Home(props: HomeProps) {
 						src={bgColorFull}
 						className=" mt-24 aspect-[2.27] w-full rounded-[32px] max-md:mt-10 max-md:max-w-full"
 					/> */}
-					<section className="ml-10 mt-24 max-md:mt-10 max-md:max-w-full lg:mt-32">
-						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
-							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-								<div className="mt-10 flex flex-col max-md:mt-10 max-md:max-w-full">
+					<section className="ml-10 mt-24 max-lg:mt-10 max-lg:max-w-full lg:mt-32">
+						<div className="flex gap-5 max-lg:flex-col max-lg:gap-0">
+							<div className="flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">
+								<div className="mt-10 flex flex-col max-lg:mt-10 max-lg:max-w-full">
 									<Image
 										alt="any"
 										loading="lazy"
@@ -326,7 +326,7 @@ export default async function Home(props: HomeProps) {
 										<div className="my-auto grow">Our mission</div>
 									</div>
 									<div className="mt-4 text-5xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full">
-										ClickMore and Your <br />
+										ClickMore and Your <br className="max-md:hidden" />
 										Company Together
 									</div>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
@@ -338,20 +338,20 @@ export default async function Home(props: HomeProps) {
 									</div>
 								</div>
 							</div>
-							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+							<div className="ml-5 flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">
 								<Image
 									alt="any"
 									loading="lazy"
 									src={OurMissionPhoto}
-									className="aspect-[1.37] w-full grow max-md:mt-10 max-md:max-w-full"
+									className="aspect-[1.37] w-full grow max-lg:mt-10 max-lg:max-w-full"
 								/>
 							</div>
 						</div>
 					</section>
 
 					<section className="mt-24 max-md:mt-10 max-md:max-w-full">
-						<div className="max-md: container flex gap-5 max-md:flex-col max-md:gap-0">
-							<div className="flex w-[46%] flex-col max-md:ml-0 max-md:w-full">
+						<div className="container flex max-lg:flex-col max-md:gap-0 lg:gap-5">
+							<div className="flex w-[46%] flex-col max-lg:w-full max-md:ml-0">
 								<div className="mt-3 flex grow flex-col max-md:mt-10 max-md:max-w-full">
 									<Image
 										alt="any"
@@ -360,12 +360,12 @@ export default async function Home(props: HomeProps) {
 										className="aspect-square w-[54px] self-end opacity-70"
 									/>
 									{/* Japanese FAQ */}
-									<div className="relative mt-3.5 flex min-h-[611px] w-full flex-col items-start overflow-hidden px-2 pb-6 max-md:max-w-full max-md:items-end max-md:px-5 max-md:pb-8">
+									<div className="relative mt-3.5 flex w-full flex-col overflow-hidden px-2 max-lg:-mb-3 max-lg:min-w-full max-md:max-w-full  max-md:px-5 max-md:pb-0 md:min-h-[611px] md:items-start ">
 										<Image
 											alt="any"
 											loading="lazy"
 											src={JapaneseFAQImage}
-											className="z-10 mb-96 mt-0 aspect-[0.98] h-full max-h-[600px] w-full max-w-full max-md:mb-10"
+											className="z-10 mt-0 h-full max-h-[600px] w-full max-w-full max-lg:mb-0 max-sm:bottom-0 max-sm:-mb-0 md:aspect-[0.98] lg:mb-96"
 										/>
 									</div>
 								</div>
@@ -373,7 +373,7 @@ export default async function Home(props: HomeProps) {
 
 							<div
 								aria-roledescription="Frequently asked questions"
-								className="ml-5 flex w-[54%] flex-col max-md:ml-0 max-md:w-full"
+								className="flex w-[54%] flex-col max-lg:ml-0 max-lg:w-full max-sm:mt-3 lg:ml-5"
 							>
 								<Faq />
 							</div>
@@ -392,8 +392,8 @@ export default async function Home(props: HomeProps) {
 						id="contact"
 						className="relative mt-12 max-md:mt-10 max-md:max-w-full"
 					>
-						<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
-							<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+						<div className="flex gap-5 max-md:flex-col max-md:gap-0">
+							<div className="flex w-full max-w-screen-lg flex-col max-md:ml-0">
 								<form className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
 									<div className="mt-3 flex gap-1 self-start whitespace-nowrap font-medium uppercase text-purple-800">
 										<Image

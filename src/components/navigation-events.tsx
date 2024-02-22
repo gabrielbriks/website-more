@@ -9,10 +9,11 @@ export function NavigationEvents() {
 
 	useEffect(() => {
 		const url = `${pathname}?${searchParams}`;
-		console.log('NavigationEvents' + pathname, ' >> ' + window.location.hash);
+		console.log('NavigationEvents history ', window.history.state);
+		console.log('NavigationEvents URL', url);
 		// You can now use the current URL
 		// ...
-	}, [pathname, window.location.hash]);
+	}, [pathname, searchParams]);
 
 	return null;
 }

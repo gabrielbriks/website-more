@@ -1,10 +1,15 @@
 'use client';
 
-import { type CarouselApi } from '@/components/ui/carousel';
+import {
+	CarouselNext,
+	CarouselPrevious,
+	type CarouselApi,
+} from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'akar-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Click_AdsenseSVG from '../assets/icons-services/click-adsense.svg';
 import Click_EcomSVG from '../assets/icons-services/click-ecom.svg';
@@ -13,13 +18,7 @@ import Click_PagesSVG from '../assets/icons-services/click-pages.svg';
 import Click_WebSVG from '../assets/icons-services/click-web.svg';
 import { Button } from './ui/button';
 import { Card, CardContent, CardFooter } from './ui/card';
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from './ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
 type CardInfoService = {
 	icon: any;
@@ -75,6 +74,7 @@ const InfoServices: CardInfoService[] = [
 interface CardServicesProps {}
 
 export default function CardServices(params: CardServicesProps) {
+	const navigation = useRouter();
 	const [api, setApi] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
 	const [count, setCount] = useState(InfoServices.length);
@@ -125,7 +125,15 @@ export default function CardServices(params: CardServicesProps) {
 									<CardFooter className="flex h-full w-full items-center justify-center">
 										<Link
 											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
-											href={{ pathname: item.urlTarget, hash: 'plan' }}
+											href={{
+												href: item.urlTarget,
+												pathname: item.urlTarget,
+												query: {
+													plan: true,
+													test: '1',
+												},
+											}}
+											// onClick={() => navigation.push(`${item.urlTarget}/#plan`)}
 										>
 											<span className="h-auto uppercase">
 												{item.buttonName}
