@@ -19,6 +19,7 @@
 		"@radix-ui/react-select": "^2.0.0",
 		"@radix-ui/react-slot": "^1.0.2",
 		"@react-spring/web": "^9.7.3",
+		"@vercel/analytics": "^1.2.2",
 		"@vercel/speed-insights": "^1.0.10",
 		"akar-icons": "^1.9.30",
 		"class-variance-authority": "^0.7.0",

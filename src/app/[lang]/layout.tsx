@@ -1,5 +1,6 @@
 import '@/app/globals.css';
 import { i18n, type Locale } from '@/i18n-config';
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Kanit, Nunito, Open_Sans } from 'next/font/google';
@@ -71,6 +72,7 @@ export default function RootLayout({
 				<Suspense fallback={<FallbackLoading />}>
 					{children}
 					<SpeedInsights />
+					<Analytics />
 				</Suspense>
 			</body>
 		</html>
