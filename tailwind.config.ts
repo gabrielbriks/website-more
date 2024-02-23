@@ -52,6 +52,8 @@ const config = {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
+				cm_gradient:
+					'hsl(linear-gradient(134deg, #6E07AD 2.81%, #CB457A 75.03%, #E85A6A 95.48%))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

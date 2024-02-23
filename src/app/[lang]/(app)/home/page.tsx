@@ -1,7 +1,7 @@
 import AreaLogosPlatforms from '@/components/area-logos-platforms';
 import CardServices from '@/components/card-services';
 import Faq from '@/components/faq';
-import Footer from '@/components/layout/footer';
+import Footer from '@/components/layout/footer/footer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

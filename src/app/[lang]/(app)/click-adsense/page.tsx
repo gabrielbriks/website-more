@@ -1,5 +1,5 @@
 import Faq from '@/components/faq';
-import Footer from '@/components/layout/footer';
+import Footer from '@/components/layout/footer/footer';
 import PlanCard from '@/components/layout/plans/plan-card';
 import { Button } from '@/components/ui/button';
 import VideoComponent from '@/components/video-component';
