@@ -27,7 +27,7 @@ export function Header({ lang }: HeaderProps) {
 		}
 
 		const currentHash = window.location.hash.replace('#', '');
-		console.log(currentHash);
+		// console.log(currentHash);
 	}, [params]);
 
 	return (

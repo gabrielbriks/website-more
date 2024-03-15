@@ -9,8 +9,8 @@ export function NavigationEvents() {
 
 	useEffect(() => {
 		const url = `${pathname}?${searchParams}`;
-		console.log('NavigationEvents history ', window.history.state);
-		console.log('NavigationEvents URL', url);
+		// console.log('NavigationEvents history ', window.history.state);
+		// console.log('NavigationEvents URL', url);
 		// You can now use the current URL
 		// ...
 	}, [pathname, searchParams]);
