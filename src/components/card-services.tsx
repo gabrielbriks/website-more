@@ -9,10 +9,8 @@ import { cn } from '@/lib/utils';
 import { ArrowUpRight } from 'akar-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Click_AdsenseSVG from '../assets/icons-services/click-adsense.svg';
-import Click_EcomSVG from '../assets/icons-services/click-ecom.svg';
 import Click_MediaSVG from '../assets/icons-services/click-media.svg';
 import Click_PagesSVG from '../assets/icons-services/click-pages.svg';
 import Click_WebSVG from '../assets/icons-services/click-web.svg';
@@ -61,41 +59,40 @@ const InfoServices: CardInfoService[] = [
 		buttonName: 'Learn More',
 		urlTarget: '/click-web',
 	},
-	{
-		icon: Click_EcomSVG,
-		nameService: 'ClickEcom',
-		descriptionService:
-			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-		buttonName: 'Learn More',
-		urlTarget: '/click-ecom',
-	},
+	// {
+	// 	icon: Click_EcomSVG,
+	// 	nameService: 'ClickEcom',
+	// 	descriptionService:
+	// 		'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
+	// 	buttonName: 'Learn More',
+	// 	urlTarget: '/click-ecom',
+	// },
 ];
 
 interface CardServicesProps {}
 
 export default function CardServices(params: CardServicesProps) {
-	const navigation = useRouter();
-	const [api, setApi] = useState<CarouselApi>();
+	const [apiCarrousel, setApiCarrousel] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
 	const [count, setCount] = useState(InfoServices.length);
 
 	useEffect(() => {
-		if (!api) {
+		if (!apiCarrousel) {
 			return;
 		}
 
-		setCount(api.scrollSnapList().length);
-		setCurrent(api.selectedScrollSnap() + 1);
+		setCount(apiCarrousel.scrollSnapList().length);
+		setCurrent(apiCarrousel.selectedScrollSnap() + 1);
 
-		api.on('select', () => {
-			setCurrent(api.selectedScrollSnap() + 1);
+		apiCarrousel.on('select', () => {
+			setCurrent(apiCarrousel.selectedScrollSnap() + 1);
 		});
-	}, [api]);
+	}, [apiCarrousel]);
 
 	return (
 		<div className="container max-w-screen-2xl rounded-lg border">
 			<Carousel
-				setApi={setApi}
+				setApi={setApiCarrousel}
 				className="h-full min-w-full max-w-screen-lg rounded-lg border-red-600"
 			>
 				<CarouselContent className="min-w-full">
@@ -126,7 +123,6 @@ export default function CardServices(params: CardServicesProps) {
 										<Link
 											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 											href={`${item.urlTarget}?plan=true`}
-											// onClick={() => navigation.push(`${item.urlTarget}/#plan`)}
 										>
 											<span className="h-auto uppercase">
 												{item.buttonName}
@@ -153,7 +149,7 @@ export default function CardServices(params: CardServicesProps) {
 						role="tab"
 						aria-selected={current - 1 === indexDot ? 'true' : 'false'}
 						aria-label={`Slide ${indexDot + 1}}`}
-						onClick={() => api?.scrollTo(indexDot)}
+						onClick={() => apiCarrousel?.scrollTo(indexDot)}
 						className={cn(
 							'h-2 w-4 rounded-full transition duration-700 ',
 							current - 1 === indexDot

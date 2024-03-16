@@ -74,7 +74,7 @@ export default function ClickMedia(params: ClickMediaProps) {
 							'1 image for up to 10 products or services',
 						]}
 						nameButton="hire"
-						namePlan="ClickStart"
+						namePlan="MediaStart"
 						periodSubscription="/month"
 						urlTarget="/add-cart"
 						valuePlan="35,000"
@@ -87,7 +87,7 @@ export default function ClickMedia(params: ClickMediaProps) {
 							'1 image for up to 10 products or services',
 						]}
 						nameButton="hire"
-						namePlan="ClickMax"
+						namePlan="MediaMax"
 						periodSubscription="/month"
 						urlTarget="/add-cart"
 						valuePlan="50,000"
@@ -103,7 +103,7 @@ export default function ClickMedia(params: ClickMediaProps) {
 							'1 image for up to 10 products or services',
 						]}
 						nameButton="hire"
-						namePlan="ClickPro"
+						namePlan="MediaPro"
 						periodSubscription="/month"
 						urlTarget="/add-cart"
 						valuePlan="75,000"
@@ -129,7 +129,7 @@ export default function ClickMedia(params: ClickMediaProps) {
 									<h3 className="my-auto uppercase">custom advertising plan</h3>
 								</div>
 								<h1 className="w-full text-5xl font-bold uppercase leading-[48.08px] text-gray-800 max-lg:text-center lg:mt-2">
-									ClickPrime
+									MediaPrime
 								</h1>
 								<p className="mt-4 self-stretch text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:text-center">
 									Create your custom advertising plan that meets all your

@@ -11,8 +11,8 @@ import Link from 'next/link';
 import arrowRightSitemap from '@/assets/arrow-right-sitemap.svg';
 import bgCoverTitleTopPage from '@/assets/layout/bg-cover-title-pages.svg';
 import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
-import clickMoreAskedQuestions from '@/assets/pages/click-pages/asked-questions-image-pages.svg';
 import clickWebHeader from '@/assets/pages/click-web/click-web-bg-header.svg';
+import clickMoreAskedQuestions from '@/assets/pages/click-web/clickweb-asked-questions.svg';
 
 interface ClickWebProps {}
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 const planInfo = {
-	namePlan: 'ClickStart',
+	namePlan: 'WebStart',
 	valuePlan: '¥35,000',
 	periodSubscription: '/MONTH',
 	items: ['Google and Meta advertising campaigns', 'Reports every 15 days'],
@@ -74,7 +74,7 @@ export default function ClickWeb(params: ClickWebProps) {
 							'1 image for up to 10 products or services',
 						]}
 						nameButton="hire"
-						namePlan="ClickStart"
+						namePlan="WebStart"
 						periodSubscription="/month"
 						urlTarget="/add-cart"
 						valuePlan="35,000"
@@ -87,7 +87,7 @@ export default function ClickWeb(params: ClickWebProps) {
 							'1 image for up to 10 products or services',
 						]}
 						nameButton="hire"
-						namePlan="ClickMax"
+						namePlan="WebMax"
 						periodSubscription="/month"
 						urlTarget="/add-cart"
 						valuePlan="50,000"
@@ -103,7 +103,7 @@ export default function ClickWeb(params: ClickWebProps) {
 							'1 image for up to 10 products or services',
 						]}
 						nameButton="hire"
-						namePlan="ClickPro"
+						namePlan="WebPro"
 						periodSubscription="/month"
 						urlTarget="/add-cart"
 						valuePlan="75,000"
@@ -129,7 +129,7 @@ export default function ClickWeb(params: ClickWebProps) {
 									<h3 className="my-auto uppercase">custom advertising plan</h3>
 								</div>
 								<h1 className="w-full text-5xl font-bold uppercase leading-[48.08px] text-gray-800 max-lg:text-center lg:mt-2">
-									ClickPrime
+									WebPrime
 								</h1>
 								<p className="mt-4 self-stretch text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:text-center">
 									Create your custom advertising plan that meets all your
@@ -162,7 +162,7 @@ export default function ClickWeb(params: ClickWebProps) {
 					</div>
 					<div className=" flex w-6/12 flex-col items-center justify-center max-lg:mt-20 max-lg:w-full max-lg:px-10 max-md:ml-0">
 						<Image
-							alt="click more adsense photo"
+							alt="click more web photo"
 							loading="lazy"
 							src={clickMoreAskedQuestions}
 							className="z-10 -mb-16 aspect-[1.23] w-full grow max-lg:max-w-[520px] max-md:mt-10"
