@@ -16,18 +16,17 @@ interface HeaderProps {
 }
 
 export function Header({ lang }: HeaderProps) {
-	const params = useSearchParams();
 	const [withPhotoInBackground, setWithPhotoInBackground] = useState<
 		boolean | null
 	>(null);
+	const params = useSearchParams();
 
 	useEffect(() => {
 		if (window === undefined) {
 			return;
 		}
 
-		const currentHash = window.location.hash.replace('#', '');
-		// console.log(currentHash);
+		setWithPhotoInBackground(params.has('plan'));
 	}, [params]);
 
 	return (

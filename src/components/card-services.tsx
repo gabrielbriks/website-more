@@ -125,14 +125,7 @@ export default function CardServices(params: CardServicesProps) {
 									<CardFooter className="flex h-full w-full items-center justify-center">
 										<Link
 											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
-											href={{
-												href: item.urlTarget,
-												pathname: item.urlTarget,
-												query: {
-													plan: true,
-													test: '1',
-												},
-											}}
+											href={`${item.urlTarget}?plan=true`}
 											// onClick={() => navigation.push(`${item.urlTarget}/#plan`)}
 										>
 											<span className="h-auto uppercase">

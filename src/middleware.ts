@@ -26,6 +26,7 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;
+	const searchParams = request.nextUrl.searchParams.toString();
 
 	// // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
 	// // If you have one
@@ -50,12 +51,14 @@ export function middleware(request: NextRequest) {
 
 		// e.g. incoming request is /products
 		// The new URL is now /en-US/products
-		return NextResponse.redirect(
-			new URL(
-				`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-				request.url,
-			),
-		);
+		let url = `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`;
+
+		//Fix: Tratativa para impedir remoção de parâmetros na url
+		if (searchParams) {
+			url += `?${searchParams}`;
+		}
+
+		return NextResponse.redirect(new URL(url, request.url));
 	}
 }
 

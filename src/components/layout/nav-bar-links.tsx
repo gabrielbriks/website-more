@@ -33,11 +33,8 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 			setPathname(pathname_hook);
 		}
 
-		if (hashURL === '#plan') {
-			setWithPhotoInBackground(true);
-		} else {
-			setWithPhotoInBackground(false);
-		}
+		const existParamPlan = searchParams.has('plan');
+		setWithPhotoInBackground(existParamPlan);
 	}, [pathname_hook, searchParams]);
 
 	return (
