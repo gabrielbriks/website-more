@@ -6,6 +6,7 @@ import VideoComponent from '@/components/video-component';
 import { ArrowUpRight } from 'akar-icons';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import ArrowRightSitemap from '../../../../assets/arrow-right-sitemap.svg';
 import ClickAdSenseHeader from '../../../../assets/click-adsense-bg-header.svg';
 import clickMoreSedePhoto from '../../../../assets/click-more-sede-photo.svg';
@@ -44,7 +45,9 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 						ClickAdsense
 					</h1>
 					<div className="relative mt-2.5 flex gap-3.5 self-center text-lg leading-5">
-						<div className="grow">Home</div>
+						<Link href={'/home'} className="grow">
+							Home
+						</Link>
 						<Image
 							alt=""
 							loading="lazy"
