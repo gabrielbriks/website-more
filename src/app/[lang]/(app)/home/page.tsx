@@ -9,26 +9,20 @@ import { Textarea } from '@/components/ui/textarea';
 import VideoComponent from '@/components/video-component';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
-import {
-	ArrowUpRight,
-	FacebookFill,
-	Heart,
-	InstagramFill,
-	TwitterFill,
-} from 'akar-icons';
+import { ArrowUpRight, Heart } from 'akar-icons';
 import { ArrowBigUpDash } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import BgColorFullHero from '../../../../assets/colorful-background.svg';
-import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.svg';
-import ValuesClickMOre from '../../../../assets/image-values.svg';
-import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
-import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
-import MapWorldDoted from '../../../../assets/map-world-dotted.svg';
-import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.svg';
-import OurMissionPhoto from '../../../../assets/our-mission-photo.svg';
-import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
-import PointerClickRight from '../../../../assets/pointer-click-right.svg';
+import BgColorFullHero from '../../../../assets/colorful-background.webp';
+import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.webp';
+import ValuesClickMOre from '../../../../assets/image-values.webp';
+import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.webp';
+import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.webp';
+import MapWorldDoted from '../../../../assets/map-world-dotted.webp';
+import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.webp';
+import OurMissionPhoto from '../../../../assets/our-mission-photo.webp';
+import PointerClickLeft from '../../../../assets/pointer-click-left.webp';
+import PointerClickRight from '../../../../assets/pointer-click-right.webp';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -365,7 +359,7 @@ export default async function Home(props: HomeProps) {
 											alt="any"
 											loading="lazy"
 											src={JapaneseFAQImage}
-											className="z-10 mt-0 h-full max-h-[600px] w-full max-w-full max-lg:mb-0 max-sm:bottom-0 max-sm:-mb-0 md:aspect-[0.98] lg:mb-96"
+											className="z-10 mt-0 h-full max-h-[600px]  max-lg:mb-0 max-sm:bottom-0 max-sm:-mb-0 md:aspect-[0.98] lg:mb-96"
 										/>
 									</div>
 								</div>
@@ -492,30 +486,6 @@ export default async function Home(props: HomeProps) {
 													<h4 className="mt-11 self-start text-2xl font-semibold text-gray-800 max-md:mt-10">
 														Follow us
 													</h4>
-													<div className="mt-6 flex gap-4 self-start pr-1.5">
-														RedesSociais
-														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
-															<InstagramFill
-																width={20}
-																height={20}
-																color="#1f242f"
-															/>
-														</div>
-														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
-															<FacebookFill
-																width={20}
-																height={20}
-																color="#1f242f"
-															/>
-														</div>
-														<div className="flex aspect-square h-10 flex-1 items-center justify-center rounded-[100px] border border-solid border-[color:var(--CM-Para,#525252)] bg-white bg-opacity-10 px-2.5">
-															<TwitterFill
-																width={20}
-																height={20}
-																color="#1f242f"
-															/>
-														</div>
-													</div>
 												</div>
 											</div>
 

@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+
 import FacebookLogo from '../assets/icons-business/facebook-logo.svg';
 import GoogleLogo from '../assets/icons-business/google-logo.svg';
 import InstagramLogo from '../assets/icons-business/instagram-logo.svg';

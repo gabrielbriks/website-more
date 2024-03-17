@@ -10,13 +10,14 @@ import { ArrowUpRight } from 'akar-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Button } from './ui/button';
+import { Card, CardContent, CardFooter } from './ui/card';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
+
 import Click_AdsenseSVG from '../assets/icons-services/click-adsense.svg';
 import Click_MediaSVG from '../assets/icons-services/click-media.svg';
 import Click_PagesSVG from '../assets/icons-services/click-pages.svg';
 import Click_WebSVG from '../assets/icons-services/click-web.svg';
-import { Button } from './ui/button';
-import { Card, CardContent, CardFooter } from './ui/card';
-import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
 type CardInfoService = {
 	icon: any;

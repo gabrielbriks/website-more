@@ -6,10 +6,11 @@ import { ArrowUpRight, Cart } from 'akar-icons';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
-import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
 import LocaleSwitcher from '../locale-switcher';
 import { NavBarLinks } from './nav-bar-links';
+
+import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
+import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
 
 interface HeaderProps {
 	lang: Locale;

@@ -8,11 +8,11 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import clickMoreAskedQuestions from '@/assets/pages/click-media/asked-questions-image.svg';
-import clickMediaAdSenseHeader from '@/assets/pages/click-media/clickmedia-bg-header.svg';
-import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.svg';
+import clickMoreAskedQuestions from '@/assets/pages/click-media/asked-questions-image.webp';
+import clickMediaAdSenseHeader from '@/assets/pages/click-media/clickmedia-bg-header.webp';
+import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.webp';
 import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.svg';
-import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
+import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.webp';
 
 interface ClickMediaProps {}
 

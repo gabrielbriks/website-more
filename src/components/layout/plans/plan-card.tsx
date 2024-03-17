@@ -12,6 +12,7 @@ import {
 import { ArrowUpRight, Check } from 'akar-icons';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+
 import BGCoverNamePlanMax from '../../../assets/layout/bg-cover-name-plan-max.svg';
 import BGCoverNamePlanPro from '../../../assets/layout/bg-cover-name-plan-pro.svg';
 import BGCoverNamePlanStart from '../../../assets/layout/bg-cover-name-plan-start.svg';

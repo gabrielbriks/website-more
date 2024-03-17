@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import VideoPlayImage from '../assets/play-video-image.svg';
+import VideoPlayImage from '../assets/play-video-image.webp';
 
 export default function VideoComponent() {
 	return (

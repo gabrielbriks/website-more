@@ -8,11 +8,11 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import arrowRightSitemap from '@/assets/arrow-right-sitemap.svg';
+import arrowRightSitemap from '@/assets/arrow-right-sitemap.webp';
 import bgCoverTitleTopPage from '@/assets/layout/bg-cover-title-pages.svg';
-import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
-import clickMoreAskedQuestions from '@/assets/pages/click-pages/asked-questions-image-pages.svg';
-import clickPagesHeader from '@/assets/pages/click-pages/click-pages-bg-header.png';
+import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.webp';
+import clickMoreAskedQuestions from '@/assets/pages/click-pages/asked-questions-image-pages.webp';
+import clickPagesHeader from '@/assets/pages/click-pages/click-pages-bg-header.webp';
 
 interface ClickPagesProps {}
 
