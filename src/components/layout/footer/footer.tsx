@@ -60,7 +60,7 @@ export default function Footer(params: FooterProps) {
 				</div>
 
 				<div className="mt-10 flex h-full w-full">
-					<nav className="mt-6 grid w-full grid-cols-1 gap-x-4 gap-y-10 leading-[125%] text-zinc-50 max-sm:place-items-center sm:grid-cols-2 md:grid-cols-4">
+					<nav className="mt-6 grid w-full grid-cols-1 gap-x-4 gap-y-10 leading-[125%] text-zinc-50 sm:grid-cols-2 md:grid-cols-4">
 						<ul>
 							<li className="text-lg font-semibold uppercase">Company</li>
 							<li className="pt-4 text-lg ">
