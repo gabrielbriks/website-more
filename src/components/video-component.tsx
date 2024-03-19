@@ -4,7 +4,7 @@ import VideoPlayImage from '../assets/play-video-image.webp';
 export default function VideoComponent() {
 	return (
 		<div className="container mt-14 flex h-full max-h-[477px] max-w-[1318px] flex-col pt-12">
-			<div className="mt-14 w-full items-center overflow-visible rounded-xl bg-button-gradient px-20 max-md:mt-10 max-md:max-w-full max-md:px-5">
+			<div className="bg-cm-gradient-imgcolor mt-14 w-full items-center overflow-visible rounded-xl px-20 max-md:mt-10 max-md:max-w-full max-md:px-5">
 				<div className="flex gap-5 max-md:flex-col max-md:gap-0">
 					<div className="flex w-[66%] flex-col max-md:ml-0 max-md:w-full">
 						<Image

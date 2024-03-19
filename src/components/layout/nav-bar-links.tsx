@@ -8,9 +8,13 @@ import { twMerge } from 'tailwind-merge';
 
 interface NavBarLinksProps {
 	showInFooter?: boolean;
+	showInMobile?: boolean;
 }
 
-export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
+export function NavBarLinks({
+	showInFooter = false,
+	showInMobile = false,
+}: NavBarLinksProps) {
 	const pathname_hook = usePathname();
 	const searchParams = useSearchParams();
 	const navigation = useRouter();
@@ -40,13 +44,16 @@ export function NavBarLinks({ showInFooter = false }: NavBarLinksProps) {
 	return (
 		<nav
 			className={cn(
-				'my-auto flex gap-5 max-md:justify-center lg:justify-between',
+				'my-auto flex gap-5 ',
+				!showInMobile &&
+					'max-md:hidden max-md:justify-center lg:justify-between',
 				!showInFooter &&
 					(withPhotoInBackground === null || !withPhotoInBackground)
 					? 'text-slate-800'
 					: withPhotoInBackground
 						? 'text-white'
 						: 'text-zinc-300',
+				showInMobile && 'flex flex-col items-center justify-center text-white',
 			)}
 		>
 			<Link

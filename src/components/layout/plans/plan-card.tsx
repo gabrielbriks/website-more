@@ -97,7 +97,7 @@ export default function CardPlanIdea2(params: CardPlanProps) {
 					<CardFooter className="flex w-full flex-1 items-center justify-center px-20 ">
 						<Button
 							onClick={() => navigation.push(params.urlTarget)}
-							className="flex h-14 min-w-full max-w-[200px] transform justify-center gap-2.5 rounded-[45px] border-pink-600 border-purple-700/50 bg-button-gradient px-8 py-5 tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50 max-md:px-5"
+							className="bg-cm-gradient-imgcolor flex h-14 min-w-full max-w-[200px] transform justify-center gap-2.5 rounded-[45px] border-pink-600 border-purple-700/50 px-8 py-5 tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50 max-md:px-5"
 						>
 							<span className="font-kanit text-lg font-normal uppercase leading-4">
 								{params.nameButton}

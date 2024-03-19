@@ -13,6 +13,7 @@ import { ArrowUpRight, Heart } from 'akar-icons';
 import { ArrowBigUpDash } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
+
 import BgColorFullHero from '../../../../assets/colorful-background.webp';
 import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.webp';
 import ValuesClickMOre from '../../../../assets/image-values.webp';
@@ -83,7 +84,7 @@ export default async function Home(props: HomeProps) {
 									<div className="mt-8 flex justify-between gap-5 whitespace-nowrap uppercase max-lg:mb-10 max-lg:w-full max-lg:justify-center lg:self-start">
 										<Button
 											variant="outline"
-											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											className="bg-cm-gradient-imgcolor flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 										>
 											<span className="uppercase">Learn More</span>
 											<ArrowUpRight
@@ -386,7 +387,7 @@ export default async function Home(props: HomeProps) {
 						id="contact"
 						className="relative mt-12 max-md:mt-10 max-md:max-w-full"
 					>
-						<div className="flex gap-5 max-md:flex-col max-md:gap-0">
+						<div className="flex gap-5 max-lg:flex-col max-md:gap-0">
 							<div className="flex w-full max-w-screen-lg flex-col max-md:ml-0">
 								<form className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
 									<div className="mt-3 flex gap-1 self-start whitespace-nowrap font-medium uppercase text-purple-800">
@@ -440,7 +441,7 @@ export default async function Home(props: HomeProps) {
 									<div className="flex w-full items-start justify-start">
 										<Button
 											type="submit"
-											className="mt-10 h-11 gap-1 rounded-full bg-button-gradient uppercase"
+											className="bg-cm-gradient-imgcolor mt-10 h-11 gap-1 rounded-full uppercase"
 										>
 											Get in touch
 											<ArrowUpRight
@@ -452,8 +453,8 @@ export default async function Home(props: HomeProps) {
 								</form>
 							</div>
 
-							<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-								<div className="relative my-auto flex flex-col self-stretch max-md:mt-10 max-md:max-w-full">
+							<div className="ml-5 flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">
+								<div className="relative my-auto flex flex-col self-stretch max-lg:mt-10 max-lg:max-w-full">
 									<div className="flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
 										<Image
 											alt="any"
@@ -463,45 +464,41 @@ export default async function Home(props: HomeProps) {
 										/>
 										<div className="my-auto grow">Contact us</div>
 									</div>
-									<div className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full">
+									<h3 className="mt-4 w-full text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-lg:max-w-full">
 										Contact Information
-									</div>
+									</h3>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
 										Need help assessing difficult situations? Or if you have any
 										other questions, please feel free to contact us. We are
 										happy to help you!
 									</div>
-									<div className="mt-11 max-md:mt-10 max-md:max-w-full">
-										<div className="max-md: flex gap-5 max-md:flex-col max-md:gap-0">
-											<div className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-												<div className="flex grow flex-col max-md:mt-10">
-													<h4 className="text-2xl font-semibold text-gray-800">
-														Phone
-													</h4>
-													<div className="mt-6 text-lg leading-7 text-neutral-600">
-														090-8321-8676
-														<br />
-														080-6369-2395
+									<div className="mt-11 w-full max-lg:max-w-full max-md:mt-10 ">
+										<div className="grid w-full grid-cols-2 max-xl:grid-cols-1 max-lg:gap-5	">
+											<div className="ml-5 flex w-full flex-col md:ml-0 lg:w-6/12">
+												<div className="flex flex-col text-2xl font-semibold text-gray-800 max-2xl:mt-10">
+													<div>Email</div>
+													<div className="mt-2 text-lg leading-7 text-neutral-600">
+														support@clickmore.org
 													</div>
-													<h4 className="mt-11 self-start text-2xl font-semibold text-gray-800 max-md:mt-10">
-														Follow us
-													</h4>
 												</div>
 											</div>
 
-											<div className="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
-												<div className="flex flex-col text-2xl font-semibold text-gray-800 max-md:mt-10">
-													<div>Address</div>
-													<div className="mt-6 text-lg leading-7 text-neutral-600">
-														55 Main Street, The Grand
-														<br />
-														Avenue 2nd Block, New York City
+											<div className="ml-5 flex w-6/12 flex-col	md:ml-0 md:w-full">
+												<div className="flex grow flex-col max-2xl:mt-10">
+													<h4 className="text-2xl font-semibold text-gray-800">
+														Phone
+													</h4>
+													<div className="mt-2 text-lg leading-7 text-neutral-600">
+														090-8321-8676
 													</div>
-													<div className="mt-12 self-start max-md:mt-10">
-														Email
-													</div>
-													<div className="mt-6 self-start text-lg leading-7 text-neutral-600">
-														support@clickmore.co.jp
+												</div>
+											</div>
+
+											<div className="ml-5 flex w-6/12 flex-col  md:ml-0 md:w-full">
+												<div className="mt-10 flex flex-col text-2xl font-semibold text-gray-800">
+													<div>Location</div>
+													<div className="mt-2 text-lg leading-7 text-neutral-600">
+														Komaki, Aichi Prefecture
 													</div>
 												</div>
 											</div>

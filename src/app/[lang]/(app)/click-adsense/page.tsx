@@ -7,11 +7,12 @@ import { ArrowUpRight } from 'akar-icons';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import ArrowRightSitemap from '../../../../assets/arrow-right-sitemap.webp';
-import ClickAdSenseHeader from '../../../../assets/click-adsense-bg-header.webp';
-import clickMoreSedePhoto from '../../../../assets/click-more-sede-photo.svg';
-import BGCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.svg';
-import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
+
+import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.webp';
+import clickAdSenseHeader from '../../../../assets/click-adsense-bg-header.webp';
+import clickMoreAskedQuestions from '../../../../assets/click-more-sede-photo.svg';
+import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.svg';
+import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
 
 export const metadata: Metadata = {
 	title: 'ClickAdsense',
@@ -38,7 +39,7 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 					<Image
 						alt="background title page"
 						loading="lazy"
-						src={BGCoverTitleTopPage}
+						src={bgCoverTitleTopPage}
 						className="absolute inset-0 size-auto object-cover"
 					/>
 					<h1 className="relative text-center text-5xl font-bold uppercase leading-[58.24px] max-md:text-4xl">
@@ -51,7 +52,7 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 						<Image
 							alt=""
 							loading="lazy"
-							src={ArrowRightSitemap}
+							src={arrowRightSitemap}
 							className="my-auto aspect-square w-[15px]"
 						/>
 						<div className="grow">ClickAdsense</div>
@@ -60,7 +61,7 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 				<Image
 					alt="ClickAdsense header background"
 					loading="lazy"
-					src={ClickAdSenseHeader}
+					src={clickAdSenseHeader}
 					className="absolute inset-0 -z-20 size-full object-cover opacity-20"
 				/>
 			</div>
@@ -122,7 +123,7 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 									<Image
 										alt="any"
 										loading="lazy"
-										src={LeftArrowClickPhrase}
+										src={leftArrowClickPhrase}
 										className="aspect-square h-auto w-5  fill-pink-700 stroke-pink-700"
 									/>
 									<h3 className="my-auto uppercase">custom advertising plan</h3>
@@ -135,7 +136,7 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 									company's needs. Talk to a specialist.
 								</p>
 							</div>
-							<Button className=" flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
+							<Button className=" bg-cm-gradient-imgcolor flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
 								<span className="uppercase">Book an appointment</span>
 								<ArrowUpRight
 									size={20}
@@ -163,7 +164,7 @@ export default function ClickAdsensePage(params: ClickAdsensePageProps) {
 						<Image
 							alt="click more adsense photo"
 							loading="lazy"
-							src={clickMoreSedePhoto}
+							src={clickMoreAskedQuestions}
 							className="z-10 -mb-16 aspect-[1.23] w-full grow max-lg:max-w-[520px] max-md:mt-10"
 						/>
 					</div>

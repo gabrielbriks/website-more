@@ -122,7 +122,7 @@ export default function CardServices(params: CardServicesProps) {
 									</CardContent>
 									<CardFooter className="flex h-full w-full items-center justify-center">
 										<Link
-											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-button-gradient px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											className="bg-cm-gradient-imgcolor flex  h-14 justify-between gap-2.5 self-center rounded-[45px] border-pink-600 px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 											href={`${item.urlTarget}?plan=true`}
 										>
 											<span className="h-auto uppercase">
@@ -139,8 +139,8 @@ export default function CardServices(params: CardServicesProps) {
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious className="bg-button-gradient" />
-				<CarouselNext className="bg-button-gradient" />
+				<CarouselPrevious className="bg-cm-gradient-imgcolor" />
+				<CarouselNext className="bg-cm-gradient-imgcolor" />
 			</Carousel>
 			<div className="z-10 my-6 flex justify-center gap-2 transition duration-700">
 				{Array.from({ length: count }).map((_, indexDot) => (
@@ -154,7 +154,7 @@ export default function CardServices(params: CardServicesProps) {
 						className={cn(
 							'h-2 w-4 rounded-full transition duration-700 ',
 							current - 1 === indexDot
-								? 'bg-button-gradient'
+								? 'bg-cm-gradient-imgcolor'
 								: 'border border-purple-500/30 bg-slate-100/40',
 						)}
 					/>

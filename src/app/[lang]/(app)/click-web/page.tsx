@@ -10,9 +10,9 @@ import Link from 'next/link';
 
 import arrowRightSitemap from '@/assets/arrow-right-sitemap.webp';
 import bgCoverTitleTopPage from '@/assets/layout/bg-cover-title-pages.svg';
-import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.webp';
+import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
 import clickWebHeader from '@/assets/pages/click-web/click-web-bg-header.webp';
-import clickMoreAskedQuestions from '@/assets/pages/click-web/clickweb-asked-questions.webp';
+import clickMoreAskedQuestions from '@/assets/pages/click-web/clickweb-asked-questions.svg';
 
 interface ClickWebProps {}
 
@@ -136,7 +136,7 @@ export default function ClickWeb(params: ClickWebProps) {
 									company's needs. Talk to a specialist.
 								</p>
 							</div>
-							<Button className=" flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 bg-button-gradient px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
+							<Button className=" bg-cm-gradient-imgcolor flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
 								<span className="uppercase">Book an appointment</span>
 								<ArrowUpRight
 									size={20}

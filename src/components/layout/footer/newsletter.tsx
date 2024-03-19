@@ -15,7 +15,7 @@ export default function NewsLetter(params: NewsLetterProps) {
 				/>
 				<Button
 					type="submit"
-					className="h-11 gap-1 rounded-full bg-button-gradient uppercase"
+					className="bg-cm-gradient-imgcolor h-11 gap-1 rounded-full uppercase"
 				>
 					Subscribe
 					<ArrowUpRight

@@ -24,6 +24,11 @@ const config = {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				cm: {
+					tile: '#1F242F',
+					'para-dark': '#D2D2D2',
+					para: '#525252',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
@@ -52,8 +57,6 @@ const config = {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
-				cm_gradient:
-					'hsl(linear-gradient(134deg, #6E07AD 2.81%, #CB457A 75.03%, #E85A6A 95.48%))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -79,9 +82,15 @@ const config = {
 				nunito: ['var(--font-nunito)'],
 				opens_sans: ['var(--font-opens-sans)'],
 			},
+			backgroundColor: {
+				'cm-primary': '#5D00A7',
+				'cm-secondary': '#D34B73',
+				cm_gradient:
+					'linear-gradient(134deg, #6E07AD 2.81%, #CB457A 75.03%, #E85A6A 95.48%)',
+			},
 			backgroundImage: {
 				'hero-background': "url('/public/colorful-background.svg')",
-				'button-gradient':
+				'cm-gradient-imgcolor':
 					'linear-gradient(134deg, #6E07AD 2.81%, #CB457A 75.03%, #E85A6A 95.48%)',
 			},
 		},
