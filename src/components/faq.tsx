@@ -49,7 +49,7 @@ export default function Faq(params: FaqProps) {
 		<Accordion
 			type="single"
 			collapsible
-			className="bg-cm-gradient-imgcolor w-full rounded-2xl p-6"
+			className="w-full rounded-2xl bg-cm-gradient-imgcolor p-6"
 		>
 			<div className="mt-12 flex w-[54px] max-md:mt-10">
 				<h3 className="my-auto flex grow gap-1 whitespace-nowrap text-base font-semibold uppercase text-white ">

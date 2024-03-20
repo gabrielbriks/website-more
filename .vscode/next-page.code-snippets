@@ -27,8 +27,8 @@
 			"      <h1 className=\"text-2xl font-semibold\">$1</h1>",
 			"    </div>",
 			"  );",
-			"}"
+			"}",
 		],
-		"description": "Cria um componente funcional em React"
-	}
+		"description": "Cria um componente funcional em React",
+	},
 }

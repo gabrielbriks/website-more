@@ -59,8 +59,8 @@ export function Header({ lang }: HeaderProps) {
 					className={cn(
 						' flex items-center justify-between gap-2.5 self-stretch rounded-[45px] border border-solid  px-8 py-6 max-md:px-5',
 						withPhotoInBackground !== null && withPhotoInBackground
-							? 'bg-cm-gradient-imgcolor transform border-purple-700/50 tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50'
-							: 'hover:bg-cm-gradient-imgcolor group border-pink-600 bg-transparent transition duration-700 hover:text-white hover:transition-colors hover:duration-1000',
+							? 'transform border-purple-700/50 bg-cm-gradient-imgcolor tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50'
+							: 'group border-pink-600 bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
 					)}
 				>
 					<span className="uppercase">Client Area</span>

@@ -122,7 +122,7 @@ export default function CardServices(params: CardServicesProps) {
 									</CardContent>
 									<CardFooter className="flex h-full w-full items-center justify-center">
 										<Link
-											className="bg-cm-gradient-imgcolor flex  h-14 justify-between gap-2.5 self-center rounded-[45px] border-pink-600 px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 											href={`${item.urlTarget}?plan=true`}
 										>
 											<span className="h-auto uppercase">

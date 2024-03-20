@@ -84,7 +84,7 @@ export default async function Home(props: HomeProps) {
 									<div className="mt-8 flex justify-between gap-5 whitespace-nowrap uppercase max-lg:mb-10 max-lg:w-full max-lg:justify-center lg:self-start">
 										<Button
 											variant="outline"
-											className="bg-cm-gradient-imgcolor flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 										>
 											<span className="uppercase">Learn More</span>
 											<ArrowUpRight
@@ -441,7 +441,7 @@ export default async function Home(props: HomeProps) {
 									<div className="flex w-full items-start justify-start">
 										<Button
 											type="submit"
-											className="bg-cm-gradient-imgcolor mt-10 h-11 gap-1 rounded-full uppercase"
+											className="mt-10 h-11 gap-1 rounded-full bg-cm-gradient-imgcolor uppercase"
 										>
 											Get in touch
 											<ArrowUpRight
