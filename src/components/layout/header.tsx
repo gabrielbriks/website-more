@@ -9,9 +9,11 @@ import { useEffect, useState } from 'react';
 import LocaleSwitcher from '../locale-switcher';
 import { NavBarLinks } from './nav-bar-links';
 
+import useDictionary from '@/hooks/useDictionary';
 import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
 import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
 import MenuMobile from '../header/menu-mobile';
+import LoaderGlobal from './loadings/loading-global';
 
 interface HeaderProps {
 	lang: Locale;
@@ -21,7 +23,10 @@ export function Header({ lang }: HeaderProps) {
 	const [withPhotoInBackground, setWithPhotoInBackground] = useState<
 		boolean | null
 	>(null);
+	const [loading, setLoading] = useState(true);
+
 	const params = useSearchParams();
+	const dictionary = useDictionary({ lang });
 
 	useEffect(() => {
 		if (window === undefined) {
@@ -30,6 +35,16 @@ export function Header({ lang }: HeaderProps) {
 
 		setWithPhotoInBackground(params.has('plan'));
 	}, [params]);
+
+	useEffect(() => {
+		if (Object.keys(dictionary).length > 0) {
+			setLoading(false);
+		}
+	}, [dictionary]);
+
+	if (loading) {
+		return <LoaderGlobal />;
+	}
 
 	return (
 		<header className="absolute z-10 flex w-full flex-wrap items-center gap-5 overflow-hidden px-16 pt-8 text-base uppercase max-md:flex max-md:max-w-full max-md:justify-between lg:justify-between">
@@ -63,7 +78,9 @@ export function Header({ lang }: HeaderProps) {
 							: 'group border-pink-600 bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
 					)}
 				>
-					<span className="uppercase">Client Area</span>
+					<span className="uppercase">
+						{dictionary.layout.header.buttonClientArea}
+					</span>
 					<ArrowUpRight
 						size={20}
 						color="#db2777"

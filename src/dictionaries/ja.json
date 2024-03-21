@@ -1,13 +1,13 @@
 {
 	"layout": {
 		"header": {
-			"menu-bar": {
+			"menuBar": {
 				"home": "ホームページ",
 				"whoWeAre": "企業ビジョン",
 				"plans": "サービス",
 				"contact": "Contact"
 			},
-			"button-client-area": "アカウントを作成する"
+			"buttonClientArea": "アカウントを作成する"
 		},
 		"footer": {},
 		"buttons": {

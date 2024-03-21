@@ -1,13 +1,13 @@
 {
 	"layout": {
 		"header": {
-			"menu-bar": {
+			"menuBar": {
 				"home": "Página Inicial",
 				"whoWeAre": "Visão da Empresa",
 				"plans": "Serviços",
 				"contact": "Contato"
 			},
-			"button-client-area": "Criar Conta"
+			"buttonClientArea": "Criar Conta"
 		},
 		"footer": {},
 		"buttons": {

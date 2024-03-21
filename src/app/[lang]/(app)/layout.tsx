@@ -42,14 +42,19 @@ export default function AppLayout({
 	params: { lang: Locale };
 }>) {
 	// const locale = useLocale();
+	// const { loading } = useDictionaryContext();
+
+	// if (loading) {
+	// 	return <LoaderGlobal />;
+	// }
 
 	return (
 		<>
 			<Suspense fallback={null}>
 				<Header lang={params.lang} />
 				<div className="flex h-full min-h-full w-full flex-col">
+					{/* <DictionaryProvider lang={params.lang}>{children}</DictionaryProvider> */}
 					{children}
-
 					<SpeedInsights />
 					<NavigationEvents />
 				</div>

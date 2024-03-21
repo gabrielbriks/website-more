@@ -70,6 +70,7 @@ export default function RootLayout({
 				className={`${nunito.variable} ${kanit.variable} ${opens_sans.variable}`}
 			>
 				<Suspense fallback={<FallbackLoading />}>
+					{/* <DictionaryProvider lang={params.lang}>{children}</DictionaryProvider> */}
 					{children}
 					<SpeedInsights />
 					<Analytics />
