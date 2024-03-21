@@ -14,16 +14,16 @@ import { ArrowBigUpDash } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import BgColorFullHero from '../../../../assets/colorful-background.webp';
-import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.webp';
-import ValuesClickMOre from '../../../../assets/image-values.webp';
-import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.webp';
-import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.webp';
-import MapWorldDoted from '../../../../assets/map-world-dotted.webp';
-import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.webp';
-import OurMissionPhoto from '../../../../assets/our-mission-photo.webp';
-import PointerClickLeft from '../../../../assets/pointer-click-left.webp';
-import PointerClickRight from '../../../../assets/pointer-click-right.webp';
+import BgColorFullHero from '../../../../assets/colorful-background.svg';
+import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.svg';
+import ValuesClickMOre from '../../../../assets/image-values.svg';
+import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
+import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
+import MapWorldDoted from '../../../../assets/map-world-dotted.svg';
+import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.svg';
+import OurMissionPhoto from '../../../../assets/our-mission-photo.svg';
+import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
+import PointerClickRight from '../../../../assets/pointer-click-right.svg';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -62,17 +62,17 @@ export default async function Home(props: HomeProps) {
 												src={LeftArrowClickPhrase}
 												className="aspect-square h-auto w-5"
 											/>
-											{dictionary['home-page'].heroSubtitleTop}
+											{dictionary['pages'].home.heroSubtitleTop}
 											{/* One Stop Solution for business */}
 										</h2>
 									</div>
 									<h1 className="mt-4 text-6xl font-bold uppercase leading-[58px] text-gray-800 max-lg:max-w-full max-lg:justify-center max-lg:text-center max-md:text-4xl max-md:leading-10">
-										{dictionary['home-page'].heroTitle}
+										{dictionary['pages'].home.heroTitle}
 										{/* Turning Clicks into <br />
 										Business Opportunities */}
 									</h1>
 									<p className="mt-6 font-nunito text-lg leading-7 text-neutral-600 max-lg:max-w-full max-lg:justify-center max-lg:text-center">
-										{dictionary['home-page'].heroTextDescription}
+										{dictionary['pages'].home.heroTextDescription}
 										{/* Welcome to ClickMore, your trusted partner in achieving
 										visibility and success in the digital world. If you're ready
 										to take your business to the next level, you're in the right
@@ -86,7 +86,9 @@ export default async function Home(props: HomeProps) {
 											variant="outline"
 											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 										>
-											<span className="uppercase">Learn More</span>
+											<span className="uppercase">
+												{dictionary['layout'].buttons.learnMore}
+											</span>
 											<ArrowUpRight
 												size={20}
 												className="stroke-white transition duration-700"
@@ -97,7 +99,9 @@ export default async function Home(props: HomeProps) {
 											variant="outline"
 											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-transparent px-8 py-5 text-pink-600 transition duration-500 hover:bg-transparent max-md:px-5"
 										>
-											<span className="uppercase">Hire now</span>
+											<span className="uppercase">
+												{dictionary['layout'].buttons.hireNow}
+											</span>
 											<ArrowUpRight
 												size={20}
 												className="stroke-pink-600 transition duration-700 group-hover:stroke-black"
@@ -223,20 +227,22 @@ export default async function Home(props: HomeProps) {
 									src={LeftArrowClickPhrase}
 									className="aspect-square w-5"
 								/>
-								Our values
+								{dictionary['pages'].home['section-define-us'].subTitleTop}
 							</h4>
 						</span>
 						<h2 className="text-5xl font-bold uppercase text-gray-800 max-lg:w-full max-lg:justify-center max-lg:text-center max-md:mr-2 max-md:max-w-full">
-							Values That Define Us
+							{dictionary['pages'].home['section-define-us'].title}
 						</h2>
 
 						<p className="mt-6 w-[564px] text-lg leading-7 text-neutral-600 max-lg:w-full max-lg:text-center max-md:mr-2 max-md:max-w-full">
-							Lorem Ipsum is simply dummy text of the printing and typesetting
+							{dictionary['pages'].home['section-define-us'].textDescription}
+
+							{/* Lorem Ipsum is simply dummy text of the printing and typesetting
 							industry. Lorem Ipsum has been the industry's standard dummy text
 							ever since the 1500s, when an unknown printer took a galley of
 							type and scrambled it to make a type specimen book. It has
 							survived not only five centuries, but also the leap into
-							electronic typesetting, remaining essentially unchanged.
+							electronic typesetting, remaining essentially unchanged. */}
 						</p>
 					</div>
 				</div>
@@ -267,16 +273,17 @@ export default async function Home(props: HomeProps) {
 							src={LeftArrowClickPhrase}
 							className="aspect-square w-5"
 						/>
-						Our Services
+						{dictionary['pages'].home['section-services'].subTitleTop}
 					</h4>
 
 					<h2 className="mt-4 text-center text-5xl font-bold uppercase text-gray-800 max-md:max-w-full">
-						Our Tailored Digital Services
+						{dictionary['pages'].home['section-services'].title}
 					</h2>
 					<p className="mt-6 text-center text-lg leading-7 text-neutral-600 max-md:max-w-full">
-						From innovative solutions to transformative strategies, we craft
+						{dictionary['pages'].home['section-services'].textDescription}
+						{/* From innovative solutions to transformative strategies, we craft
 						success through tailored and dynamic offerings. Explore limitless
-						possibilities with us.
+						possibilities with us. */}
 					</p>
 				</div>
 			</section>
@@ -285,12 +292,12 @@ export default async function Home(props: HomeProps) {
 				<div className="z-10 flex w-full min-w-full flex-col items-center justify-center ">
 					{/*pl-6 pr-16 max-md:px-5*/}
 					<div className="container flex h-full min-w-full items-center justify-center">
-						<CardServices />
+						<CardServices lang={props.params.lang} />
 					</div>
 
 					{/* Start Area PlayVideo */}
 					<div className="mb-20 ">
-						<VideoComponent />
+						<VideoComponent lang={props.params.lang} />
 					</div>
 
 					{/* End Area PlayVideo */}
@@ -318,18 +325,29 @@ export default async function Home(props: HomeProps) {
 											src={LeftArrowClickPhrase}
 											className="aspect-square w-5"
 										/>
-										<div className="my-auto grow">Our mission</div>
+										<div className="my-auto grow">
+											{
+												dictionary['pages'].home['section-ourMission']
+													.subTitleTop
+											}
+										</div>
 									</div>
 									<div className="mt-4 text-5xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full">
-										ClickMore and Your <br className="max-md:hidden" />
-										Company Together
+										{dictionary['pages'].home['section-ourMission'].title}
+										{/* ClickMore and Your <br className="max-md:hidden" />
+										Company Together */}
 									</div>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
-										ClickMore is not just an agency; we are your partners in
+										{
+											dictionary['pages'].home['section-ourMission']
+												.textDescription
+										}
+
+										{/* ClickMore is not just an agency; we are your partners in
 										growth. With personalized service and strategies tailored to
 										your needs, we ensure that small and medium-sized businesses
 										achieve significant results. Trust, visibility, and success
-										– all in one place.
+										– all in one place. */}
 									</div>
 								</div>
 							</div>
@@ -370,7 +388,7 @@ export default async function Home(props: HomeProps) {
 								aria-roledescription="Frequently asked questions"
 								className="flex w-[54%] flex-col max-lg:ml-0 max-lg:w-full max-sm:mt-3 lg:ml-5"
 							>
-								<Faq />
+								<Faq lang={props.params.lang} />
 							</div>
 						</div>
 					</section>
@@ -397,16 +415,27 @@ export default async function Home(props: HomeProps) {
 											src={LeftArrowClickPhrase}
 											className="aspect-square w-5"
 										/>
-										<h3 className="my-auto grow">Have any questions</h3>
+										<h3 className="my-auto grow">
+											{
+												dictionary['pages'].home['section-contact']
+													.areaSendMessage.subTitleTop
+											}
+										</h3>
 									</div>
 
 									<h1 className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full">
-										Send A Message
+										{
+											dictionary['pages'].home['section-contact']
+												.areaSendMessage.title
+										}
 									</h1>
 
 									<div className="mt-11 justify-center whitespace-nowrap border-b border-solid border-b-slate-200 max-md:mt-10 max-md:max-w-full">
 										<Input
-											placeholder="Name"
+											placeholder={
+												dictionary['pages'].home['section-contact']
+													.areaSendMessage.inputsPlaceholders.name
+											}
 											className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 										/>
 									</div>
@@ -415,7 +444,10 @@ export default async function Home(props: HomeProps) {
 										<div className="flex flex-1 flex-col justify-center">
 											<div className="justify-center border-b border-solid border-b-slate-200">
 												<Input
-													placeholder="Email"
+													placeholder={
+														dictionary['pages'].home['section-contact']
+															.areaSendMessage.inputsPlaceholders.email
+													}
 													className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 												/>
 											</div>
@@ -424,7 +456,10 @@ export default async function Home(props: HomeProps) {
 										<div className="flex flex-1 flex-col justify-center">
 											<div className="justify-center border-b border-solid border-b-slate-200">
 												<Input
-													placeholder="Phone"
+													placeholder={
+														dictionary['pages'].home['section-contact']
+															.areaSendMessage.inputsPlaceholders.phone
+													}
 													className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 												/>
 											</div>
@@ -433,7 +468,10 @@ export default async function Home(props: HomeProps) {
 
 									<div className="mt-11 w-full self-start border-b border-solid border-b-slate-200 max-md:mt-10">
 										<Textarea
-											placeholder="Tell us about your query"
+											placeholder={
+												dictionary['pages'].home['section-contact']
+													.areaSendMessage.inputsPlaceholders.msgText
+											}
 											className="min-w-full border-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
 										/>
 									</div>
@@ -443,7 +481,10 @@ export default async function Home(props: HomeProps) {
 											type="submit"
 											className="mt-10 h-11 gap-1 rounded-full bg-cm-gradient-imgcolor uppercase"
 										>
-											Get in touch
+											{
+												dictionary['pages'].home['section-contact']
+													.areaSendMessage.buttonSubmitName
+											}
 											<ArrowUpRight
 												size={20}
 												className="stroke-white transition duration-700 group-hover:stroke-black"
@@ -462,21 +503,39 @@ export default async function Home(props: HomeProps) {
 											src={LeftArrowClickPhrase}
 											className="aspect-square w-5"
 										/>
-										<div className="my-auto grow">Contact us</div>
+										<div className="my-auto grow">
+											{
+												dictionary['pages'].home['section-contact'][
+													'contact-information'
+												].subTitleTop
+											}
+										</div>
 									</div>
 									<h3 className="mt-4 w-full text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-lg:max-w-full">
-										Contact Information
+										{
+											dictionary['pages'].home['section-contact'][
+												'contact-information'
+											].title
+										}
 									</h3>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
-										Need help assessing difficult situations? Or if you have any
-										other questions, please feel free to contact us. We are
-										happy to help you!
+										{
+											dictionary['pages'].home['section-contact'][
+												'contact-information'
+											].textDescription
+										}
 									</div>
 									<div className="mt-11 w-full max-lg:max-w-full max-md:mt-10 ">
 										<div className="grid w-full grid-cols-2 max-xl:grid-cols-1 max-lg:gap-5	">
 											<div className="ml-5 flex w-full flex-col md:ml-0 lg:w-6/12">
 												<div className="flex flex-col text-2xl font-semibold text-gray-800 max-2xl:mt-10">
-													<div>Email</div>
+													<div>
+														{
+															dictionary['pages'].home['section-contact'][
+																'contact-information'
+															].labelEmail
+														}
+													</div>
 													<div className="mt-2 text-lg leading-7 text-neutral-600">
 														support@clickmore.org
 													</div>
@@ -486,7 +545,11 @@ export default async function Home(props: HomeProps) {
 											<div className="ml-5 flex w-6/12 flex-col	md:ml-0 md:w-full">
 												<div className="flex grow flex-col max-2xl:mt-10">
 													<h4 className="text-2xl font-semibold text-gray-800">
-														Phone
+														{
+															dictionary['pages'].home['section-contact'][
+																'contact-information'
+															].labelPhone
+														}
 													</h4>
 													<div className="mt-2 text-lg leading-7 text-neutral-600">
 														090-8321-8676
@@ -496,7 +559,13 @@ export default async function Home(props: HomeProps) {
 
 											<div className="ml-5 flex w-6/12 flex-col  md:ml-0 md:w-full">
 												<div className="mt-10 flex flex-col text-2xl font-semibold text-gray-800">
-													<div>Location</div>
+													<div>
+														{
+															dictionary['pages'].home['section-contact'][
+																'contact-information'
+															].labelLocation
+														}
+													</div>
 													<div className="mt-2 text-lg leading-7 text-neutral-600">
 														Komaki, Aichi Prefecture
 													</div>

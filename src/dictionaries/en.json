@@ -1,14 +1,100 @@
 {
-	"home-page": {
-		"heroTitle": "TURNING CLICKS INTO BUSINESS OPPORTUNITIES",
-		"heroSubtitleTop": "ONE STOP SOLUTION FOR BUSINESS",
-		"heroTextDescription": "Welcome to ClickMore, your trusted partner in achieving visibility and success in the digital world. If you're ready to take your business to the next level, you're in the right place. We're here to present innovative solutions that exceed expectations, putting your brand in the spotlight and driving business growth."
+	"layout": {
+		"header": {
+			"menu-bar": {
+				"home": "Home",
+				"whoWeAre": "Company Vision",
+				"plans": "Services",
+				"contact": "Contact"
+			},
+			"button-client-area": "Create Account"
+		},
+		"footer": {},
+		"buttons": {
+			"learnMore": "Learn More",
+			"hireNow": "Hire Now"
+		},
+		"inputs": {}
 	},
-	"server-component": {
-		"welcome": "Welcome"
-	},
-	"counter": {
-		"increment": "Increment",
-		"decrement": "Decrement"
+	"pages": {
+		"home": {
+			"heroSubtitleTop": "ONE STOP SOLUTION FOR BUSINESS",
+			"heroTitle": "ClickMore - Changing Clicks into Business Opportunities",
+			"heroTextDescription": "Welcome to ClickMore. We are your trusted partner in achieving practicality, quality, and innovation in the digital world. If you're ready to take your business to the next level, you're in the right place. We're here to present innovative solutions that exceed expectations, attract attention to your brand, and drive business growth.",
+			"section-define-us": {
+				"subTitleTop": "Company Vision",
+				"title": "Defining Us - Our Vision",
+				"textDescription": "Our goal is to provide companies with practical and high-quality work. We have a trained team that delivers the best performance to help solve problems. This drives us to constantly innovate and provide the best solutions to the market.",
+				"definitionUsImage": {
+					"Practicality": "Practicality",
+					"Quality": "Quality",
+					"Innovation": "Innovation"
+				}
+			},
+			"section-services": {
+				"subTitleTop": "Our Services",
+				"title": "Digital Services",
+				"textDescription": "From innovative solutions to innovative strategies, we create success through customized, dynamic products. Let's explore infinite possibilities together.",
+				"cardsServices": {
+					"cardAdsense": {
+						"title": "ClickAdsense",
+						"textDescription": "Enhance your online presence, captivate viewers, and ensure that your brand is the first choice."
+					},
+					"cardMedia": {
+						"title": "ClickMedia",
+						"textDescription": "No more worries about social media. We'll take care of it for you."
+					},
+					"cardPages": {
+						"title": "ClickPages",
+						"textDescription": "The best way to get more emails, launch products, and advertise services."
+					},
+					"cardWeb": {
+						"title": "ClickWeb",
+						"textDescription": "Your long-awaited website is possible here."
+					}
+				}
+			},
+			"area-video": {
+				"phraseDescription": "A new way to hire a marketing agency for your company"
+			},
+			"section-ourMission": {
+				"subTitleTop": "Our Services",
+				"title": "Negotiation Transparency",
+				"textDescription": "ClickMore is not just an agency. We are your growth partner. Personalized services and strategies tailored to your needs ensure that small and medium-sized enterprises achieve great results. Practicality, quality, innovation. ClickMore is here."
+			},
+			"faq": {
+				"subTitleTop": "FAQ",
+				"title": "Frequently Asked Questions",
+				"questions": {
+					"": ""
+				}
+			},
+			"section-contact": {
+				"areaSendMessage": {
+					"subTitleTop": "HAVE ANY QUESTIONS",
+					"title": "SEND A MESSAGE",
+					"inputsPlaceholders": {
+						"name": "Name",
+						"email": "Email Address",
+						"phone": "Phone Number",
+						"msgText": "Clear your doubts"
+					},
+					"buttonSubmitName": "Submit"
+				},
+				"contact-information": {
+					"subTitleTop": "CONTACT US",
+					"title": "Contact Information",
+					"textDescription": "Need help evaluating a challenging situation? Or have other questions? Feel free to contact us. We're happy to help.",
+					"labelPhone": "Phone",
+					"labelLocation": "Location",
+					"labelEmail": "Email"
+				}
+			}
+		},
+		"clickAdsense": {},
+		"clickMedia": {},
+		"clickPages": {},
+		"clickWeb": {},
+		"clickEcom": {}
 	}
 }

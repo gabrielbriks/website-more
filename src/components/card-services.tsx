@@ -14,73 +14,30 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardFooter } from './ui/card';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
-import Click_AdsenseSVG from '../assets/icons-services/click-adsense.svg';
-import Click_MediaSVG from '../assets/icons-services/click-media.svg';
-import Click_PagesSVG from '../assets/icons-services/click-pages.svg';
-import Click_WebSVG from '../assets/icons-services/click-web.svg';
+import { getTextsCardsServiceByLanguage } from '@/dictionaries/others/cards-info-service';
+import type { Locale } from '@/i18n-config';
+import { CardInfoServiceType } from '@/types/card-info-service-type';
 
-type CardInfoService = {
-	icon: any;
-	nameService: string;
-	descriptionService: string;
-	buttonName: string;
-	urlTarget: string;
-};
+interface CardServicesProps {
+	lang: Locale;
+}
 
-const InfoServices: CardInfoService[] = [
-	{
-		icon: Click_AdsenseSVG,
-		nameService: 'ClickAdsense',
-		descriptionService:
-			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-		buttonName: 'Learn More',
-		urlTarget: '/click-adsense',
-	},
-	{
-		icon: Click_MediaSVG,
-		nameService: 'ClickMedia',
-		descriptionService:
-			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-		buttonName: 'Learn More',
-		urlTarget: '/click-media',
-	},
-	{
-		icon: Click_PagesSVG,
-		nameService: 'ClickPages',
-		descriptionService:
-			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-		buttonName: 'Learn More',
-		urlTarget: '/click-pages',
-	},
-	{
-		icon: Click_WebSVG,
-		nameService: 'ClickWeb',
-		descriptionService:
-			'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-		buttonName: 'Learn More',
-		urlTarget: '/click-web',
-	},
-	// {
-	// 	icon: Click_EcomSVG,
-	// 	nameService: 'ClickEcom',
-	// 	descriptionService:
-	// 		'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-	// 	buttonName: 'Learn More',
-	// 	urlTarget: '/click-ecom',
-	// },
-];
-
-interface CardServicesProps {}
-
-export default function CardServices(params: CardServicesProps) {
+export default function CardServices({ lang }: CardServicesProps) {
 	const [apiCarrousel, setApiCarrousel] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
-	const [count, setCount] = useState(InfoServices.length);
+	const [infoServicesCards, setInfoServicesCards] = useState<
+		CardInfoServiceType[]
+	>([]);
+	const [count, setCount] = useState(4);
 
 	useEffect(() => {
 		if (!apiCarrousel) {
 			return;
 		}
+
+		const infoServices = getTextsCardsServiceByLanguage(lang);
+
+		setInfoServicesCards(infoServices);
 
 		setCount(apiCarrousel.scrollSnapList().length);
 		setCurrent(apiCarrousel.selectedScrollSnap() + 1);
@@ -88,7 +45,7 @@ export default function CardServices(params: CardServicesProps) {
 		apiCarrousel.on('select', () => {
 			setCurrent(apiCarrousel.selectedScrollSnap() + 1);
 		});
-	}, [apiCarrousel]);
+	}, [apiCarrousel, lang]);
 
 	return (
 		<div className="container max-w-screen-2xl rounded-lg border">
@@ -97,7 +54,7 @@ export default function CardServices(params: CardServicesProps) {
 				className="h-full min-w-full max-w-screen-lg rounded-lg border-red-600"
 			>
 				<CarouselContent className="min-w-full">
-					{InfoServices.map((item, index) => (
+					{infoServicesCards.map((item, index) => (
 						<CarouselItem
 							key={index}
 							className="max-sm:basis-1/1 min-w-56 max-w-[392px] pl-5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5"

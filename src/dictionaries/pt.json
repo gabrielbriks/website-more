@@ -1,14 +1,100 @@
 {
-	"home-page": {
-		"heroTitle": "TRANSFORMANDO CLIQUES EM OPORTUNIDADES DE NEGÓCIOS",
-		"heroSubtitleTop": "SOLUÇÃO ÚNICA PARA EMPRESAS",
-		"heroTextDescription": "Bem-vindo à ClickMore, seu parceiro de confiança para alcançar visibilidade e sucesso no mundo digital. Se você está pronto para levar sua empresa para o próximo nível, você está no lugar certo. Estamos aqui para apresentar soluções inovadoras que superem as expectativas, colocando sua marca no centro das atenções e impulsionando o crescimento do negócio"
+	"layout": {
+		"header": {
+			"menu-bar": {
+				"home": "Página Inicial",
+				"whoWeAre": "Visão da Empresa",
+				"plans": "Serviços",
+				"contact": "Contato"
+			},
+			"button-client-area": "Criar Conta"
+		},
+		"footer": {},
+		"buttons": {
+			"learnMore": "Saiba Mais",
+			"hireNow": "Contratar Agora"
+		},
+		"inputs": {}
 	},
-	"server-component": {
-		"welcome": "Bem-vindo"
-	},
-	"counter": {
-		"increment": "Incrementar",
-		"decrement": "Decrementar"
+	"pages": {
+		"home": {
+			"heroSubtitleTop": "SOLUÇÃO ÚNICA PARA NEGÓCIOS",
+			"heroTitle": "Convertendo Cliques em Oportunidades de Negócio",
+			"heroTextDescription": "Bem-vindo ao ClickMore. Somos seu parceiro confiável para alcançar praticidade, qualidade e inovação no mundo digital. Se você está pronto para levar seu negócio para o próximo nível, você está no lugar certo. Estamos aqui para apresentar soluções inovadoras que superam expectativas, atraem atenção para sua marca e impulsionam o crescimento dos negócios.",
+			"section-define-us": {
+				"subTitleTop": "Visão da Empresa",
+				"title": "Nos Definindo - Nossa Visão",
+				"textDescription": "Nosso objetivo é fornecer às empresas trabalhos práticos e de alta qualidade. Temos uma equipe treinada que oferece o melhor desempenho para ajudar a resolver problemas. Isso nos impulsiona a inovar constantemente e oferecer as melhores soluções para o mercado.",
+				"definitionUsImage": {
+					"Practicality": "Praticidade",
+					"Quality": "Qualidade",
+					"Innovation": "Inovação"
+				}
+			},
+			"section-services": {
+				"subTitleTop": "Nossos Serviços",
+				"title": "Serviços Digitais",
+				"textDescription": "De soluções inovadoras a estratégias inovadoras, criamos sucesso por meio de produtos personalizados e dinâmicos. Vamos explorar possibilidades infinitas juntos.",
+				"cardsServices": {
+					"cardAdsense": {
+						"title": "ClickAdsense",
+						"textDescription": "Aumente sua presença online, cative espectadores e garanta que sua marca seja a primeira escolha."
+					},
+					"cardMedia": {
+						"title": "ClickMedia",
+						"textDescription": "Não se preocupe mais com as redes sociais. Nós cuidaremos disso para você."
+					},
+					"cardPages": {
+						"title": "ClickPages",
+						"textDescription": "A melhor maneira de obter mais e-mails, lançar produtos e anunciar serviços."
+					},
+					"cardWeb": {
+						"title": "ClickWeb",
+						"textDescription": "Seu site tão esperado é possível aqui."
+					}
+				}
+			},
+			"area-video": {
+				"phraseDescription": "Uma nova forma de contratar uma agência de marketing para sua empresa"
+			},
+			"section-ourMission": {
+				"subTitleTop": "Nossos Serviços",
+				"title": "Transparência na Negociação",
+				"textDescription": "O ClickMore não é apenas uma agência. Somos seu parceiro de crescimento. Serviços e estratégias personalizados adaptados às suas necessidades garantem que pequenas e médias empresas alcancem grandes resultados. Praticidade, qualidade, inovação. ClickMore está aqui."
+			},
+			"faq": {
+				"subTitleTop": "Perguntas Frequentes",
+				"title": "Perguntas Frequentes",
+				"questions": {
+					"": ""
+				}
+			},
+			"section-contact": {
+				"areaSendMessage": {
+					"subTitleTop": "Precisa de ajuda",
+					"title": "Enviar uma mensagem",
+					"inputsPlaceholders": {
+						"name": "Nome",
+						"email": "Email",
+						"phone": "Telefone",
+						"msgText": "Tire suas dúvidas"
+					},
+					"buttonSubmitName": "Enviar"
+				},
+				"contact-information": {
+					"subTitleTop": "Contate-nos",
+					"title": "Informações de Contato",
+					"textDescription": "Precisa de ajuda para avaliar uma situação desafiadora? Ou tem outras perguntas? Sinta-se à vontade para entrar em contato conosco. Estamos felizes em ajudar.",
+					"labelPhone": "Telefone",
+					"labelLocation": "Localização",
+					"labelEmail": "Email"
+				}
+			}
+		},
+		"clickAdsense": {},
+		"clickMedia": {},
+		"clickPages": {},
+		"clickWeb": {},
+		"clickEcom": {}
 	}
 }

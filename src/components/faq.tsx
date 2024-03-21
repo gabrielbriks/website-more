@@ -4,6 +4,8 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion';
+import { getDictionary } from '@/get-dictionary';
+import type { Locale } from '@/i18n-config';
 import { MousePointerClick } from 'lucide-react';
 
 type DataFAQS = {
@@ -42,9 +44,13 @@ const dataFAQS: DataFAQS[] = [
 	},
 ];
 
-interface FaqProps {}
+interface FaqProps {
+	lang: Locale;
+}
 
-export default function Faq(params: FaqProps) {
+export default async function Faq({ lang }: FaqProps) {
+	const dictionary = await getDictionary(lang);
+
 	return (
 		<Accordion
 			type="single"
@@ -57,11 +63,13 @@ export default function Faq(params: FaqProps) {
 						className="stroke-white"
 						style={{ transform: 'rotate(90deg)' }}
 					/>
-					FAQ
+					{dictionary['pages'].home.faq.subTitleTop}
 				</h3>
 			</div>
 			<h1 className="mt-2 pb-4 text-5xl font-bold uppercase leading-[48.08px] text-white max-md:max-w-full max-md:text-4xl">
-				Frequently asked questions
+				{dictionary['pages'].home.faq.title}
+
+				{/* Frequently asked questions */}
 			</h1>
 			<div className="flex flex-col gap-3">
 				{dataFAQS.map((item) => (

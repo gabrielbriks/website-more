@@ -1,15 +1,96 @@
 {
 	"layout": {
-		"header": {},
+		"header": {
+			"menu-bar": {
+				"home": "ホームページ",
+				"who-we-are": "企業ビジョン",
+				"plans": "サービス",
+				"contact": "Contact"
+			},
+			"button-client-area": "アカウントを作成する"
+		},
 		"footer": {},
-		"buttons": {},
+		"buttons": {
+			"learn-more": "もっと知る",
+			"hire-now": "今すぐ雇う"
+		},
 		"inputs": {}
 	},
 	"pages": {
 		"home": {
-			"heroTitle": "TURNING CLICKS INTO BUSINESS OPPORTUNITIES",
 			"heroSubtitleTop": "ONE STOP SOLUTION FOR BUSINESS",
-			"heroTextDescription": "Welcome to ClickMore, your trusted partner in achieving visibility and success in the digital world. If you're ready to take your business to the next level, you're in the right place. We're here to present innovative solutions that exceed expectations, putting your brand in the spotlight and driving business growth."
+			"heroTitle": "クリックを変える ビジネスチャンス",
+			"heroTextDescription": "ClickMore へようこそ。デジタル世界での実用性、品質、イノベーションを実現する信頼できるパートナーです。 ビジネスを次のレベルに引き上げる準備ができているなら、あなたは正しい場所にいます。 私たちは、期待を超える革新的なソリューションを提示し、貴社のブランドに注目を集め、ビジネスの成長を促進するためにここにいます。",
+			"section-define-us": {
+				"subTitleTop": "企業ビジョン",
+				"title": "私たちを定義するビジョン",
+				"textDescription": "当社の目標は、企業に実用性と高品質な仕事を提供することです。問題の解決に協力する最高のパフォーマンスを提供するために訓練されたチームがいます。これは私たちを常に革新し、市場に最高の解決策を提供し続ける原動力となっています。",
+				"image-definition": {
+					"Practicality": "実用性",
+					"Quality": "品質",
+					"Innovation": "革新"
+				}
+			},
+			"section-services": {
+				"subTitleTop": "Our Services",
+				"title": "デジタルサービス",
+				"textDescription": "革新的なソリューションから革新的な戦略に至るまで、私たちはカスタマイズされたダイナミックな製品を通じて成功を生み出します。 私たちと一緒に無限の可能性を探求しましょう。",
+				"cards-services": {
+					"card-adsense": {
+						"title": "ClickAdsense",
+						"textDescription": "オンラインでの貴社の存在感を高め、視聴者を魅了し、貴社のブランドが最初の選択肢となることを保証します。"
+					},
+					"card-media": {
+						"title": "ClickMedia",
+						"textDescription": "ソーシャルメディアについてはもう心配する必要はありません。私たちがあなたのためにそれを行います"
+					},
+					"card-pages": {
+						"title": "ClickPages",
+						"textDescription": "より多くの電子メールを取得し、製品を発売し、サービスを宣伝するための最良の方法。"
+					},
+					"card-web": {
+						"title": "ClickWeb",
+						"textDescription": "あなたがずっと望んでいたウェブサイトがここで可能です。"
+					},
+					"card-web": {
+						"title": "ClickWeb",
+						"textDescription": "あなたがずっと望んでいたウェブサイトがここで可能です。"
+					}
+				}
+			},
+			"area-video": {
+				"phraseDescription": "あなたの会社にマーケティング代理店を雇う新しい方法"
+			},
+			"area-ourMission": {
+				"subTitleTop": "Our Services",
+				"title": "交渉の透明性",
+				"textDescription": "ClickMore は単なる代理店ではありません。 私たちはあなたの成長のパートナーです。 お客様のニーズに合わせたパーソナライズされたサービスと戦略により、中小企業が確実に大きな成果を達成できるようにします。 実用性、品質、革新性。 クリックモアです"
+			},
+			"faq": {
+				"subTitleTop": "FAQ",
+				"title": "よくある質問",
+				"questions": {
+					"": ""
+				}
+			},
+			"section-contact": {
+				"area-send-message": {
+					"inputs": {
+						"placeholder-name": "名前",
+						"placeholder-email": "電子メールアドレス",
+						"placeholder-phone": "電話番号",
+						"placeholder-msgText": "疑問を晴らしてください"
+					},
+					"button-submit-name": "連絡する"
+				},
+				"contact-information": {
+					"title": "Contact Information",
+					"textDescription": "困難な状況を評価するのに助けが必要ですか? または、その他ご不明な点がございましたら、お気軽にお問い合わせください。 喜んでお手伝いさせていただきます。",
+					"label-phone": "電話番号",
+					"label-location": "所在地",
+					"label-email": "企業メール"
+				}
+			}
 		},
 		"clickAdsense": {},
 		"clickMedia": {},
