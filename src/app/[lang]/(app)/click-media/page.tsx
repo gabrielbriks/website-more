@@ -16,7 +16,7 @@ import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.
 import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.webp';
 
 interface ClickMediaProps {
-	lang: Locale;
+	params: { lang: Locale };
 }
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ const planInfo = {
 	typePlan: 'start',
 };
 
-export default function ClickMedia({ lang }: ClickMediaProps) {
+export default function ClickMedia({ params }: ClickMediaProps) {
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex min-h-[500px] w-full flex-col items-center bg-black px-16 pb-12 pt-8 backdrop-blur-xl max-md:max-w-full max-md:px-5">
@@ -152,14 +152,14 @@ export default function ClickMedia({ lang }: ClickMediaProps) {
 				{/* End Area ClickPrime */}
 			</div>
 			<div className="my-6 mb-20 h-full w-full">
-				<VideoComponent lang={lang} />
+				<VideoComponent lang={params.lang} />
 			</div>
 
 			<div className="container mt-24 w-full rounded-[32px_0px_0px_32px] py-12 pl-20 max-md:mt-10 max-md:max-w-full max-md:pl-5">
 				<div className="flex gap-5 max-lg:flex-col-reverse max-md:gap-0">
 					<div className="flex w-6/12 flex-col max-lg:w-full max-md:ml-0">
 						{/* Start Faq */}
-						<Faq lang={lang} />
+						<Faq lang={params.lang} />
 
 						{/* End Faq */}
 					</div>
