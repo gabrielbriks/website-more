@@ -1,27 +1,27 @@
-'use client';
+// 'use client';
 
-import { type getDictionary } from '@/get-dictionary';
-import { useState } from 'react';
-import { Button } from './ui/button';
+// import { type getDictionary } from '@/get-dictionary';
+// import { useState } from 'react';
+// import { Button } from './ui/button';
 
-export default function Counter({
-	dictionary,
-}: {
-	dictionary: Awaited<ReturnType<typeof getDictionary>>['counter'];
-}) {
-	const [count, setCount] = useState(0);
-	return (
-		<div className="m-5">
-			This component is rendered on client:
-			<div className="my-4 flex gap-4">
-				<Button variant="default" onClick={() => setCount((n) => n - 1)}>
-					{dictionary.decrement}
-				</Button>
-				<span className="text-2xl font-semibold">{count}</span>
-				<Button variant="default" onClick={() => setCount((n) => n + 1)}>
-					{dictionary.increment}
-				</Button>
-			</div>
-		</div>
-	);
-}
+// export default function Counter({
+// 	dictionary,
+// }: {
+// 	dictionary: Awaited<ReturnType<typeof getDictionary>>['counter'];
+// }) {
+// 	const [count, setCount] = useState(0);
+// 	return (
+// 		<div className="m-5">
+// 			This component is rendered on client:
+// 			<div className="my-4 flex gap-4">
+// 				<Button variant="default" onClick={() => setCount((n) => n - 1)}>
+// 					{dictionary.decrement}
+// 				</Button>
+// 				<span className="text-2xl font-semibold">{count}</span>
+// 				<Button variant="default" onClick={() => setCount((n) => n + 1)}>
+// 					{dictionary.increment}
+// 				</Button>
+// 			</div>
+// 		</div>
+// 	);
+// }
