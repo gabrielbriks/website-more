@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import LocaleSwitcher from '../locale-switcher';
 import { NavBarLinks } from './nav-bar-links';
 
-import useDictionary from '@/hooks/useDictionary';
+import { useDictionaryContext } from '@/contexts/dictionaryContext';
 import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
 import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
 import MenuMobile from '../header/menu-mobile';
@@ -23,10 +23,10 @@ export function Header({ lang }: HeaderProps) {
 	const [withPhotoInBackground, setWithPhotoInBackground] = useState<
 		boolean | null
 	>(null);
-	const [loading, setLoading] = useState(true);
+	// const [loading, setLoading] = useState(true);
 
 	const params = useSearchParams();
-	const dictionary = useDictionary({ lang });
+	const { dictionary, loading } = useDictionaryContext();
 
 	useEffect(() => {
 		if (window === undefined) {
@@ -36,11 +36,11 @@ export function Header({ lang }: HeaderProps) {
 		setWithPhotoInBackground(params.has('plan'));
 	}, [params]);
 
-	useEffect(() => {
-		if (Object.keys(dictionary).length > 0) {
-			setLoading(false);
-		}
-	}, [dictionary]);
+	// useEffect(() => {
+	// 	if (Object.keys(dictionary).length > 0) {
+	// 		setLoading(false);
+	// 	}
+	// }, [dictionary]);
 
 	if (loading) {
 		return <LoaderGlobal />;

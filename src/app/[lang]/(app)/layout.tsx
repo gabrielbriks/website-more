@@ -1,5 +1,6 @@
 import '@/app/globals.css';
 import { Header } from '@/components/layout/header';
+import FallbackLoading from '@/components/layout/loadings/fallback-loading';
 import { NavigationEvents } from '@/components/navigation-events';
 import { i18n, type Locale } from '@/i18n-config';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -50,7 +51,7 @@ export default function AppLayout({
 
 	return (
 		<>
-			<Suspense fallback={null}>
+			<Suspense fallback={<FallbackLoading />}>
 				<Header lang={params.lang} />
 				<div className="flex h-full min-h-full w-full flex-col">
 					{/* <DictionaryProvider lang={params.lang}>{children}</DictionaryProvider> */}
