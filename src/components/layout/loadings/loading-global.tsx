@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function LoaderGlobal() {
 	return (
-		<div className="absolute z-50 flex max-h-full min-h-screen w-full flex-col items-center justify-center bg-cm-gradient-imgcolor">
+		<div className="fixed z-50 flex min-h-full w-full flex-col items-center justify-center overscroll-none bg-cm-gradient-imgcolor">
 			<div>
 				<Image
 					alt="Logo click more purple "
