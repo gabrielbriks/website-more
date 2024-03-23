@@ -25,9 +25,11 @@ const config = {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				cm: {
-					tile: '#1F242F',
-					'para-dark': '#D2D2D2',
-					para: '#525252',
+					primary: '#5D00A7', //purple 800
+					secondary: '#D34B73', //pink 600
+					tertiary: '#1F242F', //slate 900
+					semiDark: '#525252', //slate 600
+					light: '#D2D2D2', // zinc 100
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -83,8 +85,9 @@ const config = {
 				opens_sans: ['var(--font-opens-sans)'],
 			},
 			backgroundColor: {
-				'cm-primary': '#5D00A7',
-				'cm-secondary': '#D34B73',
+				'cm-default-light': '#f4f4f5', //zinc 100
+				'cm-primary': '#5D00A7', //purple 800
+				'cm-secondary': '#D34B73', //pink 600
 				cm_gradient:
 					'linear-gradient(134deg, #6E07AD 2.81%, #CB457A 75.03%, #E85A6A 95.48%)',
 			},
