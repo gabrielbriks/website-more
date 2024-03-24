@@ -6,9 +6,7 @@ import {
 	type CarouselApi,
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
-import { ArrowUpRight } from 'akar-icons';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardFooter } from './ui/card';
@@ -17,6 +15,7 @@ import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import { getTextsCardsServiceByLanguage } from '@/dictionaries/others/cards-info-service';
 import type { Locale } from '@/i18n-config';
 import { CardInfoServiceType } from '@/types/card-info-service-type';
+import ButtonLinkCard from './layout/buttons/button-link-card';
 
 interface CardServicesProps {
 	lang: Locale;
@@ -78,18 +77,10 @@ export default function CardServices({ lang }: CardServicesProps) {
 										</div>
 									</CardContent>
 									<CardFooter className="flex h-full w-full items-center justify-center">
-										<Link
-											className="flex h-14  justify-between gap-2.5 self-center rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-4 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
-											href={`${item.urlTarget}?plan=true`}
-										>
-											<span className="h-auto uppercase">
-												{item.buttonName}
-											</span>
-											<ArrowUpRight
-												size={20}
-												className="stroke-white transition duration-700"
-											/>
-										</Link>
+										<ButtonLinkCard
+											urlTarget={item.urlTarget}
+											text={item.buttonName}
+										/>
 									</CardFooter>
 								</Card>
 							</div>

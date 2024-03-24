@@ -14,16 +14,16 @@ import { ArrowBigUpDash } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import BgColorFullHero from '../../../../assets/colorful-background.svg';
-import IconCircleGraphBlue from '../../../../assets/iconCircle-graph.svg';
-import ValuesClickMOre from '../../../../assets/image-values.svg';
-import JapaneseFAQImage from '../../../../assets/japanase-faq-photo.svg';
-import LeftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
-import MapWorldDoted from '../../../../assets/map-world-dotted.svg';
-import MenPhotoTopHero from '../../../../assets/men-photo-top-hero.svg';
-import OurMissionPhoto from '../../../../assets/our-mission-photo.svg';
-import PointerClickLeft from '../../../../assets/pointer-click-left.svg';
-import PointerClickRight from '../../../../assets/pointer-click-right.svg';
+import IconCircleGraphBlue from '@/assets/iconCircle-graph.svg';
+import ValuesClickMOre from '@/assets/image-values.svg';
+import JapaneseFAQImage from '@/assets/japanase-faq-photo.svg';
+import LeftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
+import MapWorldDoted from '@/assets/map-world-dotted.svg';
+import MenPhotoTopHero from '@/assets/men-photo-top-hero.svg';
+import OurMissionPhoto from '@/assets/our-mission-photo.svg';
+import BgImageFullHero from '@/assets/pages/home/hero-background.jpg';
+import PointerClickLeft from '@/assets/pointer-click-left.svg';
+import PointerClickRight from '@/assets/pointer-click-right.svg';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -43,9 +43,9 @@ export default async function Home(props: HomeProps) {
 				<div className="relative flex w-full flex-col pb-12 pt-8 max-lg:px-10 max-md:h-auto max-md:max-w-full max-md:px-5 lg:min-h-[788px] lg:overflow-hidden lg:px-16">
 					<Image
 						priority={true}
-						src={BgColorFullHero}
+						src={BgImageFullHero}
 						alt={''}
-						className="absolute inset-0 size-full object-cover opacity-70"
+						className="absolute inset-0 size-full object-cover opacity-100"
 					/>
 
 					<div className="absolute ml-40 mt-48 flex w-[76px] items-center justify-center self-center rounded-full p-px mix-blend-multiply max-md:mt-10"></div>
@@ -84,7 +84,7 @@ export default async function Home(props: HomeProps) {
 									<div className="mt-8 flex justify-between gap-5 whitespace-nowrap uppercase max-lg:mb-10 max-lg:w-full max-lg:justify-center lg:self-start">
 										<Button
 											variant="outline"
-											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-950 bg-cm-primary px-8 py-5 text-white transition duration-500 hover:bg-purple-800  hover:text-white max-md:px-5"
 										>
 											<span className="uppercase">
 												{dictionary['layout'].buttons.learnMore}
@@ -97,14 +97,14 @@ export default async function Home(props: HomeProps) {
 
 										<Button
 											variant="outline"
-											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-pink-600 bg-transparent px-8 py-5 text-pink-600 transition duration-500 hover:bg-transparent max-md:px-5"
+											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-900 bg-transparent px-8 py-5 text-purple-900 transition duration-500 hover:bg-transparent max-md:px-5"
 										>
-											<span className="uppercase">
+											<span className="uppercase text-purple-900 group-hover:text-purple-800">
 												{dictionary['layout'].buttons.hireNow}
 											</span>
 											<ArrowUpRight
 												size={20}
-												className="stroke-pink-600 transition duration-700 group-hover:stroke-black"
+												className="stroke-purple-900 transition duration-700"
 											/>
 										</Button>
 									</div>
@@ -479,7 +479,7 @@ export default async function Home(props: HomeProps) {
 									<div className="flex w-full items-start justify-start">
 										<Button
 											type="submit"
-											className="mt-10 h-11 gap-1 rounded-full bg-cm-gradient-imgcolor uppercase"
+											className="mt-10 h-11 gap-1 rounded-full border-purple-900 bg-cm-primary uppercase hover:bg-purple-700"
 										>
 											{
 												dictionary['pages'].home['section-contact']
@@ -557,8 +557,8 @@ export default async function Home(props: HomeProps) {
 												</div>
 											</div>
 
-											<div className="ml-5 flex w-6/12 flex-col  md:ml-0 md:w-full">
-												<div className="mt-10 flex flex-col text-2xl font-semibold text-gray-800">
+											<div className="ml-5 flex w-6/12 flex-col md:ml-0 md:w-full">
+												<div className="mt-10 flex w-full flex-1 flex-col text-2xl font-semibold text-gray-800">
 													<div>
 														{
 															dictionary['pages'].home['section-contact'][
@@ -566,7 +566,7 @@ export default async function Home(props: HomeProps) {
 															].labelLocation
 														}
 													</div>
-													<div className="mt-2 text-lg leading-7 text-neutral-600">
+													<div className="mt-2 flex-1 text-lg leading-7 text-neutral-600">
 														Komaki, Aichi Prefecture
 													</div>
 												</div>

@@ -63,9 +63,9 @@ export function Header({ lang }: HeaderProps) {
 
 			<NavBarLinks />
 
-			<div className="flex items-center justify-between gap-5 self-stretch whitespace-nowrap font-medium text-pink-600 max-lg:hidden">
+			<div className="flex items-center justify-between gap-5 self-stretch whitespace-nowrap font-medium text-purple-700 max-lg:hidden">
 				<div>
-					<Cart className="my-auto self-stretch stroke-pink-600" size={20} />
+					<Cart className="my-auto self-stretch stroke-purple-700" size={20} />
 				</div>
 				<LocaleSwitcher langCurrent={lang} />
 
@@ -75,7 +75,7 @@ export function Header({ lang }: HeaderProps) {
 						' flex items-center justify-between gap-2.5 self-stretch rounded-[45px] border border-solid  px-8 py-6 max-md:px-5',
 						withPhotoInBackground !== null && withPhotoInBackground
 							? 'transform border-purple-700/50 bg-cm-gradient-imgcolor tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50'
-							: 'group border-pink-600 bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
+							: 'border- group	 bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
 					)}
 				>
 					<span className="uppercase">
@@ -83,9 +83,9 @@ export function Header({ lang }: HeaderProps) {
 					</span>
 					<ArrowUpRight
 						size={20}
-						color="#db2777"
+						// color="#db2777"
 						className={cn(
-							'transition duration-700',
+							'stroke-cm-primary transition duration-700',
 							withPhotoInBackground !== null && withPhotoInBackground
 								? 'stroke-white hover:stroke-pink-100'
 								: 'group-hover:stroke-white',

@@ -44,7 +44,7 @@ export function NavBarLinks({
 	return (
 		<nav
 			className={cn(
-				'my-auto flex gap-5 ',
+				'my-auto flex gap-5 font-semibold ',
 				!showInMobile &&
 					'max-md:hidden max-md:justify-center lg:justify-between',
 				!showInFooter &&
