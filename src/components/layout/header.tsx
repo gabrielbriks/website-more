@@ -75,10 +75,10 @@ export function Header({ lang }: HeaderProps) {
 						' flex items-center justify-between gap-2.5 self-stretch rounded-[45px] border border-solid  px-8 py-6 max-md:px-5',
 						withPhotoInBackground !== null && withPhotoInBackground
 							? 'transform border-purple-700/50 bg-cm-gradient-imgcolor tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50'
-							: 'border- group	 bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
+							: 'group border-cm-primary bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
 					)}
 				>
-					<span className="uppercase">
+					<span className="uppercase text-cm-primary transition duration-1000 group-hover:text-white">
 						{dictionary.layout.header.buttonClientArea}
 					</span>
 					<ArrowUpRight

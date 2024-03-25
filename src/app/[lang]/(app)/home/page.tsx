@@ -97,14 +97,14 @@ export default async function Home(props: HomeProps) {
 
 										<Button
 											variant="outline"
-											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-900 bg-transparent px-8 py-5 text-purple-900 transition duration-500 hover:bg-transparent max-md:px-5"
+											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-900 bg-transparent px-8 py-5 text-purple-900 transition  hover:bg-cm-primary  hover:text-white hover:transition-colors hover:duration-1000 max-md:px-5"
 										>
-											<span className="uppercase text-purple-900 group-hover:text-purple-800">
+											<span className="uppercase text-purple-900 hover:duration-700 group-hover:text-white">
 												{dictionary['layout'].buttons.hireNow}
 											</span>
 											<ArrowUpRight
 												size={20}
-												className="stroke-purple-900 transition duration-700"
+												className="stroke-purple-900 transition duration-700 group-hover:stroke-white"
 											/>
 										</Button>
 									</div>

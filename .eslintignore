@@ -1,2 +1,4 @@
 next.config.js
 next.config.mjs
+node_modules
+.next

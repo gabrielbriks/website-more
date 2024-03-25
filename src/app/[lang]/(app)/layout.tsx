@@ -12,7 +12,7 @@ interface AppLayoutProps {
 }
 
 export const metadata: Metadata = {
-	// metadataBase: new URL("https://clickmore.com"),
+	metadataBase: new URL('https://clickmore.org'),
 	title: {
 		default: 'Click More',
 		template: '%s | clickmore.com',
