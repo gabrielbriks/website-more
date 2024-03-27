@@ -15,7 +15,6 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 import IconCircleGraphBlue from '@/assets/iconCircle-graph.svg';
-import ValuesClickMOre from '@/assets/image-values.svg';
 import JapaneseFAQImage from '@/assets/japanase-faq-photo.svg';
 import LeftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
 import MapWorldDoted from '@/assets/map-world-dotted.svg';
@@ -24,6 +23,8 @@ import OurMissionPhoto from '@/assets/our-mission-photo.svg';
 import BgImageFullHero from '@/assets/pages/home/hero-background.jpg';
 import PointerClickLeft from '@/assets/pointer-click-left.svg';
 import PointerClickRight from '@/assets/pointer-click-right.svg';
+// import ValuesClickMOre from '@/assets/image-values.svg';
+import ValuesClickMOre from '@/assets/pages/home/img-atributes-click-more.svg';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -94,7 +95,6 @@ export default async function Home(props: HomeProps) {
 												className="stroke-white transition duration-700"
 											/>
 										</Button>
-
 										<Button
 											variant="outline"
 											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-900 bg-transparent px-8 py-5 text-purple-900 transition  hover:bg-cm-primary  hover:text-white hover:transition-colors hover:duration-1000 max-md:px-5"
@@ -259,12 +259,12 @@ export default async function Home(props: HomeProps) {
 				id="services"
 				className="-mt-3 flex w-full max-w-[985px] items-start justify-between self-center max-md:max-w-full max-md:flex-wrap lg:gap-5"
 			>
-				<Image
+				{/* <Image
 					alt="any"
 					loading="lazy"
 					src={PointerClickLeft}
 					className="absolute aspect-square w-[54px] self-start"
-				/>
+				/> */}
 				<div className="mt-6 flex flex-col self-end max-md:max-w-full">
 					<h4 className="flex gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800">
 						<Image
