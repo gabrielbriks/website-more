@@ -252,7 +252,7 @@ export default async function Home(props: HomeProps) {
 					alt="any"
 					loading="lazy"
 					src={PointerClickRight}
-					className="absolute z-10 mt-36 aspect-square w-[54px] max-md:mt-10"
+					className="absolute z-10 mt-36 aspect-square w-[54px] max-md:mt-10 max-md:hidden"
 				/>
 			</section>
 
