@@ -12,7 +12,7 @@ export default function ButtonLinkCard({
 }: ButtonLinkCardProps) {
 	return (
 		<Link
-			className="flex max-h-14  justify-between gap-2.5 self-center rounded-[45px] border-purple-950 bg-cm-primary px-8 py-3 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
+			className="flex max-h-14 justify-between gap-2.5 self-center rounded-[45px] border-purple-950 bg-cm-primary px-8 py-3 font-medium text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5"
 			href={`${urlTarget}?plan=true`}
 		>
 			<span className="h-auto uppercase">{text}</span>

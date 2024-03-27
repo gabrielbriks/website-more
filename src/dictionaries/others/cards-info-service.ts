@@ -55,7 +55,7 @@ const cardTextsPT: CardInfoServiceType[] = [
 		nameService: 'ClickAdsense',
 		descriptionService:
 			'Aumente a sua presença online, envolva o seu público e garanta que a sua marca se torne a sua primeira escolha.',
-		buttonName: 'Saiba',
+		buttonName: 'Saiba Mais',
 		urlTarget: '/click-adsense',
 	},
 	{
@@ -63,7 +63,7 @@ const cardTextsPT: CardInfoServiceType[] = [
 		nameService: 'ClickMedia',
 		descriptionService:
 			'Não há mais necessidade de se preocupar com mídias sociais. nós fazemos isso por você',
-		buttonName: 'Saiba',
+		buttonName: 'Saiba Mais',
 		urlTarget: '/click-media',
 	},
 	{
@@ -71,14 +71,14 @@ const cardTextsPT: CardInfoServiceType[] = [
 		nameService: 'ClickPages',
 		descriptionService:
 			'A melhor forma de receber mais emails, lançar seus produtos e promover seus serviços.',
-		buttonName: 'Saiba',
+		buttonName: 'Saiba Mais',
 		urlTarget: '/click-pages',
 	},
 	{
 		icon: Click_WebSVG,
 		nameService: 'ClickWeb',
 		descriptionService: 'O site que você sempre quis é possível aqui.',
-		buttonName: 'Saiba',
+		buttonName: 'Saiba Mais',
 		urlTarget: '/click-web',
 	},
 	// {
