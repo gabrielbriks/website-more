@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import {
 	Card,
 	CardContent,
@@ -9,13 +8,14 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card';
-import { ArrowUpRight, Check } from 'akar-icons';
+import { Check } from 'akar-icons';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import BGCoverNamePlanMax from '../../../assets/layout/bg-cover-name-plan-max.svg';
 import BGCoverNamePlanPro from '../../../assets/layout/bg-cover-name-plan-pro.svg';
 import BGCoverNamePlanStart from '../../../assets/layout/bg-cover-name-plan-start.svg';
+import ButtonHireCard from './button-hire-card';
 
 interface CardPlanProps {
 	namePlan: string;
@@ -95,18 +95,10 @@ export default function CardPlanIdea2(params: CardPlanProps) {
 						</div>
 					</CardContent>
 					<CardFooter className="flex w-full flex-1 items-center justify-center px-20 ">
-						<Button
-							onClick={() => navigation.push(params.urlTarget)}
-							className="flex h-14 min-w-full max-w-[200px] transform justify-center gap-2.5 rounded-[45px] border-pink-600 border-purple-700/50 bg-cm-gradient-imgcolor px-8 py-5 tracking-widest text-white transition duration-700 hover:scale-105 hover:text-pink-50 max-md:px-5"
-						>
-							<span className="font-kanit text-lg font-normal uppercase leading-4">
-								{params.nameButton}
-							</span>
-							<ArrowUpRight
-								size={20}
-								className="stroke-white transition duration-700"
-							/>
-						</Button>
+						<ButtonHireCard
+							text={params.nameButton}
+							urlTarget={params.urlTarget}
+						/>
 					</CardFooter>
 				</Card>
 			</div>

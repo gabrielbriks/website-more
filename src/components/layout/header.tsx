@@ -65,9 +65,19 @@ export function Header({ lang }: HeaderProps) {
 
 			<div className="flex items-center justify-between gap-5 self-stretch whitespace-nowrap font-medium text-purple-700 max-lg:hidden">
 				<div>
-					<Cart className="my-auto self-stretch stroke-purple-700" size={20} />
+					<Cart
+						className={cn(
+							'my-auto self-stretch stroke-purple-700',
+							withPhotoInBackground && ' stroke-white',
+						)}
+						size={20}
+					/>
 				</div>
-				<LocaleSwitcher langCurrent={lang} />
+
+				<LocaleSwitcher
+					withPhotoInBackground={withPhotoInBackground}
+					langCurrent={lang}
+				/>
 
 				<Button
 					variant="outline"
@@ -78,7 +88,12 @@ export function Header({ lang }: HeaderProps) {
 							: 'group border-cm-primary bg-transparent transition duration-700 hover:bg-cm-gradient-imgcolor hover:text-white hover:transition-colors hover:duration-1000',
 					)}
 				>
-					<span className="uppercase text-cm-primary transition duration-1000 group-hover:text-white">
+					<span
+						className={cn(
+							'uppercase text-cm-primary transition duration-1000 group-hover:text-white',
+							withPhotoInBackground && 'text-white',
+						)}
+					>
 						{dictionary.layout.header.buttonClientArea}
 					</span>
 					<ArrowUpRight
