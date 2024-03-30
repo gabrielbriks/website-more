@@ -11,7 +11,7 @@ import Link from 'next/link';
 import arrowRightSitemap from '@/assets/arrow-right-sitemap.webp';
 import bgCoverTitleTopPage from '@/assets/layout/bg-cover-title-pages.svg';
 import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.webp';
-import clickMoreAskedQuestions from '@/assets/pages/click-pages/asked-questions-image-pages.webp';
+import clickMoreAskedQuestions from '@/assets/pages/click-pages/asked-questions-image-pages.png';
 import clickPagesHeader from '@/assets/pages/click-pages/click-pages-bg-header.webp';
 import { Locale } from '@/i18n-config';
 
@@ -168,7 +168,7 @@ export default function ClickPages({ params }: ClickPagesProps) {
 							alt="click more adsense photo"
 							loading="lazy"
 							src={clickMoreAskedQuestions}
-							className="z-10 -mb-16 aspect-[1.23] w-full grow max-lg:max-w-[520px] max-md:mt-10"
+							className="z-10 -mb-16 aspect-[1.23] max-h-[570px] w-full grow max-lg:max-w-[620px]  max-md:mt-10"
 						/>
 					</div>
 				</div>

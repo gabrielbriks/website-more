@@ -8,12 +8,12 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import clickMoreAskedQuestions from '@/assets/pages/click-media/asked-questions-image.webp';
+import clickMoreAskedQuestions from '@/assets/pages/click-media/asked-questions-image.png';
 import clickMediaAdSenseHeader from '@/assets/pages/click-media/clickmedia-bg-header.webp';
 import { Locale } from '@/i18n-config';
-import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.webp';
+import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.svg';
 import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.svg';
-import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.webp';
+import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
 
 interface ClickMediaProps {
 	params: { lang: Locale };
@@ -168,7 +168,7 @@ export default function ClickMedia({ params }: ClickMediaProps) {
 							alt="click more adsense photo"
 							loading="lazy"
 							src={clickMoreAskedQuestions}
-							className="z-10 -mb-16 aspect-[1.23] w-full grow max-lg:max-w-[520px] max-md:mt-10"
+							className="z-10 -mb-16 aspect-[1.23] max-h-[570px] w-full grow max-lg:max-w-[620px] max-md:mt-10"
 						/>
 					</div>
 				</div>

@@ -20,12 +20,13 @@ import LeftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
 import MapWorldDoted from '@/assets/map-world-dotted.svg';
 import MenPhotoTopHero from '@/assets/men-photo-top-hero.svg';
 // import OurMissionPhoto from '@/assets/our-mission-photo.svg';
-import BgImageFullHero from '@/assets/pages/home/hero-background.jpg';
-import OurMissionPhoto from '@/assets/pages/home/our-mission.jpg';
+import BgImageFullHero from '@/assets/pages/home/hero-background.png';
+import OurMissionPhoto from '@/assets/pages/home/our-mission.png';
 import PointerClickLeft from '@/assets/pointer-click-left.svg';
 import PointerClickRight from '@/assets/pointer-click-right.svg';
 // import ValuesClickMOre from '@/assets/image-values.svg';
 import ValuesClickMOre from '@/assets/pages/home/img-atributes-click-more.svg';
+import BGImageWorldMap from '@/assets/pages/home/map-background.svg';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -65,22 +66,13 @@ export default async function Home(props: HomeProps) {
 												className="aspect-square h-auto w-5"
 											/>
 											{dictionary['pages'].home.heroSubtitleTop}
-											{/* One Stop Solution for business */}
 										</h2>
 									</div>
 									<h1 className="mt-4 text-6xl font-bold uppercase leading-[58px] text-gray-800 max-lg:max-w-full max-lg:justify-center max-lg:text-center max-md:text-4xl max-md:leading-10">
 										{dictionary['pages'].home.heroTitle}
-										{/* Turning Clicks into <br />
-										Business Opportunities */}
 									</h1>
 									<p className="mt-6 font-nunito text-lg leading-7 text-neutral-600 max-lg:max-w-full max-lg:justify-center max-lg:text-center">
 										{dictionary['pages'].home.heroTextDescription}
-										{/* Welcome to ClickMore, your trusted partner in achieving
-										visibility and success in the digital world. If you're ready
-										to take your business to the next level, you're in the right
-										place. We're here to present innovative solutions that
-										exceed expectations, putting your brand in the spotlight and
-										driving business growth. */}
 									</p>
 
 									<div className="mt-8 flex justify-between gap-5 whitespace-nowrap uppercase max-lg:mb-10 max-lg:w-full max-lg:justify-center lg:self-start">
@@ -207,8 +199,14 @@ export default async function Home(props: HomeProps) {
 
 			<section
 				id="who-we-are"
-				className="container z-10 mt-24 flex w-full items-center gap-14 max-lg:flex-col max-md:mt-10 max-md:max-w-full max-md:px-5 lg:px-12"
+				className="container relative z-10 mt-24 flex w-full items-center gap-14 max-lg:flex-col max-md:mt-10 max-md:max-w-full max-md:px-5 lg:px-12"
 			>
+				<Image
+					priority={true}
+					src={BGImageWorldMap}
+					alt={''}
+					className="absolute inset-0 -z-20 w-full object-cover opacity-50 max-md:size-full"
+				/>
 				<div className="w-full min-w-[380px]">
 					<Image
 						alt="any"
@@ -235,15 +233,8 @@ export default async function Home(props: HomeProps) {
 							{dictionary['pages'].home['section-define-us'].title}
 						</h2>
 
-						<p className="mt-6 w-[564px] text-lg leading-7 text-neutral-600 max-lg:w-full max-lg:text-center max-md:mr-2 max-md:max-w-full">
+						<p className="mt-6 w-[564px] text-lg leading-7 text-neutral-800 max-lg:w-full max-lg:text-center max-md:mr-2 max-md:max-w-full">
 							{dictionary['pages'].home['section-define-us'].textDescription}
-
-							{/* Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry's standard dummy text
-							ever since the 1500s, when an unknown printer took a galley of
-							type and scrambled it to make a type specimen book. It has
-							survived not only five centuries, but also the leap into
-							electronic typesetting, remaining essentially unchanged. */}
 						</p>
 					</div>
 				</div>
@@ -252,7 +243,7 @@ export default async function Home(props: HomeProps) {
 					alt="any"
 					loading="lazy"
 					src={PointerClickRight}
-					className="absolute z-10 mt-36 aspect-square w-[54px] max-md:mt-10 max-md:hidden"
+					className="absolute z-10 mt-36 aspect-square w-[54px] max-lg:hidden max-md:mt-10"
 				/>
 			</section>
 
@@ -260,12 +251,6 @@ export default async function Home(props: HomeProps) {
 				id="services"
 				className="-mt-3 flex w-full max-w-[985px] items-start justify-between self-center max-md:max-w-full max-md:flex-wrap lg:gap-5"
 			>
-				{/* <Image
-					alt="any"
-					loading="lazy"
-					src={PointerClickLeft}
-					className="absolute aspect-square w-[54px] self-start"
-				/> */}
 				<div className="mt-6 flex flex-col self-end max-md:max-w-full">
 					<h4 className="flex gap-1 self-center whitespace-nowrap text-base font-medium uppercase text-purple-800">
 						<Image
@@ -282,16 +267,12 @@ export default async function Home(props: HomeProps) {
 					</h2>
 					<p className="mt-6 text-center text-lg leading-7 text-neutral-600 max-md:max-w-full">
 						{dictionary['pages'].home['section-services'].textDescription}
-						{/* From innovative solutions to transformative strategies, we craft
-						success through tailored and dynamic offerings. Explore limitless
-						possibilities with us. */}
 					</p>
 				</div>
 			</section>
 
 			<section className="mt-12 flex w-full flex-col max-md:mt-10 max-md:max-w-full">
 				<div className="z-10 flex w-full min-w-full flex-col items-center justify-center ">
-					{/*pl-6 pr-16 max-md:px-5*/}
 					<div className="container flex h-full min-w-full items-center justify-center">
 						<CardServices lang={props.params.lang} />
 					</div>
@@ -303,12 +284,6 @@ export default async function Home(props: HomeProps) {
 
 					{/* End Area PlayVideo */}
 
-					{/* <Image
-						alt="any"
-						loading="lazy"
-						src={bgColorFull}
-						className=" mt-24 aspect-[2.27] w-full rounded-[32px] max-md:mt-10 max-md:max-w-full"
-					/> */}
 					<section className="ml-10 mt-24 max-lg:mt-10 max-lg:max-w-full lg:mt-32">
 						<div className="flex gap-5 max-lg:flex-col max-lg:gap-0">
 							<div className="flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">
@@ -317,7 +292,7 @@ export default async function Home(props: HomeProps) {
 										alt="any"
 										loading="lazy"
 										src={PointerClickLeft}
-										className="aspect-square w-[54px] self-end opacity-70"
+										className="aspect-square w-[54px] self-end opacity-30"
 									/>
 									<div className="mt-7 flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
 										<Image
@@ -335,20 +310,12 @@ export default async function Home(props: HomeProps) {
 									</div>
 									<div className="mt-4 text-5xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full">
 										{dictionary['pages'].home['section-ourMission'].title}
-										{/* ClickMore and Your <br className="max-md:hidden" />
-										Company Together */}
 									</div>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
 										{
 											dictionary['pages'].home['section-ourMission']
 												.textDescription
 										}
-
-										{/* ClickMore is not just an agency; we are your partners in
-										growth. With personalized service and strategies tailored to
-										your needs, we ensure that small and medium-sized businesses
-										achieve significant results. Trust, visibility, and success
-										– all in one place. */}
 									</div>
 								</div>
 							</div>
@@ -371,7 +338,7 @@ export default async function Home(props: HomeProps) {
 										alt="any"
 										loading="lazy"
 										src={PointerClickRight}
-										className="aspect-square w-[54px] self-end opacity-70"
+										className="aspect-square w-[54px] self-end opacity-30"
 									/>
 									{/* Japanese FAQ */}
 									<div className="relative mt-3.5 flex w-full flex-col overflow-hidden px-2 max-lg:-mb-3 max-lg:min-w-full max-md:max-w-full  max-md:px-5 max-md:pb-0 md:min-h-[611px] md:items-start ">

@@ -11,8 +11,8 @@ import Link from 'next/link';
 import arrowRightSitemap from '@/assets/arrow-right-sitemap.webp';
 import bgCoverTitleTopPage from '@/assets/layout/bg-cover-title-pages.svg';
 import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
+import clickMoreAskedQuestions from '@/assets/pages/click-web/asked-questions-image.png';
 import clickWebHeader from '@/assets/pages/click-web/click-web-bg-header.webp';
-import clickMoreAskedQuestions from '@/assets/pages/click-web/clickweb-asked-questions.svg';
 import { Locale } from '@/i18n-config';
 
 interface ClickWebProps {
@@ -168,7 +168,7 @@ export default function ClickWeb({ params }: ClickWebProps) {
 							alt="click more web photo"
 							loading="lazy"
 							src={clickMoreAskedQuestions}
-							className="z-10 -mb-16 aspect-[1.23] w-full grow max-lg:max-w-[520px] max-md:mt-10"
+							className="z-10 -mb-16 aspect-[1.23] max-h-[570px] w-full grow max-lg:max-w-[620px] max-md:mt-10"
 						/>
 					</div>
 				</div>
