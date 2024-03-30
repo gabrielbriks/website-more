@@ -56,10 +56,10 @@ export default function CardServices({ lang }: CardServicesProps) {
 					{infoServicesCards.map((item, index) => (
 						<CarouselItem
 							key={index}
-							className="max-sm:basis-1/1 min-w-56 max-w-[392px] pl-5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/4"
+							className="max-sm:basis-1/1 min-w-56 max-w-[392px] md:basis-1/2 lg:basis-1/3 lg:pl-5 xl:basis-1/4 2xl:basis-1/4"
 						>
 							<div className="p-1">
-								<Card className="my-2 flex max-h-[500px] min-h-[500px] min-w-[285px] flex-col shadow-lg">
+								<Card className="my-2 flex max-h-[500px] min-h-[500px] min-w-[200px] flex-col shadow-lg">
 									<CardContent className="flex aspect-square flex-1 items-center justify-center ">
 										<div className="mt-16 flex flex-1 flex-col items-center  border-none bg-transparent px-4 pb-1 pt-8  max-md:mt-10">
 											<Image
