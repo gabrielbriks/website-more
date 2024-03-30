@@ -66,7 +66,7 @@ export default async function Faq({ lang }: FaqProps) {
 					{dictionary['pages'].home.faq.subTitleTop}
 				</h3>
 			</div>
-			<h1 className="mt-2 pb-4 text-5xl font-bold uppercase leading-[48.08px] text-white max-md:max-w-full max-md:text-4xl">
+			<h1 className="mt-2 pb-4 text-5xl font-bold uppercase leading-[48.08px] text-white max-md:max-w-full max-md:text-center max-md:text-4xl">
 				{dictionary['pages'].home.faq.title}
 
 				{/* Frequently asked questions */}

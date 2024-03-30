@@ -60,8 +60,8 @@ export default function CardServices({ lang }: CardServicesProps) {
 						>
 							<div className="p-1">
 								<Card className="my-2 flex max-h-[500px] min-h-[500px] min-w-[200px] flex-col shadow-lg">
-									<CardContent className="flex aspect-square flex-1 items-center justify-center ">
-										<div className="mt-16 flex flex-1 flex-col items-center  border-none bg-transparent px-4 pb-1 pt-8  max-md:mt-10">
+									<CardContent className="flex items-center justify-center ">
+										<div className="mt-16 flex w-full flex-col items-center  border-none bg-transparent px-4 pb-1 pt-8  max-md:mt-10">
 											<Image
 												alt="any"
 												loading="lazy"

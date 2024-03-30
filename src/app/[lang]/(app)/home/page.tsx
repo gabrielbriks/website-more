@@ -229,7 +229,7 @@ export default async function Home(props: HomeProps) {
 								{dictionary['pages'].home['section-define-us'].subTitleTop}
 							</h4>
 						</span>
-						<h2 className="text-5xl font-bold uppercase text-gray-800 max-lg:w-full max-lg:justify-center max-lg:text-center max-md:mr-2 max-md:max-w-full">
+						<h2 className="text-5xl font-bold uppercase text-gray-800 max-lg:w-full max-lg:justify-center max-lg:text-center max-md:mr-2 max-md:max-w-full max-md:text-4xl">
 							{dictionary['pages'].home['section-define-us'].title}
 						</h2>
 
@@ -243,7 +243,7 @@ export default async function Home(props: HomeProps) {
 					alt="any"
 					loading="lazy"
 					src={PointerClickRight}
-					className="absolute z-10 mt-36 aspect-square w-[54px] max-lg:hidden max-md:mt-10"
+					className="absolute z-10 mt-36 aspect-square w-[54px] max-lg:hidden max-md:mt-10 "
 				/>
 			</section>
 
@@ -262,7 +262,7 @@ export default async function Home(props: HomeProps) {
 						{dictionary['pages'].home['section-services'].subTitleTop}
 					</h4>
 
-					<h2 className="mt-4 text-center text-5xl font-bold uppercase text-gray-800 max-md:max-w-full">
+					<h2 className="mt-4 max-w-full text-center text-5xl font-bold uppercase text-gray-800 max-md:text-4xl ">
 						{dictionary['pages'].home['section-services'].title}
 					</h2>
 					<p className="mt-6 text-center text-lg leading-7 text-neutral-600 max-md:max-w-full">
@@ -284,15 +284,15 @@ export default async function Home(props: HomeProps) {
 
 					{/* End Area PlayVideo */}
 
-					<section className="ml-10 mt-24 max-lg:mt-10 max-lg:max-w-full lg:mt-32">
+					<section className="mt-24 max-lg:mt-10 max-lg:w-full max-lg:px-4 lg:ml-10 lg:mt-32">
 						<div className="flex gap-5 max-lg:flex-col max-lg:gap-0">
-							<div className="flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">
+							<div className="ml-0 flex w-6/12 flex-col max-lg:w-full">
 								<div className="mt-10 flex flex-col max-lg:mt-10 max-lg:max-w-full">
 									<Image
 										alt="any"
 										loading="lazy"
 										src={PointerClickLeft}
-										className="aspect-square w-[54px] self-end opacity-30"
+										className="aspect-square w-[54px] self-end opacity-30 max-md:hidden"
 									/>
 									<div className="mt-7 flex gap-1 self-start whitespace-nowrap text-base font-medium uppercase text-purple-800">
 										<Image
@@ -308,9 +308,9 @@ export default async function Home(props: HomeProps) {
 											}
 										</div>
 									</div>
-									<div className="mt-4 text-5xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full">
+									<h2 className="mt-4 text-5xl font-bold uppercase leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl">
 										{dictionary['pages'].home['section-ourMission'].title}
-									</div>
+									</h2>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
 										{
 											dictionary['pages'].home['section-ourMission']
@@ -319,12 +319,12 @@ export default async function Home(props: HomeProps) {
 									</div>
 								</div>
 							</div>
-							<div className="ml-5 flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">
+							<div className="ml-5 flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full max-md:items-center max-md:justify-center">
 								<Image
 									alt="any"
 									loading="lazy"
 									src={OurMissionPhoto}
-									className="aspect-[1.37] w-full grow max-lg:mt-10 max-lg:max-w-full"
+									className="aspect-[1.37] w-full grow max-lg:mt-10 lg:max-w-full"
 								/>
 							</div>
 						</div>
@@ -391,12 +391,12 @@ export default async function Home(props: HomeProps) {
 										</h3>
 									</div>
 
-									<h1 className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full">
+									<h2 className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full max-md:text-3xl">
 										{
 											dictionary['pages'].home['section-contact']
 												.areaSendMessage.title
 										}
-									</h1>
+									</h2>
 
 									<div className="mt-11 justify-center whitespace-nowrap border-b border-solid border-b-slate-200 max-md:mt-10 max-md:max-w-full">
 										<Input
@@ -479,13 +479,13 @@ export default async function Home(props: HomeProps) {
 											}
 										</div>
 									</div>
-									<h3 className="mt-4 w-full text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-lg:max-w-full">
+									<h2 className="mt-4 w-full text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-lg:max-w-full max-md:text-4xl">
 										{
 											dictionary['pages'].home['section-contact'][
 												'contact-information'
 											].title
 										}
-									</h3>
+									</h2>
 									<div className="mt-6 text-lg leading-7 text-neutral-600 max-md:max-w-full">
 										{
 											dictionary['pages'].home['section-contact'][
