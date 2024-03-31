@@ -12,7 +12,7 @@ import { Locale } from '@/i18n-config';
 import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.webp';
 import clickAdSenseHeader from '../../../../assets/click-adsense-bg-header.webp';
 import clickMoreAskedQuestions from '../../../../assets/click-more-sede-photo.svg';
-import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.svg';
+import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.png';
 import leftArrowClickPhrase from '../../../../assets/left-arrow-click-phrase.svg';
 
 export const metadata: Metadata = {
@@ -38,27 +38,29 @@ export default function ClickAdsensePage({ params }: ClickAdsensePageProps) {
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex min-h-[500px] w-full flex-col items-center bg-black px-16 pb-12 pt-8 backdrop-blur-xl max-md:max-w-full max-md:px-5">
-				<div className="relative mt-20 flex min-h-[187px] w-[499px] max-w-full flex-col items-center justify-center overflow-hidden whitespace-nowrap py-12 text-white  max-sm:px-7 max-sm:py-8 max-[500px]:py-4 md:px-10 lg:px-14">
+				<div className="relative mt-20 flex min-h-[187px] w-[499px] max-w-full flex-col items-center justify-center overflow-hidden whitespace-nowrap text-white">
 					<Image
 						alt="background title page"
 						loading="lazy"
 						src={bgCoverTitleTopPage}
-						className="absolute inset-0 object-cover"
+						className="inset-0 w-full object-cover"
 					/>
-					<h1 className="relative text-center text-xl font-bold uppercase leading-[58.24px] max-md:text-3xl max-[639px]:text-3xl max-[639px]:leading-[48.24px] md:text-4xl lg:text-5xl">
-						ClickAdsense
-					</h1>
-					<div className="relative mt-2.5 flex gap-3.5 self-center text-lg leading-5 max-lg:mt-2 max-sm:text-sm ">
-						<Link href={'/home'} className="grow">
-							Home
-						</Link>
-						<Image
-							alt=""
-							loading="lazy"
-							src={arrowRightSitemap}
-							className="my-auto aspect-square w-[15px]"
-						/>
-						<div className="grow">ClickAdsense</div>
+					<div className="absolute  max-sm:px-7 max-sm:py-8 max-[500px]:py-4 md:px-10 lg:px-14 lg:py-12">
+						<h1 className="relative text-center text-xl font-bold uppercase leading-[58.24px] max-md:text-3xl max-[639px]:text-3xl max-[639px]:leading-[48.24px] md:text-4xl lg:text-5xl">
+							ClickAdsense
+						</h1>
+						<div className="relative mt-2.5 flex justify-center gap-3.5 self-center  text-lg leading-5 max-lg:mt-2 max-sm:text-sm ">
+							<Link href={'/home'} className="">
+								Home
+							</Link>
+							<Image
+								alt=""
+								loading="lazy"
+								src={arrowRightSitemap}
+								className="my-auto aspect-square w-[15px]"
+							/>
+							<div className="">ClickAdsense</div>
+						</div>
 					</div>
 				</div>
 				<Image
