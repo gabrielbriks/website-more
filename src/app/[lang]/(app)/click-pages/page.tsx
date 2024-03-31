@@ -38,17 +38,17 @@ export default function ClickPages({ params }: ClickPagesProps) {
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex min-h-[500px] w-full flex-col items-center bg-black px-16 pb-12 pt-8 backdrop-blur-xl max-md:max-w-full max-md:px-5">
-				<div className="relative mt-20 flex min-h-[187px] w-[499px] max-w-full flex-col overflow-hidden whitespace-nowrap  px-14 py-12 text-white max-md:px-5">
+				<div className="relative mt-20 flex min-h-[187px] w-[499px] max-w-full flex-col overflow-hidden whitespace-nowrap py-12 text-white  max-sm:px-7 max-sm:py-8 max-[500px]:py-4 md:px-10 lg:px-14">
 					<Image
 						alt="background title page"
 						loading="lazy"
 						src={bgCoverTitleTopPage}
 						className="absolute inset-0 size-auto object-cover"
 					/>
-					<h1 className="relative text-center text-5xl font-bold uppercase leading-[58.24px] max-md:text-4xl">
+					<h1 className="relative text-center text-xl font-bold uppercase leading-[58.24px] max-md:text-3xl max-[639px]:text-3xl max-[639px]:leading-[48.24px] md:text-4xl lg:text-5xl">
 						ClickPages
 					</h1>
-					<div className="relative mt-2.5 flex gap-3.5 self-center text-lg leading-5">
+					<div className="relative mt-2.5 flex gap-3.5 self-center text-lg leading-5 max-lg:mt-2 max-sm:text-sm ">
 						<Link href={'/home'} className="grow">
 							Home
 						</Link>
