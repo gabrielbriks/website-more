@@ -1,6 +1,6 @@
 'use client';
 import { X } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import {
@@ -27,17 +27,24 @@ interface MenuMobileDrawerProps {
 
 export default function MenuMobileDrawer({ lang }: MenuMobileDrawerProps) {
 	const searchParams = useSearchParams();
+	const pathname = usePathname();
 	const [isPlanPage, setIsPlanPage] = useState<boolean | null>(null);
+	const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
 	useEffect(() => {
 		const existParamPlan = searchParams.has('plan');
 		setIsPlanPage(existParamPlan);
 	}, [searchParams]);
 
+	useEffect(() => {
+		setDrawerOpen(false);
+	}, [pathname]);
+
 	return (
-		<Drawer direction="right">
+		<Drawer direction="right" open={drawerOpen}>
 			<DrawerTrigger asChild>
 				<Button
+					onClick={() => setDrawerOpen(true)}
 					className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cm-gradient-imgcolor p-2 text-sm text-white hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-purple-800 md:hidden"
 					aria-controls="navbar-default"
 					aria-expanded="false"
