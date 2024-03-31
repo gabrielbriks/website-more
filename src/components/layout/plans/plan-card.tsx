@@ -120,7 +120,7 @@ export default function CardPlanIdea2(params: CardPlanProps) {
 							))}
 						</div>
 					</CardContent>
-					<CardFooter className="flex w-full flex-1 items-center justify-center px-20 ">
+					<CardFooter className="flex w-full flex-1 items-center justify-center lg:px-20 ">
 						<ButtonHireCard
 							text={params.nameButton}
 							urlTarget={params.urlTarget}

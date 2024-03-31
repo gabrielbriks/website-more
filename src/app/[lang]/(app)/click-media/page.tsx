@@ -133,7 +133,7 @@ export default function ClickMedia({ params }: ClickMediaProps) {
 									/>
 									<h3 className="my-auto uppercase">custom advertising plan</h3>
 								</div>
-								<h1 className="w-full text-5xl font-bold uppercase leading-[48.08px] text-gray-800 max-lg:text-center lg:mt-2">
+								<h1 className="w-full text-5xl font-bold uppercase leading-[48.08px] text-gray-800 max-lg:text-center  max-md:text-4xl max-sm:text-3xl lg:mt-2">
 									MediaPrime
 								</h1>
 								<p className="mt-4 self-stretch text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:text-center">
