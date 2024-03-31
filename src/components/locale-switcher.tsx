@@ -27,11 +27,24 @@ export default function LocaleSwitcher({
 	const navigate = useRouter();
 
 	const redirectedPathName = (locale: Locale) => {
+		const searchParams = window.location.search;
+		const hashParams = window.location.hash;
+
 		if (!pathName) return '/';
+
 		const segments = pathName.split('/');
 		segments[1] = locale;
 
-		const pathTarget = segments.join('/');
+		let pathTarget = segments.join('/');
+
+		if (hashParams) {
+			pathTarget += hashParams;
+		}
+
+		if (searchParams) {
+			pathTarget += searchParams;
+		}
+
 		navigate.push(pathTarget);
 	};
 

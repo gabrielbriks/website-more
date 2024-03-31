@@ -12,7 +12,7 @@ import { NavBarLinks } from './nav-bar-links';
 import { useDictionaryContext } from '@/contexts/dictionaryContext';
 import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
 import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
-import MenuMobile from '../header/menu-mobile';
+import MenuMobileDrawer from '../header/menu-mobile-drawer';
 import LoaderGlobal from './loadings/loading-global';
 
 interface HeaderProps {
@@ -47,7 +47,7 @@ export function Header({ lang }: HeaderProps) {
 	}
 
 	return (
-		<header className="absolute z-10 flex w-full flex-wrap items-center gap-5 overflow-hidden px-16 pt-8 text-base uppercase max-md:flex max-md:max-w-full max-md:justify-between lg:justify-between">
+		<header className="absolute z-10 flex w-full flex-wrap items-center gap-5 overflow-hidden pt-8 text-base uppercase max-md:flex max-md:max-w-full max-md:justify-between max-md:px-6 lg:justify-between lg:px-16">
 			<Image
 				alt="Logo click more purple "
 				loading="lazy"
@@ -59,7 +59,8 @@ export function Header({ lang }: HeaderProps) {
 				className="my-auto aspect-[4.76] max-w-full self-stretch max-md:w-48 lg:w-64"
 			/>
 
-			<MenuMobile />
+			{/* <MenuMobile /> */}
+			<MenuMobileDrawer lang={lang} />
 
 			<NavBarLinks />
 

@@ -27,6 +27,7 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;
 	const searchParams = request.nextUrl.searchParams.toString();
+	const hashParams = request.nextUrl.hash.toString();
 
 	// // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
 	// // If you have one
@@ -54,6 +55,10 @@ export function middleware(request: NextRequest) {
 		let url = `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`;
 
 		//Fix: Tratativa para impedir remoção de parâmetros na url
+		if (hashParams) {
+			url += `#${hashParams}`;
+		}
+
 		if (searchParams) {
 			url += `?${searchParams}`;
 		}

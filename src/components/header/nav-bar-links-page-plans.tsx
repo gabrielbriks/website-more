@@ -6,9 +6,10 @@ import {
 } from '@/components/ui/collapsible';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { Button } from '../ui/button';
 
 interface NavBarLinksPagePlansProps {
 	showInFooter?: boolean;
@@ -21,6 +22,7 @@ export default function NavBarLinksPagePlans({
 }: NavBarLinksPagePlansProps) {
 	const searchParams = useSearchParams();
 	const [isPlanPage, setIsPlanPage] = useState<boolean | null>(null);
+	const navigation = useRouter();
 
 	useEffect(() => {
 		const existParamPlan = searchParams.has('plan');
@@ -42,36 +44,37 @@ export default function NavBarLinksPagePlans({
 					'mt-10 flex flex-col items-center justify-center gap-5 text-white',
 			)}
 		>
-			<Link
-				href="/home"
+			<Button
+				onClick={() => navigation.push('/home')}
 				className={twMerge(
-					'flex w-full grow items-center justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
+					'flex w-full grow items-center justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
 			>
 				Home
-			</Link>
-			<Link
+			</Button>
+
+			{/* <Link
 				href="#who-we-are"
 				className={twMerge(
 					'flex w-full grow items-center justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
 			>
 				Who we are
-			</Link>
+			</Link> */}
 
 			<Collapsible className="w-full">
 				<CollapsibleTrigger className="flex w-full grow items-center justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600">
 					Plans
 				</CollapsibleTrigger>
 				<CollapsibleContent className="flex flex-col gap-5">
-					<Link
-						href="#services"
+					<Button
+						onClick={() => navigation.push('/click-adsense?plan=true')}
 						className={twMerge(
 							'ml-4 flex w-full grow items-start justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 						)}
 					>
 						ClickAdsense
-					</Link>
+					</Button>
 
 					<Link
 						href="#services"
@@ -103,7 +106,10 @@ export default function NavBarLinksPagePlans({
 			</Collapsible>
 
 			<Link
-				href="#contact"
+				href={{
+					href: '/home',
+					hash: 'contact',
+				}}
 				className={twMerge(
 					'flex w-full grow items-center justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
