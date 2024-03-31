@@ -41,10 +41,10 @@ export default function MenuMobileDrawer({ lang }: MenuMobileDrawerProps) {
 	}, [pathname]);
 
 	return (
-		<Drawer direction="right" open={drawerOpen}>
+		<Drawer direction="right">
 			<DrawerTrigger asChild>
 				<Button
-					onClick={() => setDrawerOpen(true)}
+					// onClick={() => setDrawerOpen(true)}
 					className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cm-gradient-imgcolor p-2 text-sm text-white hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-purple-800 md:hidden"
 					aria-controls="navbar-default"
 					aria-expanded="false"

@@ -10,6 +10,7 @@ import LocaleSwitcher from '../locale-switcher';
 import { NavBarLinks } from './nav-bar-links';
 
 import { useDictionaryContext } from '@/contexts/dictionaryContext';
+import Link from 'next/link';
 import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
 import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
 import MenuMobileDrawer from '../header/menu-mobile-drawer';
@@ -48,16 +49,18 @@ export function Header({ lang }: HeaderProps) {
 
 	return (
 		<header className="absolute z-10 flex w-full flex-wrap items-center gap-5 overflow-hidden pt-8 text-base uppercase max-md:flex max-md:max-w-full max-md:justify-between max-md:px-6 lg:justify-between lg:px-16">
-			<Image
-				alt="Logo click more purple "
-				loading="lazy"
-				src={
-					withPhotoInBackground !== null && withPhotoInBackground
-						? ClickMoreLogoWhite
-						: ClickMoreLogoPurple
-				}
-				className="my-auto aspect-[4.76] max-w-full self-stretch max-md:w-48 lg:w-64"
-			/>
+			<Link href="/home">
+				<Image
+					alt="Logo click more purple "
+					loading="lazy"
+					src={
+						withPhotoInBackground !== null && withPhotoInBackground
+							? ClickMoreLogoWhite
+							: ClickMoreLogoPurple
+					}
+					className="my-auto aspect-[4.76] max-w-full self-stretch max-md:w-48 lg:w-64"
+				/>
+			</Link>
 
 			{/* <MenuMobile /> */}
 			<MenuMobileDrawer lang={lang} />
