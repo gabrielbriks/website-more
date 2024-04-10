@@ -1,55 +1,40 @@
+'use client';
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion';
-import { getDictionary } from '@/get-dictionary';
+import { useDictionaryContext } from '@/contexts/dictionaryContext';
+import { getItemsFAQs } from '@/dictionaries/others/faqs/faqs-questions';
 import type { Locale } from '@/i18n-config';
+import { DataFAQS } from '@/types/data-faqs-type';
 import { MousePointerClick } from 'lucide-react';
-
-type DataFAQS = {
-	valueItem: string;
-	nameTrigger: string;
-	descriptionItem: string;
-};
-
-const dataFAQS: DataFAQS[] = [
-	{
-		valueItem: 'item-1',
-		nameTrigger: 'Which plan is best for me?',
-		descriptionItem:
-			'Magna est fugiat veniam ipsum in commodo amet ea minim occaecat ipsum duis. Sit laboris sint exercitation ullamco consectetur veniam ullamco ea laborum adipisicing non quis. <br /><br /> Voluptate consequat culpa veniam velit nostrud nulla. Incididunt nulla minim do commodo Lorem esse est ipsum id veniam qui dolor.',
-	},
-	{
-		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
-		descriptionItem:
-			'Magna est fugiat veniam ipsum in commodo amet ea minim occaecat ipsum duis. Sit laboris sint exercitation ullamco consectetur veniam ullamco ea laborum adipisicing non quis.',
-	},
-	{
-		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
-		descriptionItem: 'Lorem',
-	},
-	{
-		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
-		descriptionItem: 'Lorem Do plan prices include all fees',
-	},
-	{
-		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
-		descriptionItem: 'How do I cancel my plan',
-	},
-];
+import { useEffect, useState } from 'react';
+import LoadingLanguage from './layout/loadings/loading-language';
 
 interface FaqProps {
 	lang: Locale;
+	namePage: 'home' | 'clickAdsense' | 'clickMedia' | 'clickWeb' | 'clickPages';
 }
 
-export default async function Faq({ lang }: FaqProps) {
-	const dictionary = await getDictionary(lang);
+export default async function Faq({ lang, namePage }: FaqProps) {
+	// const dictionary = await getDictionary(lang);
+
+	const { dictionary, loading } = useDictionaryContext();
+
+	const [dataFaqs, setDataFaqs] = useState<DataFAQS[]>(
+		getItemsFAQs(lang, namePage),
+	);
+
+	useEffect(() => {
+		const faqs = getItemsFAQs(lang, namePage);
+		setDataFaqs(faqs);
+	}, [lang, namePage]);
+
+	if (loading) {
+		return <LoadingLanguage />;
+	}
 
 	return (
 		<Accordion
@@ -72,7 +57,7 @@ export default async function Faq({ lang }: FaqProps) {
 				{/* Frequently asked questions */}
 			</h1>
 			<div className="flex flex-col gap-3">
-				{dataFAQS.map((item) => (
+				{dataFaqs?.map((item) => (
 					<AccordionItem
 						key={item.valueItem}
 						value={item.valueItem}
@@ -82,13 +67,15 @@ export default async function Faq({ lang }: FaqProps) {
 							{item.nameTrigger}
 						</AccordionTrigger>
 						<AccordionContent className="max-w-[470px] bg-transparent px-4 font-nunito text-base">
-							{item.valueItem == 'item-1' ? (
+							<item.descriptionItem />
+
+							{/* {item.valueItem == 'item-1' ? (
 								<span
 									dangerouslySetInnerHTML={{ __html: item.descriptionItem }}
 								/>
 							) : (
 								item.descriptionItem
-							)}
+							)} */}
 						</AccordionContent>
 					</AccordionItem>
 				))}

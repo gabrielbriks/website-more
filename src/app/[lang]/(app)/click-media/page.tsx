@@ -161,7 +161,7 @@ export default function ClickMedia({ params }: ClickMediaProps) {
 				<div className="flex gap-5 max-lg:flex-col-reverse max-md:gap-0">
 					<div className="flex w-6/12 flex-col max-lg:w-full max-md:ml-0">
 						{/* Start Faq */}
-						<Faq lang={params.lang} />
+						<Faq namePage="clickMedia" lang={params.lang} />
 
 						{/* End Faq */}
 					</div>

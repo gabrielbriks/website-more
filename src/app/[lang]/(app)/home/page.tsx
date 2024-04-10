@@ -356,7 +356,7 @@ export default async function Home(props: HomeProps) {
 								aria-roledescription="Frequently asked questions"
 								className="flex w-[54%] flex-col max-lg:ml-0 max-lg:w-full max-sm:mt-3 lg:ml-5"
 							>
-								<Faq lang={props.params.lang} />
+								<Faq namePage="home" lang={props.params.lang} />
 							</div>
 						</div>
 					</section>
