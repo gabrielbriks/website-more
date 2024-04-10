@@ -4,63 +4,64 @@ import { DataFAQS } from '@/types/data-faqs-type';
 export const faqClickAdsensePT: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'O que é a ClickMore ?',
+		nameTrigger: 'Posso escolher em qual plataforma quero criar anúncios?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					a ClickMore é uma agência de publicidade , que oferece diversas
-					soluções para a sua empresa no mundo digital.
+					Podera escolher entre Google, Meta, Line, Youtube, vamos posicionar a
+					sua empresa para ser vista pelo cliente certo. Fazemos isso com
+					maestria.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'como faço para contratar algum serviço ?',
+		nameTrigger:
+			'A contratacao do plano inclui o valor investido nas plataformas?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Para contratar é simples e rápido , escolha o seu plano , coloque
-					algumas informações sobre a sua empresa e você escolhe o dia e horário
-					para agendar uma reunião com a nossa equipe
+					Sim , cada plano tem o seu orcamento de publicidade, para orcamentos
+					exclusivos contrate o ClickPrime.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Quer um plano exclusivo PRIME para a sua empresa? ',
+		nameTrigger: 'o material da publicidade da minha empresa eu preciso criar?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Escolha o plano PRIME e você será direcionado direto para um
-					especialista da ClickMore , será um atendimento exclusivo para
-					entender as necessidades da sua empresa
+					Nao, nos criamos tudo, caso contrate o plano ClickPro podemos ir ate a
+					sua empresa criar um video exclusivo.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Precisa criar um site?',
+		nameTrigger: 'O pagamento é mensal?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Contrate o plano desejado e Agende uma reunião que nós iremos te
-					passar mais informações agora.
+					Nao, qualquer plano do ClickAdsense é um contrato de 3 meses, caso
+					deseje um periodo mais longo e com orcamento de marketing maior ,
+					contrate o ClickPrime.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger:
-			'Os planos do ClickAdsense ou ClickMedia são pagamentos mensais?',
+		nameTrigger: 'Posso divulgar o meu negocio em outro Pais?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Não, o período de contrato são 3 meses, podendo ou não renovar a
-					contratação do Plano.
+					Sim, criamos campanhas de publicidades personalizadas para cada
+					cliente, nos informe o país que deseja que nos criamos tudo para a sua
+					empresa.
 				</p>
 			</span>
 		),

@@ -4,51 +4,76 @@ import { DataFAQS } from '@/types/data-faqs-type';
 export const faqClickPagesPT: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'O que é a ClickMore ?',
+		nameTrigger: 'Por que ter um site?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					a ClickMore é uma agência de publicidade , que oferece diversas
-					soluções para a sua empresa no mundo digital.
+					Presença online profissional: Crie uma identidade digital forte e
+					profissional para sua empresa.
+				</p>
+				<p>
+					Divulgue seus produtos ou serviços: Apresente sua oferta de forma
+					clara e atrativa para seus clientes.
+				</p>
+				<p>
+					Aumente suas vendas: Venda seus produtos ou serviços online e expanda
+					seu alcance.
+				</p>
+				<p>
+					Canal de comunicação: Interaja com seus clientes e forneça informações
+					relevantes.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'como faço para contratar algum serviço ?',
+		nameTrigger: 'Quais os serviços de Criação de Sites a Click More oferece?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Para contratar é simples e rápido , escolha o seu plano , coloque
-					algumas informações sobre a sua empresa e você escolhe o dia e horário
-					para agendar uma reunião com a nossa equipe
+					Criação de sites institucionais: Sites para apresentar sua empresa,
+					produtos ou serviços.
+				</p>
+				<p>
+					Criação de e-commerce: Lojas virtuais completas para vender seus
+					produtos online.
+				</p>
+				<p>
+					Criação de landing pages: Páginas específicas para capturar leads ou
+					realizar vendas.
+				</p>
+				<p>
+					Desenvolvimento web personalizado: Soluções web personalizadas para
+					atender às suas necessidades específicas.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Quer um plano exclusivo PRIME para a sua empresa? ',
+		nameTrigger: 'Quanto custa criar um site?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Escolha o plano PRIME e você será direcionado direto para um
-					especialista da ClickMore , será um atendimento exclusivo para
-					entender as necessidades da sua empresa
+					O investimento varia de acordo com o tipo de site, funcionalidades,
+					design e objetivos. Porém, aqui temos planos a partir de XYZ conforme
+					pode [link:conferir aqui].
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Precisa criar um site?',
+		nameTrigger: 'Quais resultados posso esperar?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
-				<p>
-					Contrate o plano desejado e Agende uma reunião que nós iremos te
-					passar mais informações agora.
-				</p>
+				<p>Aumento da visibilidade da sua marca online.</p>
+				<p>Posicionamento de Marca.</p>
+				<p>Maior alcance de clientes potenciais.</p>
+				<p>Geração de leads e conversões.</p>
+				<p>Aumento das vendas.</p>
+				<p>Melhoria na comunicação com seus clientes</p>
 			</span>
 		),
 	},

@@ -4,67 +4,68 @@ import { DataFAQS } from '@/types/data-faqs-type';
 export const faqClickMediaPT: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'O que é a ClickMore ?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
-				<p>
-					a ClickMore é uma agência de publicidade , que oferece diversas
-					soluções para a sua empresa no mundo digital.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-2',
-		nameTrigger: 'como faço para contratar algum serviço ?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
-				<p>
-					Para contratar é simples e rápido , escolha o seu plano , coloque
-					algumas informações sobre a sua empresa e você escolhe o dia e horário
-					para agendar uma reunião com a nossa equipe
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-3',
-		nameTrigger: 'Quer um plano exclusivo PRIME para a sua empresa? ',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
-				<p>
-					Escolha o plano PRIME e você será direcionado direto para um
-					especialista da ClickMore , será um atendimento exclusivo para
-					entender as necessidades da sua empresa
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-4',
-		nameTrigger: 'Precisa criar um site?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
-				<p>
-					Contrate o plano desejado e Agende uma reunião que nós iremos te
-					passar mais informações agora.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-5',
 		nameTrigger:
-			'Os planos do ClickAdsense ou ClickMedia são pagamentos mensais?',
+			'Tem algum plano que gerencia as redes sociais da minha empresa?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Não, o período de contrato são 3 meses, podendo ou não renovar a
-					contratação do Plano.
+					Sim , contrate agora o plano MediaPro que gerenciamos e implementamos
+					o ClickBot para responder os seus clientes.
 				</p>
 			</span>
 		),
 	},
+	// {
+	// 	valueItem: 'item-2',
+	// 	nameTrigger: 'como faço para contratar algum serviço ?',
+	// 	descriptionItem: () => (
+	// 		<span className="flex w-full flex-col gap-2">
+	// 			<p>
+	// 				Para contratar é simples e rápido , escolha o seu plano , coloque
+	// 				algumas informações sobre a sua empresa e você escolhe o dia e horário
+	// 				para agendar uma reunião com a nossa equipe
+	// 			</p>
+	// 		</span>
+	// 	),
+	// },
+	// {
+	// 	valueItem: 'item-3',
+	// 	nameTrigger: 'Quer um plano exclusivo PRIME para a sua empresa? ',
+	// 	descriptionItem: () => (
+	// 		<span className="flex w-full flex-col gap-2">
+	// 			<p>
+	// 				Escolha o plano PRIME e você será direcionado direto para um
+	// 				especialista da ClickMore , será um atendimento exclusivo para
+	// 				entender as necessidades da sua empresa
+	// 			</p>
+	// 		</span>
+	// 	),
+	// },
+	// {
+	// 	valueItem: 'item-4',
+	// 	nameTrigger: 'Precisa criar um site?',
+	// 	descriptionItem: () => (
+	// 		<span className="flex w-full flex-col gap-2">
+	// 			<p>
+	// 				Contrate o plano desejado e Agende uma reunião que nós iremos te
+	// 				passar mais informações agora.
+	// 			</p>
+	// 		</span>
+	// 	),
+	// },
+	// {
+	// 	valueItem: 'item-5',
+	// 	nameTrigger:
+	// 		'Os planos do ClickAdsense ou ClickMedia são pagamentos mensais?',
+	// 	descriptionItem: () => (
+	// 		<span className="flex w-full flex-col gap-2">
+	// 			<p>
+	// 				Não, o período de contrato são 3 meses, podendo ou não renovar a
+	// 				contratação do Plano.
+	// 			</p>
+	// 		</span>
+	// 	),
+	// },
 ];
 
 export const faqClickMediaEN: DataFAQS[] = [
