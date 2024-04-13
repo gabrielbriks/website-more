@@ -4,63 +4,62 @@ import { DataFAQS } from '@/types/data-faqs-type';
 export const faqClickWebPT: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'O que é a ClickMore ?',
+		nameTrigger: 'Qual linguagem é utilizada para criar o site?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					a ClickMore é uma agência de publicidade , que oferece diversas
-					soluções para a sua empresa no mundo digital.
+					Nos criamos o seu site em qualquer linguagem da sua preferencia,
+					Python , NodeJs , JavaScript, Html entre outras, agende agora sua
+					reuniao.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'como faço para contratar algum serviço ?',
+		nameTrigger: 'Posso cadastrar os meus clientes dentro do site?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Para contratar é simples e rápido , escolha o seu plano , coloque
-					algumas informações sobre a sua empresa e você escolhe o dia e horário
-					para agendar uma reunião com a nossa equipe
+					Podemos inserir qualquer funcao dentro do seu site, cadastros,
+					agendamentos, checkout de pagamento, contato direto com o suporte,
+					dentro da clickmore nao temos limites para criar.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Quer um plano exclusivo PRIME para a sua empresa? ',
+		nameTrigger: 'Como funciona a hospedagem e dominios ?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Escolha o plano PRIME e você será direcionado direto para um
-					especialista da ClickMore , será um atendimento exclusivo para
-					entender as necessidades da sua empresa
+					Em todos os planos oferecemos hospedagem e dominio gratuitos por 1 ano
+					, garantindo que o seu site fique online.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Precisa criar um site?',
+		nameTrigger: 'Quanto tempo o site ficara pronto?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Contrate o plano desejado e Agende uma reunião que nós iremos te
-					passar mais informações agora.
+					O prazo é de 20 dias apos a aprovacao do layout do site, para o plano
+					WebPrime depende da necessidade do cliente.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger:
-			'Os planos do ClickAdsense ou ClickMedia são pagamentos mensais?',
+		nameTrigger: 'Como faco para saber quantas pessoas estao acessando ?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2">
 				<p>
-					Não, o período de contrato são 3 meses, podendo ou não renovar a
-					contratação do Plano.
+					Nos implementamos o google analytics para que voce acompanhe todas as
+					pessoas que navegam no seu site.
 				</p>
 			</span>
 		),
