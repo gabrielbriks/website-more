@@ -1,11 +1,5 @@
 'use client';
-import {
-	Collapsible,
-	CollapsibleContent,
-	CollapsibleTrigger,
-} from '@/components/ui/collapsible';
 import { cn } from '@/lib/utils';
-import { ArrowDownNarrowWideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -46,7 +40,7 @@ export default function NavBarLinksPagePlans({
 			)}
 		>
 			<Button
-				onClick={() => navigation.push('/home')}
+				onClick={() => (window.location.href = '/home')}
 				className={twMerge(
 					'flex w-full grow items-center justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
@@ -54,61 +48,64 @@ export default function NavBarLinksPagePlans({
 				Home
 			</Button>
 
-			<Collapsible className="w-full">
+			{/* <Collapsible className="w-full">
 				<CollapsibleTrigger className="flex w-full grow items-center justify-center gap-2 rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600">
 					Plans
 					<ArrowDownNarrowWideIcon size={16} />
 				</CollapsibleTrigger>
-				<CollapsibleContent className="flex flex-col gap-5">
-					<Button
-						onClick={() => navigation.push('/click-adsense?plan=true')}
-						className={twMerge(
-							'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
-						)}
-					>
-						ClickAdsense
-					</Button>
-
-					<Button
-						onClick={() => navigation.push('/click-media?plan=true')}
-						className={twMerge(
-							'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
-						)}
-					>
-						ClickMedia
-					</Button>
-
-					<Button
-						onClick={() => navigation.push('/click-pages?plan=true')}
-						className={twMerge(
-							'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
-						)}
-					>
-						ClickPages
-					</Button>
-
-					<Button
-						onClick={() => navigation.push('/click-web?plan=true')}
-						className={twMerge(
-							'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
-						)}
-					>
-						ClickWeb
-					</Button>
-				</CollapsibleContent>
-			</Collapsible>
-
-			<Link
-				href={{
-					href: '/home',
-					hash: 'contact',
-				}}
+				<CollapsibleContent className="flex flex-col gap-5"> */}
+			<Button
+				onClick={() => (window.location.href = '/click-adsense?plan=true')}
 				className={twMerge(
-					'flex w-full grow items-center justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
+					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
 			>
-				Contact
-			</Link>
+				ClickAdsense
+			</Button>
+
+			<Button
+				onClick={() => (window.location.href = '/click-media?plan=true')}
+				className={twMerge(
+					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
+				)}
+			>
+				ClickMedia
+			</Button>
+
+			<Button
+				onClick={() => (window.location.href = '/click-pages?plan=true')}
+				className={twMerge(
+					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
+				)}
+			>
+				ClickPages
+			</Button>
+
+			<Button
+				onClick={() => (window.location.href = '/click-web?plan=true')}
+				className={twMerge(
+					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
+				)}
+			>
+				ClickWeb
+			</Button>
+			{/* </CollapsibleContent>
+			</Collapsible> */}
+
+			{!showInMobile && (
+				<Link
+					// onClick={() => (window.location.href = '/home#contact')}
+					href={{
+						href: '/home',
+						hash: 'contact',
+					}}
+					className={twMerge(
+						'flex w-full grow items-center justify-center rounded-lg p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
+					)}
+				>
+					Contact
+				</Link>
+			)}
 		</nav>
 	);
 }
