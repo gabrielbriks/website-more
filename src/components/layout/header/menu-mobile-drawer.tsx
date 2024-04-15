@@ -2,7 +2,7 @@
 import { X } from 'lucide-react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 import {
 	Drawer,
 	DrawerClose,
@@ -10,7 +10,7 @@ import {
 	DrawerHeader,
 	DrawerTitle,
 	DrawerTrigger,
-} from '../ui/drawer';
+} from '../../ui/drawer';
 
 import { Locale } from '@/i18n-config';
 import { cn } from '@/lib/utils';
@@ -19,7 +19,7 @@ import Image from 'next/image';
 import NavBarLinksPagePlans from './nav-bar-links-page-plans';
 
 import ClickMoreLogoWhite from '@/assets/clickmore-logo-white.svg';
-import LocaleSwitcher from '../locale-switcher';
+import LocaleSwitcher from '../../locale-switcher';
 
 interface MenuMobileDrawerProps {
 	lang: Locale;

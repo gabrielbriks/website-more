@@ -1,4 +1,5 @@
 'use client';
+import LocaleSwitcher from '@/components/locale-switcher';
 import { Button } from '@/components/ui/button';
 import { Locale } from '@/i18n-config';
 import { cn } from '@/lib/utils';
@@ -6,15 +7,14 @@ import { ArrowUpRight, Cart } from 'akar-icons';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import LocaleSwitcher from '../locale-switcher';
-import { NavBarLinks } from './nav-bar-links';
+import { NavBarLinks } from '../nav-bar-links';
 
+import ClickMoreLogoPurple from '@/assets/click-more-purple.svg';
+import ClickMoreLogoWhite from '@/assets/click-more-white.svg';
 import { useDictionaryContext } from '@/contexts/dictionaryContext';
 import Link from 'next/link';
-import ClickMoreLogoPurple from '../../assets/click-more-purple.svg';
-import ClickMoreLogoWhite from '../../assets/click-more-white.svg';
-import MenuMobileDrawer from '../header/menu-mobile-drawer';
-import LoaderGlobal from './loadings/loading-global';
+import LoaderGlobal from '../loadings/loading-global';
+import MenuMobileDrawer from './menu-mobile-drawer';
 
 interface HeaderProps {
 	lang: Locale;

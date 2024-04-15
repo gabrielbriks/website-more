@@ -1,5 +1,5 @@
 import '@/app/globals.css';
-import { Header } from '@/components/layout/header';
+import { Header } from '@/components/layout/header/header';
 import FallbackLoading from '@/components/layout/loadings/fallback-loading';
 import { NavigationEvents } from '@/components/navigation-events';
 import { i18n, type Locale } from '@/i18n-config';

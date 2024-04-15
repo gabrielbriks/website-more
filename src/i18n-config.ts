@@ -1,6 +1,6 @@
 export const i18n = {
-	defaultLocale: 'en', //TODO: Alterar para 'ja'
-	locales: ['en', 'ja', 'pt'],
+	defaultLocale: 'ja',
+	locales: ['en', 'pt', 'ja'],
 } as const;
 
 //TODO: Rever aspectos do video(https://www.youtube.com/watch?v=1S7yFzU2ulg) para refinamento

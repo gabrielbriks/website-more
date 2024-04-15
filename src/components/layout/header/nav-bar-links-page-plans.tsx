@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 
 interface NavBarLinksPagePlansProps {
 	showInFooter?: boolean;

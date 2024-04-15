@@ -25,7 +25,7 @@ function getLocale(request: NextRequest): string | undefined {
 }
 
 export function middleware(request: NextRequest) {
-	const pathname = request.nextUrl.pathname;
+	const pathname = request.nextUrl.pathname.toLocaleLowerCase();
 	const searchParams = request.nextUrl.searchParams.toString();
 	const hashParams = request.nextUrl.hash.toString();
 
@@ -41,13 +41,12 @@ export function middleware(request: NextRequest) {
 	//   return
 
 	// Check if there is any supported locale in the pathname
-	const pathnameIsMissingLocale = i18n.locales.every(
-		(locale) =>
-			!pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
-	);
+	const pathnameHasLocale = i18n.locales.every((locale) => {
+		return !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`;
+	});
 
 	// Redirect if there is no locale
-	if (pathnameIsMissingLocale) {
+	if (pathnameHasLocale) {
 		const locale = getLocale(request);
 
 		// e.g. incoming request is /products

@@ -80,6 +80,7 @@ export default function CardServices({ lang }: CardServicesProps) {
 										<ButtonLinkCard
 											urlTarget={item.urlTarget}
 											text={item.buttonName}
+											locale={lang}
 										/>
 									</CardFooter>
 								</Card>
