@@ -6,7 +6,7 @@ export const faqHomePT: DataFAQS[] = [
 		valueItem: 'item-1',
 		nameTrigger: 'O que é a ClickMore ?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					a ClickMore é uma agência de publicidade , que oferece diversas
 					soluções para a sua empresa no mundo digital.
@@ -18,7 +18,7 @@ export const faqHomePT: DataFAQS[] = [
 		valueItem: 'item-2',
 		nameTrigger: 'como faço para contratar algum serviço ?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Para contratar é simples e rápido , escolha o seu plano , coloque
 					algumas informações sobre a sua empresa e você escolhe o dia e horário
@@ -31,7 +31,7 @@ export const faqHomePT: DataFAQS[] = [
 		valueItem: 'item-3',
 		nameTrigger: 'Quer um plano exclusivo PRIME para a sua empresa? ',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Escolha o plano PRIME e você será direcionado direto para um
 					especialista da ClickMore , será um atendimento exclusivo para
@@ -44,7 +44,7 @@ export const faqHomePT: DataFAQS[] = [
 		valueItem: 'item-4',
 		nameTrigger: 'Precisa criar um site?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Contrate o plano desejado e Agende uma reunião que nós iremos te
 					passar mais informações agora.
@@ -57,7 +57,7 @@ export const faqHomePT: DataFAQS[] = [
 		nameTrigger:
 			'Os planos do ClickAdsense ou ClickMedia são pagamentos mensais?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Não, o período de contrato são 3 meses, podendo ou não renovar a
 					contratação do Plano.
@@ -72,7 +72,7 @@ export const faqHomeEN: DataFAQS[] = [
 		valueItem: 'item-1',
 		nameTrigger: 'Por que investir tráfego pago?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -92,7 +92,7 @@ export const faqHomeEN: DataFAQS[] = [
 		valueItem: 'item-2',
 		nameTrigger: 'Do plans include support?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -112,7 +112,7 @@ export const faqHomeEN: DataFAQS[] = [
 		valueItem: 'item-3',
 		nameTrigger: 'Can I adjust my plan?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -132,7 +132,7 @@ export const faqHomeEN: DataFAQS[] = [
 		valueItem: 'item-4',
 		nameTrigger: 'Do plan prices include all fees?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -152,7 +152,7 @@ export const faqHomeEN: DataFAQS[] = [
 		valueItem: 'item-5',
 		nameTrigger: 'How do I cancel my plan?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -175,7 +175,7 @@ export const faqHomeJA: DataFAQS[] = [
 		valueItem: 'item-1',
 		nameTrigger: 'Por que investir tráfego pago?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -195,7 +195,7 @@ export const faqHomeJA: DataFAQS[] = [
 		valueItem: 'item-2',
 		nameTrigger: 'Do plans include support?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -215,7 +215,7 @@ export const faqHomeJA: DataFAQS[] = [
 		valueItem: 'item-3',
 		nameTrigger: 'Can I adjust my plan?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -235,7 +235,7 @@ export const faqHomeJA: DataFAQS[] = [
 		valueItem: 'item-4',
 		nameTrigger: 'Do plan prices include all fees?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).
@@ -255,7 +255,7 @@ export const faqHomeJA: DataFAQS[] = [
 		valueItem: 'item-5',
 		nameTrigger: 'How do I cancel my plan?',
 		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2">
+			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
 					Alcance rápido e segmentado: Atingimos o público ideal para sua
 					empresa, aumentando o ROI (retorno sobre investimento).

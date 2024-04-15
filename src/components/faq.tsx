@@ -63,7 +63,7 @@ export default async function Faq({ lang, namePage }: FaqProps) {
 						value={item.valueItem}
 						className="rounded-xl bg-white p-1 text-zinc-800 "
 					>
-						<AccordionTrigger className="px-3 text-lg">
+						<AccordionTrigger className="px-3 text-start text-lg">
 							{item.nameTrigger}
 						</AccordionTrigger>
 						<AccordionContent className="max-w-[470px] bg-transparent px-4 font-nunito text-base">
