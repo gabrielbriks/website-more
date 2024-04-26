@@ -1,5 +1,4 @@
 'use client';
-
 import {
 	Select,
 	SelectContent,
@@ -11,7 +10,7 @@ import {
 import { i18n, type Locale } from '@/i18n-config';
 import { cn } from '@/lib/utils';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface LocaleSwitcherParams {
 	langCurrent: Locale;
@@ -25,6 +24,27 @@ export default function LocaleSwitcher({
 	const pathName = usePathname();
 	const [langState, setLangState] = useState(pathName.split('/')[1]);
 	const navigate = useRouter();
+
+	// Função para verificar o idioma armazenado no armazenamento local
+	const getStoredLocale = () => {
+		try {
+			const storedLocale = localStorage.getItem('locale') as Locale | undefined;
+			return storedLocale && i18n.locales.includes(storedLocale)
+				? storedLocale
+				: undefined;
+		} catch (error) {
+			console.error(
+				'Erro ao recuperar o idioma do armazenamento local:',
+				error,
+			);
+			return undefined;
+		}
+	};
+
+	useEffect(() => {
+		const storedLocale = getStoredLocale();
+		setLangState(storedLocale || pathName.split('/')[1]);
+	}, [pathName]);
 
 	const redirectedPathName = (locale: Locale) => {
 		const searchParams = window.location.search;
@@ -45,7 +65,19 @@ export default function LocaleSwitcher({
 			pathTarget += searchParams;
 		}
 
-		navigate.push(pathTarget);
+		fetch('/api/set-locale', {
+			method: 'POST',
+			body: JSON.stringify({ locale: locale }),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				console.log('Resposta de configuração de local:', data);
+				navigate.push(pathTarget);
+			})
+			.catch((error) => {
+				console.error('Erro ao definir o local:', error);
+				navigate.push(pathTarget); // navega mesmo se a configuração falhar
+			});
 	};
 
 	return (
