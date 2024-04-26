@@ -18,7 +18,7 @@ interface FaqProps {
 	namePage: 'home' | 'clickAdsense' | 'clickMedia' | 'clickWeb' | 'clickPages';
 }
 
-export default async function Faq({ lang, namePage }: FaqProps) {
+export default function Faq({ lang, namePage }: FaqProps) {
 	// const dictionary = await getDictionary(lang);
 
 	const { dictionary, loading } = useDictionaryContext();
