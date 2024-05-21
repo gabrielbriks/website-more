@@ -36,7 +36,7 @@ export default function IndexPage({
 			setLocaleInCookie();
 			window.location.href = `${lang}/home`;
 		}
-	}, []);
+	}, [lang]);
 
 	return <FallbackLoading />;
 }
