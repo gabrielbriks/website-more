@@ -70,20 +70,20 @@ export const faqHomePT: DataFAQS[] = [
 export const faqHomeEN: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'Why invest in paid traffic?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Quick and targeted reach: We reach the ideal audience for your
+					business, increasing ROI (return on investment).
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					Proven results: We monitor and optimize campaigns to ensure maximum
+					conversions.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Agility and flexibility: We create and adjust campaigns according to
+					your needs and objectives.
 				</p>
 			</span>
 		),
@@ -94,16 +94,16 @@ export const faqHomeEN: DataFAQS[] = [
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Quick and targeted reach: We reach the ideal audience for your
+					business, increasing ROI (return on investment).
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					Proven results: We monitor and optimize campaigns to ensure maximum
+					conversions.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Agility and flexibility: We create and adjust campaigns according to
+					your needs and objectives.
 				</p>
 			</span>
 		),
@@ -114,16 +114,16 @@ export const faqHomeEN: DataFAQS[] = [
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Quick and targeted reach: We reach the ideal audience for your
+					business, increasing ROI (return on investment).
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					Proven results: We monitor and optimize campaigns to ensure maximum
+					conversions.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Agility and flexibility: We create and adjust campaigns according to
+					your needs and objectives.
 				</p>
 			</span>
 		),
@@ -134,16 +134,16 @@ export const faqHomeEN: DataFAQS[] = [
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Quick and targeted reach: We reach the ideal audience for your
+					business, increasing ROI (return on investment).
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					Proven results: We monitor and optimize campaigns to ensure maximum
+					conversions.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Agility and flexibility: We create and adjust campaigns according to
+					your needs and objectives.
 				</p>
 			</span>
 		),
@@ -154,16 +154,16 @@ export const faqHomeEN: DataFAQS[] = [
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Quick and targeted reach: We reach the ideal audience for your
+					business, increasing ROI (return on investment).
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					Proven results: We monitor and optimize campaigns to ensure maximum
+					conversions.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Agility and flexibility: We create and adjust campaigns according to
+					your needs and objectives.
 				</p>
 			</span>
 		),
@@ -173,101 +173,86 @@ export const faqHomeEN: DataFAQS[] = [
 export const faqHomeJA: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'なぜ有料トラフィックに投資するのか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					迅速かつターゲットを絞ったリーチ:
+					私たちはビジネスに最適なターゲットにリーチし、ROI（投資利益率）を向上させます。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					実証された結果:
+					キャンペーンを監視および最適化し、最大限のコンバージョンを保証します。
 				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>機敏性と柔軟性: 必要に応じてキャンペーンを作成し、調整します。</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'プランにはサポートが含まれていますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					迅速かつターゲットを絞ったリーチ:
+					私たちはビジネスに最適なターゲットにリーチし、ROI（投資利益率）を向上させます。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					実証された結果:
+					キャンペーンを監視および最適化し、最大限のコンバージョンを保証します。
 				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>機敏性と柔軟性: 必要に応じてキャンペーンを作成し、調整します。</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: 'プランを調整できますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					迅速かつターゲットを絞ったリーチ:
+					私たちはビジネスに最適なターゲットにリーチし、ROI（投資利益率）を向上させます。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					実証された結果:
+					キャンペーンを監視および最適化し、最大限のコンバージョンを保証します。
 				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>機敏性と柔軟性: 必要に応じてキャンペーンを作成し、調整します。</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: 'プラン料金にはすべての料金が含まれていますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					迅速かつターゲットを絞ったリーチ:
+					私たちはビジネスに最適なターゲットにリーチし、ROI（投資利益率）を向上させます。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					実証された結果:
+					キャンペーンを監視および最適化し、最大限のコンバージョンを保証します。
 				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>機敏性と柔軟性: 必要に応じてキャンペーンを作成し、調整します。</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: 'プランをキャンセルするにはどうすればよいですか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					迅速かつターゲットを絞ったリーチ:
+					私たちはビジネスに最適なターゲットにリーチし、ROI（投資利益率）を向上させます。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					実証された結果:
+					キャンペーンを監視および最適化し、最大限のコンバージョンを保証します。
 				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>機敏性と柔軟性: 必要に応じてキャンペーンを作成し、調整します。</p>
 			</span>
 		),
 	},

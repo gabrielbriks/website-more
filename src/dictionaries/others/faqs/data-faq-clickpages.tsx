@@ -95,100 +95,85 @@ export const faqClickPagesPT: DataFAQS[] = [
 export const faqClickPagesEN: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'Why have a website?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Professional online presence: Create a strong and professional digital
+					identity for your company.
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					Showcase your products or services: Present your offerings clearly and
+					attractively to your customers.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Increase your sales: Sell your products or services online and expand
+					your reach.
+				</p>
+				<p>
+					Communication channel: Interact with your customers and provide
+					relevant information.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'What website creation services does Click More offer?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					Institutional website creation: Websites to showcase your company,
+					products, or services.
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					E-commerce creation: Complete online stores to sell your products.
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Landing page creation: Specific pages to capture leads or make sales.
+				</p>
+				<p>
+					Custom web development: Personalized web solutions to meet your
+					specific needs.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: 'How much does it cost to create a website?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					The investment varies depending on the type of website, features,
+					design, and goals. However, we have plans starting from XYZ as you can
+					[link:check here].
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: 'What results can I expect?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>Increased online visibility of your brand.</p>
+				<p>Brand positioning.</p>
+				<p>Greater reach of potential customers.</p>
+				<p>Lead generation and conversions.</p>
+				<p>Increased sales.</p>
+				<p>Improved communication with your customers.</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: 'Are ClickAdsense or ClickMedia plans monthly payments?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					No, the contract period is 3 months, with the option to renew or not
+					the plan.
 				</p>
 			</span>
 		),
@@ -198,100 +183,74 @@ export const faqClickPagesEN: DataFAQS[] = [
 export const faqClickPagesJA: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'ウェブサイトを持つ理由は？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					プロフェッショナルなオンラインプレゼンス：企業の強力でプロフェッショナルなデジタルアイデンティティを作成します。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
+					製品やサービスを紹介：お客様に対してオファーを明確かつ魅力的に提示します。
 				</p>
 				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					売上の増加：製品やサービスをオンラインで販売し、届ける範囲を拡大します。
+				</p>
+				<p>
+					コミュニケーションチャネル：お客様と対話し、関連する情報を提供します。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'Click Moreが提供するウェブサイト作成サービスは何ですか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
+					企業の紹介サイトの作成：会社や製品、サービスを紹介するためのウェブサイト。
+				</p>
+				<p>Eコマースの作成：製品を販売するための完全なオンラインストア。</p>
+				<p>
+					ランディングページの作成：リードを獲得したり、販売を行うための特定のページ。
 				</p>
 				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					カスタムウェブ開発：特定のニーズに対応するためのカスタマイズされたウェブソリューション。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: 'ウェブサイトを作成する費用はいくらですか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					投資額は、ウェブサイトの種類、機能、デザイン、目標によって異なります。ただし、こちらからXYZからのプランを提供しています。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: 'どのような結果が期待できますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
+				<p>ブランドのオンラインでの視認性の向上。</p>
+				<p>ブランドのポジショニング。</p>
+				<p>潜在的な顧客の範囲の拡大。</p>
+				<p>リードの獲得とコンバージョン。</p>
+				<p>売上の増加。</p>
+				<p>お客様とのコミュニケーションの改善。</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: 'ClickAdsenseまたはClickMediaのプランは月額支払いですか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					いいえ、契約期間は3ヶ月で、プランの更新をするかどうかは選択できます。
 				</p>
 			</span>
 		),

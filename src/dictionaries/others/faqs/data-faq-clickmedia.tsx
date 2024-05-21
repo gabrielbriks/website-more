@@ -71,100 +71,12 @@ export const faqClickMediaPT: DataFAQS[] = [
 export const faqClickMediaEN: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: "Is there a plan that manages my company's social media?",
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Yes, sign up for the MediaPro plan, and we will manage and implement
+					ClickBot to respond to your customers.
 				</p>
 			</span>
 		),
@@ -174,100 +86,11 @@ export const faqClickMediaEN: DataFAQS[] = [
 export const faqClickMediaJA: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: '私の会社のソーシャルメディアを管理するプランはありますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
-				</p>
-			</span>
-		),
-	},
-	{
-		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
-		descriptionItem: () => (
-			<span className="flex w-full flex-col gap-2 text-start">
-				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					はい、MediaProプランに申し込むと、お客様に返信するためのClickBotを管理および実装します。
 				</p>
 			</span>
 		),

@@ -69,100 +69,61 @@ export const faqClickWebPT: DataFAQS[] = [
 export const faqClickWebEN: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'What language is used to create the site?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					We create your site in any language of your choice, Python, NodeJs,
+					JavaScript, Html among others, schedule your meeting now.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'Can I register my clients on the site?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					We can insert any function into your site, registrations,
+					appointments, payment checkout, direct contact with support, at
+					ClickMore we have no limits to create.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: 'How does hosting and domains work?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					In all plans we offer free hosting and domain for 1 year, ensuring
+					that your site stays online.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: 'How long will it take for the site to be ready?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					The deadline is 20 days after the approval of the site layout, for the
+					WebPrime plan it depends on the client's needs.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: 'How do I find out how many people are accessing?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					We implement google analytics so that you can track all the people
+					browsing your site.
 				</p>
 			</span>
 		),
@@ -172,100 +133,56 @@ export const faqClickWebEN: DataFAQS[] = [
 export const faqClickWebJA: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'サイトを作成するために使用される言語は何ですか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					お客様の選択した言語でサイトを作成します。Python、NodeJs、JavaScript、Htmlなど、今すぐミーティングを予約してください。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'サイトに顧客を登録できますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					お客様のサイトに任意の機能を追加できます。登録、予約、支払いチェックアウト、サポートとの直接的な連絡など、ClickMoreでは制限はありません。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: 'ホスティングとドメインはどのように動作しますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					すべてのプランで、1年間の無料ホスティングとドメインを提供しており、お客様のサイトがオンラインで維持されることを保証しています。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: 'サイトが完成するのにどれくらい時間がかかりますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					サイトのレイアウトが承認されてから20日以内に完了します。WebPrimeプランの場合は、お客様のニーズに応じて変わります。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: 'アクセスしている人数を知る方法は？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Google
+					Analyticsを導入していますので、お客様のサイトを閲覧しているすべての人を追跡できます。
 				</p>
 			</span>
 		),

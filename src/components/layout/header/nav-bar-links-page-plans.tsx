@@ -1,5 +1,7 @@
 'use client';
+import { i18n } from '@/i18n-config';
 import { cn } from '@/lib/utils';
+import { useCurrentLocale } from 'next-i18n-router/client';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -18,7 +20,9 @@ export default function NavBarLinksPagePlans({
 	const searchParams = useSearchParams();
 	const [isPlanPage, setIsPlanPage] = useState<boolean | null>(null);
 	const navigation = useRouter();
+	const locale = useCurrentLocale(i18n);
 
+	useCurrentLocale;
 	useEffect(() => {
 		const existParamPlan = searchParams.has('plan');
 		setIsPlanPage(existParamPlan);
@@ -40,7 +44,7 @@ export default function NavBarLinksPagePlans({
 			)}
 		>
 			<Button
-				onClick={() => (window.location.href = '/home')}
+				onClick={() => (window.location.href = `/${locale}/home`)}
 				className={twMerge(
 					'flex w-full grow items-center justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
@@ -55,7 +59,9 @@ export default function NavBarLinksPagePlans({
 				</CollapsibleTrigger>
 				<CollapsibleContent className="flex flex-col gap-5"> */}
 			<Button
-				onClick={() => (window.location.href = '/click-adsense?plan=true')}
+				onClick={() =>
+					(window.location.href = `/${locale}/click-adsense?plan=true`)
+				}
 				className={twMerge(
 					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
@@ -64,7 +70,9 @@ export default function NavBarLinksPagePlans({
 			</Button>
 
 			<Button
-				onClick={() => (window.location.href = '/click-media?plan=true')}
+				onClick={() =>
+					(window.location.href = `/${locale}/click-media?plan=true`)
+				}
 				className={twMerge(
 					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
@@ -73,7 +81,9 @@ export default function NavBarLinksPagePlans({
 			</Button>
 
 			<Button
-				onClick={() => (window.location.href = '/click-pages?plan=true')}
+				onClick={() =>
+					(window.location.href = `/${locale}/click-pages?plan=true`)
+				}
 				className={twMerge(
 					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
@@ -82,7 +92,9 @@ export default function NavBarLinksPagePlans({
 			</Button>
 
 			<Button
-				onClick={() => (window.location.href = '/click-web?plan=true')}
+				onClick={() =>
+					(window.location.href = `/${locale}/click-web?plan=true`)
+				}
 				className={twMerge(
 					'ml-4 flex w-full grow items-start justify-center rounded-lg bg-transparent p-2 text-center text-xl font-medium text-white transition duration-700 hover:bg-white hover:text-pink-600',
 				)}
@@ -92,7 +104,7 @@ export default function NavBarLinksPagePlans({
 			{/* </CollapsibleContent>
 			</Collapsible> */}
 
-			{!showInMobile && (
+			{showInMobile == false && isPlanPage != null && isPlanPage === false ? (
 				<Link
 					// onClick={() => (window.location.href = '/home#contact')}
 					href={{
@@ -105,7 +117,7 @@ export default function NavBarLinksPagePlans({
 				>
 					Contact
 				</Link>
-			)}
+			) : null}
 		</nav>
 	);
 }

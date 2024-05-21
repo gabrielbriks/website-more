@@ -71,100 +71,62 @@ export const faqClickAdsensePT: DataFAQS[] = [
 export const faqClickAdsenseEN: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'Can I choose which platform to advertise on?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					You can choose between Google, Meta, Line, Youtube; we will position
+					your company to be seen by the right customers. We do this with
+					expertise.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'Does the plan include the amount invested in the platforms?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Yes, each plan has its advertising budget. For exclusive budgets,
+					choose ClickPrime.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: 'Do I need to create the advertising material for my company?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					No, we create everything. If you hire the ClickPro plan, we can even
+					come to your company to create an exclusive video.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: 'Is the payment monthly?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					No, any plan with ClickAdsense is a 3-month contract. If you want a
+					longer period with a larger marketing budget, choose ClickPrime.
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: 'Can I advertise my business in another country?',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Yes, we create customized advertising campaigns for each client. Tell
+					us the country you want to target, and we will create everything for
+					your company.
 				</p>
 			</span>
 		),
@@ -174,100 +136,55 @@ export const faqClickAdsenseEN: DataFAQS[] = [
 export const faqClickAdsenseJA: DataFAQS[] = [
 	{
 		valueItem: 'item-1',
-		nameTrigger: 'Por que investir tráfego pago?',
+		nameTrigger: 'どのプラットフォームで広告を行うか選択できますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					Google、Meta、Line、Youtubeのいずれかを選択できます。私たちはあなたの会社を適切な顧客に見てもらえるように配置します。我々はこれを熟練で行います。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-2',
-		nameTrigger: 'Do plans include support?',
+		nameTrigger: 'プランにはプラットフォームへの投資額が含まれていますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					はい、各プランには広告予算が含まれています。独自の予算については、ClickPrimeを選択してください。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-3',
-		nameTrigger: 'Can I adjust my plan?',
+		nameTrigger: '自社の広告資料を作成する必要がありますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					いいえ、私たちがすべて作成します。ClickProプランを契約すれば、独自のビデオを作成するためにあなたの会社に出向くことさえできます。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-4',
-		nameTrigger: 'Do plan prices include all fees?',
+		nameTrigger: '支払いは月額ですか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					いいえ、ClickAdsenseのいずれかのプランは3か月契約です。より長い期間と大きなマーケティング予算を希望する場合は、ClickPrimeを選択してください。
 				</p>
 			</span>
 		),
 	},
 	{
 		valueItem: 'item-5',
-		nameTrigger: 'How do I cancel my plan?',
+		nameTrigger: '他の国でビジネスを宣伝できますか？',
 		descriptionItem: () => (
 			<span className="flex w-full flex-col gap-2 text-start">
 				<p>
-					Alcance rápido e segmentado: Atingimos o público ideal para sua
-					empresa, aumentando o ROI (retorno sobre investimento).
-				</p>
-				<p>
-					Resultados comprovados: Monitoramos e otimizamos campanhas para
-					garantir o máximo de conversões.
-				</p>
-				<p>
-					Agilidade e flexibilidade: Criamos e ajustamos campanhas de acordo com
-					suas necessidades e objetivos.
+					はい、私たちは各クライアントに合わせたカスタマイズ広告キャンペーンを作成します。ターゲットとしたい国を教えてください、そして私たちはあなたの会社のためにすべてを作成します。
 				</p>
 			</span>
 		),

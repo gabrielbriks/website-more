@@ -44,59 +44,136 @@ function getLocale(request: NextRequest): string | undefined {
 	return locale;
 }
 
-export function middleware(request: NextRequest) {
-	const pathname = request.nextUrl.pathname.toLocaleLowerCase();
-	const searchParams = request.nextUrl.searchParams.toString();
-	const hashParams = request.nextUrl.hash.toString();
+const cookieName = 'locale';
+const fallbackLng = 'ja';
 
-	const storedLocale = getLocaleFromCookie(request);
-	// console.log('storedLocale', storedLocale);
-	// console.log('pathname', pathname);
+export function middleware(req: NextRequest) {
+	const searchParams = req.nextUrl.searchParams.toString();
+	const hashParams = req.nextUrl.hash.toString();
+	let lng;
+	let urlTarget: string;
+	let newURL;
 
-	// Redirect if there is no locale
-	if (
-		!storedLocale &&
-		i18n.locales.every((locale) => {
-			return !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`;
-		})
-	) {
-		console.log('Redirect if there is no locale');
+	// console.log('1:: ', req.nextUrl.locale);
 
-		const locale = getLocale(request) as string;
-		console.log('locale', locale);
-		// e.g. incoming request is /products
-		// The new URL is now /en-US/products
-		let url = `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`;
-
-		//Fix: Tratativa para impedir remoção de parâmetros na url
-		if (hashParams) {
-			url += `#${hashParams}`;
-		}
-
-		if (searchParams) {
-			url += `?${searchParams}`;
-		}
-
-		return NextResponse.redirect(new URL(url, request.url));
-	} else if (
-		!pathname.startsWith(`/${storedLocale}/`) &&
-		pathname !== `/${storedLocale}`
-	) {
-		console.log('url', pathname);
-
-		let url = `/${storedLocale}${pathname}`;
-
-		// //Fix: Tratativa para impedir remoção de parâmetros na url
-		if (hashParams) {
-			url += `#${hashParams}`;
-		}
-
-		if (searchParams) {
-			url += `?${searchParams}`;
-		}
-
-		return NextResponse.redirect(new URL(url, request.url));
+	if (req.cookies.has(cookieName)) {
+		const locale = req.cookies.get(cookieName)!.value;
+		lng = locale;
 	}
+
+	// if (!lng) lng = acceptLanguage.get(req.headers.get('Accept-Language'));
+	if (!lng) lng = fallbackLng;
+
+	// Redirect if lng in path is not supported
+	if (
+		!i18n.locales.some((lang) => req.nextUrl.pathname.startsWith(`/${lang}`)) &&
+		!req.nextUrl.pathname.startsWith('/_next')
+	) {
+		console.log('lng in path is not');
+		return NextResponse.redirect(
+			new URL(`/${lng}${req.nextUrl.pathname}`, req.url),
+		);
+	}
+
+	if (req.headers.has('referer')) {
+		const refererUrl = new URL(req.headers.get('referer')!);
+
+		const langInReferer = i18n.locales.find((lang) =>
+			refererUrl.pathname.startsWith(`/${lang}`),
+		);
+
+		// const response = NextResponse.next();
+
+		if (langInReferer) {
+			console.log('YEP referer');
+			const langRefererUrl = refererUrl.pathname.split('/')[1];
+
+			if (req.cookies.has('lang')) {
+				if (langRefererUrl == req.cookies.get('lang')?.value) {
+					urlTarget = `/${langRefererUrl}${req.nextUrl.pathname.slice(3)}`;
+					// newURL = new URL(refererUrl.pathname, req.nextUrl.origin);
+				} else {
+					lng = req.cookies.get('lang')?.value;
+					urlTarget = `/${lng}${req.nextUrl.pathname.slice(3)}`;
+				}
+			} else {
+				req.cookies.set('lang', langRefererUrl);
+				urlTarget = `/${langRefererUrl}${req.nextUrl.pathname.slice(3)}`;
+			}
+
+			// if (langInReferer && !req.cookies.get('lang')?.value) {
+			// 	req.cookies.set('lang', lng);
+			// }
+		}
+
+		// if(!langInReferer)
+
+		// if (langInReferer) response.cookies.set(cookieName, langInReferer);
+
+		if (hashParams) {
+			urlTarget! += `#${hashParams}`;
+		}
+
+		if (searchParams) {
+			urlTarget! += `?${searchParams}`;
+		}
+
+		urlTarget = `/${lng}${req.nextUrl.pathname.slice(3)}`;
+
+		//Fix: Tratativa para impedir remoção de parâmetros na urlWithLocale
+		if (hashParams) {
+			urlTarget! += `#${hashParams}`;
+		}
+
+		if (searchParams) {
+			urlTarget! += `?${searchParams}`;
+		}
+
+		newURL = new URL(urlTarget, req.nextUrl.origin);
+
+		return NextResponse.rewrite(newURL);
+	} else {
+		const langInURL = req.nextUrl.pathname.split('/')[1];
+
+		const langOfCookie = req.cookies.get('lang')?.value;
+
+		if (langOfCookie || i18n.locales.some((lang) => lang == langInURL)) {
+			console.log('langOfCookie || i18n.locales.some', {
+				langOfCookie,
+				langInURL,
+			});
+
+			if (langInURL && langOfCookie !== undefined) {
+				req.cookies.set('lang', langInURL);
+			}
+
+			urlTarget = req.nextUrl.pathname;
+		} else {
+			console.log(
+				'req.cookies.set(lang, langInURL) IS_FALSE',
+				req.nextUrl.pathname,
+			);
+			urlTarget = req.nextUrl.pathname;
+		}
+
+		//Fix: Tratativa para impedir remoção de parâmetros na urlWithLocale
+		if (hashParams) {
+			urlTarget! += `#${hashParams}`;
+		}
+
+		if (searchParams) {
+			urlTarget! += `?${searchParams}`;
+		}
+
+		// newURL = new URL(urlTarget, req.nextUrl.origin);
+	}
+
+	newURL = new URL(urlTarget, req.nextUrl.origin);
+
+	console.log('urlTarget', urlTarget);
+	if (newURL) NextResponse.redirect(newURL);
+
+	NextResponse.next();
 }
 
 export const config = {

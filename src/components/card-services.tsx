@@ -78,7 +78,7 @@ export default function CardServices({ lang }: CardServicesProps) {
 									</CardContent>
 									<CardFooter className="flex w-full items-center justify-center self-end">
 										<ButtonLinkCard
-											urlTarget={item.urlTarget}
+											urlTarget={`/${lang}${item.urlTarget}`}
 											text={item.buttonName}
 											locale={lang}
 										/>

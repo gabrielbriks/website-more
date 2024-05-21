@@ -10,7 +10,7 @@ import {
 import { i18n, type Locale } from '@/i18n-config';
 import { cn } from '@/lib/utils';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface LocaleSwitcherParams {
 	langCurrent: Locale;
@@ -28,7 +28,7 @@ export default function LocaleSwitcher({
 	// Função para verificar o idioma armazenado no armazenamento local
 	const getStoredLocale = () => {
 		try {
-			const storedLocale = localStorage.getItem('locale') as Locale | undefined;
+			const storedLocale = localStorage.getItem('lang') as Locale | undefined;
 			return storedLocale && i18n.locales.includes(storedLocale)
 				? storedLocale
 				: undefined;
@@ -41,12 +41,12 @@ export default function LocaleSwitcher({
 		}
 	};
 
-	useEffect(() => {
-		const storedLocale = getStoredLocale();
-		setLangState(storedLocale || pathName.split('/')[1]);
-	}, [pathName]);
+	// useEffect(() => {
+	// 	const storedLocale = getStoredLocale();
+	// 	setLangState(storedLocale || pathName.split('/')[1]);
+	// }, [langState]);
 
-	const redirectedPathName = (locale: Locale) => {
+	const redirectedPathName = async (locale: Locale) => {
 		const searchParams = window.location.search;
 		const hashParams = window.location.hash;
 
@@ -65,7 +65,11 @@ export default function LocaleSwitcher({
 			pathTarget += searchParams;
 		}
 
-		fetch('/api/set-locale', {
+		// localStorage.setItem('lang', locale);
+
+		if (!locale) return;
+
+		await fetch('/api/set-locale', {
 			method: 'POST',
 			body: JSON.stringify({ locale: locale }),
 		})
