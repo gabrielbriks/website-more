@@ -9,5 +9,16 @@ const dictionaries = {
 	pt: () => import('./dictionaries/pt.json').then((module) => module.default),
 };
 
-export const getDictionary = async (locale: Locale) =>
-	dictionaries[locale]?.() ?? dictionaries.ja();
+export const getDictionary = async (locale: Locale) => {
+	switch (locale) {
+		case 'en':
+			return await dictionaries.en();
+			break;
+		case 'pt':
+			return await dictionaries.pt();
+			break;
+		default:
+			return await dictionaries.ja();
+			break;
+	}
+};
