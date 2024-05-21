@@ -32,7 +32,7 @@ export default function IndexPage({
 	};
 
 	useEffect(() => {
-		if (lang !== undefined) {
+		if (lang != undefined) {
 			setLocaleInCookie();
 			window.location.href = `${lang}/home`;
 		}
