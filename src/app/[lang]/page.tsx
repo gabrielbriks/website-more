@@ -19,7 +19,7 @@ export default function IndexPage({
 		})
 			.then((response) => response.json())
 			.catch((error) => {
-				console.error('Erro ao definir o local:', error);
+				console.error('Erro ao definir o local(Index):', error);
 				navigate.replace(`${i18n.defaultLocale}/home`); // navega mesmo se a configuração falhar, utilizando localeDefault
 			});
 	};

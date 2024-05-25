@@ -10,6 +10,8 @@ import Link from 'next/link';
 
 import clickMoreAskedQuestions from '@/assets/pages/click-media/asked-questions-image.png';
 import clickMediaAdSenseHeader from '@/assets/pages/click-media/clickmedia-bg-header.webp';
+import { getPlansClickMedia } from '@/dictionaries/others/plans/click-media';
+import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
 import arrowRightSitemap from '../../../../assets/arrow-right-sitemap.svg';
 import bgCoverTitleTopPage from '../../../../assets/layout/bg-cover-title-pages.png';
@@ -34,7 +36,9 @@ const planInfo = {
 	typePlan: 'start',
 };
 
-export default function ClickMedia({ params }: ClickMediaProps) {
+export default async function ClickMedia({ params }: ClickMediaProps) {
+	const dictionary = await getDictionary(params.lang);
+
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex min-h-[500px] w-full flex-col items-center bg-black px-16 pb-12 pt-8 backdrop-blur-xl max-md:max-w-full max-md:px-5">
@@ -73,47 +77,18 @@ export default function ClickMedia({ params }: ClickMediaProps) {
 
 			<div className="z-10 w-full max-w-[1304px] self-center px-5 max-lg:mt-16 lg:-mt-12 ">
 				<div className="container flex gap-5 max-lg:flex-col max-lg:items-center max-md:gap-4 max-sm:gap-3">
-					<PlanCard
-						itemsIncluded={[
-							...planInfo.items,
-							'1 image for up to 10 products or services',
-						]}
-						nameButton="hire"
-						namePlan="MediaStart"
-						periodSubscription="/month"
-						urlTarget="/add-cart"
-						valuePlan="35,000"
-						typePlan="start"
-					/>
-
-					<PlanCard
-						itemsIncluded={[
-							...planInfo.items,
-							'1 image for up to 10 products or services',
-						]}
-						nameButton="hire"
-						namePlan="MediaMax"
-						periodSubscription="/month"
-						urlTarget="/add-cart"
-						valuePlan="50,000"
-						typePlan="max"
-					/>
-
-					<PlanCard
-						itemsIncluded={[
-							...planInfo.items,
-							'1 image for up to 10 products or services',
-							'1 image for up to 10 products or services',
-							'1 image for up to 10 products or services',
-							'1 image for up to 10 products or services',
-						]}
-						nameButton="hire"
-						namePlan="MediaPro"
-						periodSubscription="/month"
-						urlTarget="/add-cart"
-						valuePlan="75,000"
-						typePlan="pro"
-					/>
+					{getPlansClickMedia(params.lang).map((plan, index) => (
+						<PlanCard
+							key={`${plan.typePlan}_${index}`}
+							itemsIncluded={plan.items}
+							nameButton={plan.nameButton}
+							namePlan={plan.namePlan}
+							periodSubscription={plan.periodSubscription}
+							urlTarget={plan.urlTarget}
+							valuePlan={plan.valuePlan}
+							typePlan={plan.typePlan}
+						/>
+					))}
 				</div>
 			</div>
 			<div className="container mt-40 flex w-full max-w-[1200px] justify-between gap-5 self-center max-md:mt-10 max-md:max-w-full max-md:flex-wrap">
@@ -131,18 +106,24 @@ export default function ClickMedia({ params }: ClickMediaProps) {
 										src={leftArrowClickPhrase}
 										className="aspect-square h-auto w-5  fill-pink-700 stroke-pink-700"
 									/>
-									<h3 className="my-auto uppercase">custom advertising plan</h3>
+									<h3 className="my-auto uppercase">
+										{dictionary.pages.clickAdsense.areaPrime.subTitleTop}
+									</h3>
 								</div>
-								<h1 className="w-full text-5xl font-bold uppercase leading-[48.08px] text-gray-800 max-lg:text-center  max-md:text-4xl max-sm:text-3xl lg:mt-2">
-									MediaPrime
+								<h1 className="w-full text-5xl font-bold uppercase leading-[48.08px] text-gray-800 max-lg:text-center max-md:text-4xl max-sm:text-3xl  lg:mt-2">
+									{dictionary.pages.clickAdsense.areaPrime.title}
 								</h1>
 								<p className="mt-4 self-stretch text-lg leading-7 text-neutral-600 max-md:max-w-full max-md:text-center">
-									Create your custom advertising plan that meets all your
-									company's needs. Talk to a specialist.
+									{dictionary.pages.clickAdsense.areaPrime.textDescription}
 								</p>
 							</div>
 							<Button className=" flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
-								<span className="uppercase">Book an appointment</span>
+								<span className="uppercase">
+									{
+										dictionary.pages.clickAdsense.areaPrime
+											.nameButtonAppointment
+									}
+								</span>
 								<ArrowUpRight
 									size={20}
 									className="stroke-white transition duration-700"

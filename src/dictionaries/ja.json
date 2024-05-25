@@ -91,10 +91,41 @@
 				}
 			}
 		},
-		"clickAdsense": {},
-		"clickMedia": {},
-		"clickPages": {},
-		"clickWeb": {},
-		"clickEcom": {}
+		"clickAdsense": {
+			"areaPrime": {
+				"subTitleTop": "カスタム広告プラン",
+				"title": "WEBPRIME",
+				"textDescription": "会社のすべてのニーズを満たすカスタム広告プランを作成します。 専門家に相談してください。",
+				"nameButtonAppointment": "予約する"
+			},
+			"areaVideo": {}
+		},
+		"clickMedia": {
+			"areaPrime": {
+				"subTitleTop": "カスタム広告プラン",
+				"title": "WEBPRIME",
+				"textDescription": "会社のすべてのニーズを満たすカスタム広告プランを作成します。 専門家に相談してください。",
+				"nameButtonAppointment": "予約する"
+			},
+			"areaVideo": {}
+		},
+		"clickPages": {
+			"areaPrime": {
+				"subTitleTop": "カスタム広告プラン",
+				"title": "WEBPRIME",
+				"textDescription": "会社のすべてのニーズを満たすカスタム広告プランを作成します。 専門家に相談してください。",
+				"nameButtonAppointment": "予約する"
+			},
+			"areaVideo": {}
+		},
+		"clickWeb": {
+			"areaPrime": {
+				"subTitleTop": "カスタム広告プラン",
+				"title": "WEBPRIME",
+				"textDescription": "会社のすべてのニーズを満たすカスタム広告プランを作成します。 専門家に相談してください。",
+				"nameButtonAppointment": "予約する"
+			},
+			"areaVideo": {}
+		}
 	}
 }

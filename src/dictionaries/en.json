@@ -91,10 +91,41 @@
 				}
 			}
 		},
-		"clickAdsense": {},
-		"clickMedia": {},
-		"clickPages": {},
-		"clickWeb": {},
-		"clickEcom": {}
+		"clickAdsense": {
+			"areaPrime": {
+				"subTitleTop": "CUSTOM ADVERTISING PLAN",
+				"title": "WEBPRIME",
+				"textDescription": "Create your custom advertising plan that meets all your company's needs. Talk to a specialist.",
+				"nameButtonAppointment": "BOOK AN APPOINTMENT"
+			},
+			"areaVideo": {}
+		},
+		"clickMedia": {
+			"areaPrime": {
+				"subTitleTop": "CUSTOM ADVERTISING PLAN",
+				"title": "WEBPRIME",
+				"textDescription": "Create your custom advertising plan that meets all your company's needs. Talk to a specialist.",
+				"nameButtonAppointment": "BOOK AN APPOINTMENT"
+			},
+			"areaVideo": {}
+		},
+		"clickPages": {
+			"areaPrime": {
+				"subTitleTop": "CUSTOM ADVERTISING PLAN",
+				"title": "WEBPRIME",
+				"textDescription": "Create your custom advertising plan that meets all your company's needs. Talk to a specialist.",
+				"nameButtonAppointment": "BOOK AN APPOINTMENT"
+			},
+			"areaVideo": {}
+		},
+		"clickWeb": {
+			"areaPrime": {
+				"subTitleTop": "CUSTOM ADVERTISING PLAN",
+				"title": "WEBPRIME",
+				"textDescription": "Create your custom advertising plan that meets all your company's needs. Talk to a specialist.",
+				"nameButtonAppointment": "BOOK AN APPOINTMENT"
+			},
+			"areaVideo": {}
+		}
 	}
 }

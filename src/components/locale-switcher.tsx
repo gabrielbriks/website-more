@@ -73,13 +73,9 @@ export default function LocaleSwitcher({
 			method: 'POST',
 			body: JSON.stringify({ locale: locale }),
 		})
-			.then((response) => response.json())
-			.then((data) => {
-				console.log('Resposta de configuração de local:', data);
-				navigate.push(pathTarget);
-			})
+			.then((res) => navigate.push(pathTarget))
 			.catch((error) => {
-				console.error('Erro ao definir o local:', error);
+				console.error('Erro ao definir o local(Switch):', error);
 				navigate.push(pathTarget); // navega mesmo se a configuração falhar
 			});
 	};
