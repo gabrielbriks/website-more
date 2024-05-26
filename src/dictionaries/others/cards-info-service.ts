@@ -39,14 +39,6 @@ const cardTextsJA: CardInfoServiceType[] = [
 		buttonName: 'もっと知る',
 		urlTarget: '/click-web',
 	},
-	// {
-	// 	icon: Click_EcomSVG,
-	// 	nameService: 'ClickEcom',
-	// 	descriptionService:
-	// 		'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-	// 	buttonName: 'もっと知る',
-	// 	urlTarget: '/click-ecom',
-	// },
 ];
 
 const cardTextsPT: CardInfoServiceType[] = [
@@ -81,14 +73,6 @@ const cardTextsPT: CardInfoServiceType[] = [
 		buttonName: 'Saiba Mais',
 		urlTarget: '/click-web',
 	},
-	// {
-	// 	icon: Click_EcomSVG,
-	// 	nameService: 'ClickEcom',
-	// 	descriptionService:
-	// 		'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-	// 	buttonName: 'Saiba mais',
-	// 	urlTarget: '/click-ecom',
-	// },
 ];
 
 const cardTextsEN: CardInfoServiceType[] = [
@@ -123,14 +107,6 @@ const cardTextsEN: CardInfoServiceType[] = [
 		buttonName: 'Learn More',
 		urlTarget: '/click-web',
 	},
-	// {
-	// 	icon: Click_EcomSVG,
-	// 	nameService: 'ClickEcom',
-	// 	descriptionService:
-	// 		'ClickAdsense elevates your online presence, captivate audiences, ensuring your brand is the first choice.',
-	// 	buttonName: 'Learn More',
-	// 	urlTarget: '/click-ecom',
-	// },
 ];
 
 export function getTextsCardsServiceByLanguage(lang: Locale) {

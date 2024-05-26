@@ -93,7 +93,6 @@ type DictionaryCustomType = {
 		clickMedia: Record<string, never>; // Um tipo vazio para as informações do clickMedia, pois não há informações fornecidas
 		clickPages: Record<string, never>; // Um tipo vazio para as informações do clickPages, pois não há informações fornecidas
 		clickWeb: Record<string, never>; // Um tipo vazio para as informações do clickWeb, pois não há informações fornecidas
-		clickEcom: Record<string, never>; // Um tipo vazio para as informações do clickEcom, pois não há informações fornecidas
 	};
 };
 
