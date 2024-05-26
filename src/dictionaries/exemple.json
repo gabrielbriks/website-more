@@ -92,9 +92,41 @@
 				}
 			}
 		},
-		"clickAdsense": {},
-		"clickMedia": {},
-		"clickPages": {},
-		"clickWeb": {}
+		"clickAdsense": {
+			"areaPrime": {
+				"subTitleTop": "PLANO DE PUBLICIDADE PERSONALIZADO",
+				"title": "WEBPRIME",
+				"textDescription": "Crie seu plano de publicidade personalizado que atenda a todas as necessidades da sua empresa. Fale com um especialista.",
+				"nameButtonAppointment": "AGENDAR UMA CONSULTA"
+			},
+			"areaVideo": {}
+		},
+		"clickMedia": {
+			"areaPrime": {
+				"subTitleTop": "PLANO DE PUBLICIDADE PERSONALIZADO",
+				"title": "WEBPRIME",
+				"textDescription": "Crie seu plano de publicidade personalizado que atenda a todas as necessidades da sua empresa. Fale com um especialista.",
+				"nameButtonAppointment": "AGENDAR UMA CONSULTA"
+			},
+			"areaVideo": {}
+		},
+		"clickPages": {
+			"areaPrime": {
+				"subTitleTop": "PLANO DE PUBLICIDADE PERSONALIZADO",
+				"title": "WEBPRIME",
+				"textDescription": "Crie seu plano de publicidade personalizado que atenda a todas as necessidades da sua empresa. Fale com um especialista.",
+				"nameButtonAppointment": "AGENDAR UMA CONSULTA"
+			},
+			"areaVideo": {}
+		},
+		"clickWeb": {
+			"areaPrime": {
+				"subTitleTop": "PLANO DE PUBLICIDADE PERSONALIZADO",
+				"title": "WEBPRIME",
+				"textDescription": "Crie seu plano de publicidade personalizado que atenda a todas as necessidades da sua empresa. Fale com um especialista.",
+				"nameButtonAppointment": "AGENDAR UMA CONSULTA"
+			},
+			"areaVideo": {}
+		}
 	}
 }

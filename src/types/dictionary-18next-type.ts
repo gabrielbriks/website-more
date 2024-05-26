@@ -89,10 +89,42 @@ type DictionaryCustomType = {
 				};
 			};
 		};
-		clickAdsense: Record<string, never>; // Um tipo vazio para as informações do clickAdsense, pois não há informações fornecidas
-		clickMedia: Record<string, never>; // Um tipo vazio para as informações do clickMedia, pois não há informações fornecidas
-		clickPages: Record<string, never>; // Um tipo vazio para as informações do clickPages, pois não há informações fornecidas
-		clickWeb: Record<string, never>; // Um tipo vazio para as informações do clickWeb, pois não há informações fornecidas
+		clickAdsense: {
+			areaPrime: {
+				subTitleTop: string;
+				title: string;
+				textDescription: string;
+				nameButtonAppointment: string;
+			};
+			areaVideo: {};
+		};
+		clickMedia: {
+			areaPrime: {
+				subTitleTop: string;
+				title: string;
+				textDescription: string;
+				nameButtonAppointment: string;
+			};
+			areaVideo: {};
+		};
+		clickPages: {
+			areaPrime: {
+				subTitleTop: string;
+				title: string;
+				textDescription: string;
+				nameButtonAppointment: string;
+			};
+			areaVideo: {};
+		};
+		clickWeb: {
+			areaPrime: {
+				subTitleTop: string;
+				title: string;
+				textDescription: string;
+				nameButtonAppointment: string;
+			};
+			areaVideo: {};
+		};
 	};
 };
 
