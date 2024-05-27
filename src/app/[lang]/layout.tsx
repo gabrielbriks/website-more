@@ -1,5 +1,6 @@
 import '@/app/globals.css';
 import FallbackLoading from '@/components/layout/loadings/fallback-loading';
+import { Toaster } from '@/components/ui/sonner';
 import { DictionaryProvider } from '@/contexts/dictionaryContext';
 import { i18n, type Locale } from '@/i18n-config';
 import { Analytics } from '@vercel/analytics/react';
@@ -69,6 +70,7 @@ export default function RootLayout({
 					<SpeedInsights />
 					<Analytics />
 				</Suspense>
+				<Toaster position="top-right" />
 			</body>
 		</html>
 	);
