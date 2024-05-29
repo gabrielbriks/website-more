@@ -127,6 +127,18 @@
 				"nameButtonAppointment": "AGENDAR UMA CONSULTA"
 			},
 			"areaVideo": {}
+		},
+		"subscription": {
+			"components": {
+				"labelTopButtonClickHere": "Ainda não foi exibido?",
+				"textButtonClickHere": "",
+				"textButtonGoBack": ""
+			},
+			"titlePage": "",
+			"contentDescription": {
+				"wait": "",
+				"message": ""
+			}
 		}
 	}
 }

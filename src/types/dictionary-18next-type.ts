@@ -65,7 +65,7 @@ type DictionaryCustomType = {
 			faq: {
 				subTitleTop: string;
 				title: string;
-				questions: Record<string, string>; // Um tipo vazio para as perguntas, pois não há informações fornecidas
+				questions: Record<string, string>; // Um tipo vazio para as perguntas, pois não há informações fornecidas[in new approach]
 			};
 			'section-contact': {
 				areaSendMessage: {
@@ -96,7 +96,7 @@ type DictionaryCustomType = {
 				textDescription: string;
 				nameButtonAppointment: string;
 			};
-			areaVideo: {};
+			areaVideo: Record<string, string>;
 		};
 		clickMedia: {
 			areaPrime: {
@@ -105,7 +105,7 @@ type DictionaryCustomType = {
 				textDescription: string;
 				nameButtonAppointment: string;
 			};
-			areaVideo: {};
+			areaVideo: Record<string, string>;
 		};
 		clickPages: {
 			areaPrime: {
@@ -114,7 +114,7 @@ type DictionaryCustomType = {
 				textDescription: string;
 				nameButtonAppointment: string;
 			};
-			areaVideo: {};
+			areaVideo: Record<string, string>;
 		};
 		clickWeb: {
 			areaPrime: {
@@ -123,7 +123,19 @@ type DictionaryCustomType = {
 				textDescription: string;
 				nameButtonAppointment: string;
 			};
-			areaVideo: {};
+			areaVideo: Record<string, string>;
+		};
+		subscription: {
+			components: {
+				labelTopButtonClickHere: string;
+				textButtonClickHere: string;
+				textButtonGoBack: string;
+			};
+			titlePage: string;
+			contentDescription: {
+				wait: string;
+				message: string;
+			};
 		};
 	};
 };

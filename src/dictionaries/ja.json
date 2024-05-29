@@ -126,6 +126,18 @@
 				"nameButtonAppointment": "予約する"
 			},
 			"areaVideo": {}
+		},
+		"subscription": {
+			"components": {
+				"labelTopButtonClickHere": "まだ表示されていませんか？",
+				"textButtonClickHere": "ここをクリック",
+				"textButtonGoBack": "戻る"
+			},
+			"titlePage": "事前ブリーフィング",
+			"contentDescription": {
+				"wait": "お待ちください...",
+				"message": "間もなく事前ブリーフィングの開始が表示されます"
+			}
 		}
 	}
 }

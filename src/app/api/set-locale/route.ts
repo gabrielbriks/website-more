@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
 	const { locale } = await req.json();
 
-	console.log('api-locale', locale);
+	// console.log('api-locale', locale);
 
 	if (!locale || !i18n.locales.includes(locale)) {
 		return new Response('Local inválido', {

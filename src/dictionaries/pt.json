@@ -126,6 +126,18 @@
 				"nameButtonAppointment": "AGENDAR UMA CONSULTA"
 			},
 			"areaVideo": {}
+		},
+		"subscription": {
+			"components": {
+				"labelTopButtonClickHere": "Ainda não foi exibido?",
+				"textButtonClickHere": "Clique aqui",
+				"textButtonGoBack": "Voltar"
+			},
+			"titlePage": "Pré-Briefing",
+			"contentDescription": {
+				"wait": "Aguarde...",
+				"message": "Em instantes, será exibido o início do seu pré-briefing"
+			}
 		}
 	}
 }

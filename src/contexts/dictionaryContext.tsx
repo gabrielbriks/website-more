@@ -1,6 +1,7 @@
 'use client';
 import { getDictionary } from '@/get-dictionary';
 import type { Locale } from '@/i18n-config';
+import DictionaryCustomType from '@/types/dictionary-18next-type';
 import React, {
 	createContext,
 	ReactNode,
@@ -12,7 +13,7 @@ import React, {
 type Dictionary = Record<string, any>;
 
 interface DictionaryContextType {
-	dictionary: Dictionary;
+	dictionary: DictionaryCustomType;
 	loading: boolean;
 }
 
@@ -38,7 +39,9 @@ export const DictionaryProvider: React.FC<DictionaryProviderProps> = ({
 	lang,
 	children,
 }) => {
-	const [dictionary, setDictionary] = useState<Dictionary>({});
+	const [dictionary, setDictionary] = useState<DictionaryCustomType>(
+		{} as DictionaryCustomType,
+	);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {

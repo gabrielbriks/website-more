@@ -126,6 +126,18 @@
 				"nameButtonAppointment": "BOOK AN APPOINTMENT"
 			},
 			"areaVideo": {}
+		},
+		"subscription": {
+			"components": {
+				"labelTopButtonClickHere": "Not displayed yet?",
+				"textButtonClickHere": "Click here",
+				"textButtonGoBack": "Go back"
+			},
+			"titlePage": "Pre-Briefing",
+			"contentDescription": {
+				"wait": "Please wait...",
+				"message": "In a moment, the start of your pre-briefing will be displayed"
+			}
 		}
 	}
 }
