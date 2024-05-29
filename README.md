@@ -19,6 +19,8 @@ _Site Click More, que oferece soluções digitais para empresas de todos os port
 - **Framer Motion** (Biblioteca para criação de animações complexas e interativas)
 - **Shadcn-UI**
 - **i18Next** (Framework de internacionalização escrito em e para JavaScript. Mas é muito mais do que isso)
+- **nodemailer** (Biblioteca para envio de emails)
+- **React Hook Form** (Biblioteca para tratamento de formulários)
 
 ## Aspectos Técnicos Relevantes
 
