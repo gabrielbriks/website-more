@@ -22,6 +22,7 @@ _Site Click More, que oferece soluções digitais para empresas de todos os port
 - **Shadcn-UI** (Biblioteca de componentes personalizáveis)
 - **i18Next** (Framework de internacionalização escrito em e para JavaScript. Mas é muito mais do que isso)
 - **nodemailer** (Biblioteca para envio de emails)
+- **universal-cookie**
 - **React Hook Form** (Biblioteca para tratamento de formulários)
 
 ## Aspectos Técnicos Relevantes
@@ -81,5 +82,6 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
   Dessa forma será possível implementar o fluxo de forma completamente personalizável conforme a necessidade ou plano selecionado.
 
   - Atualmente no fluxo do `typebot.io` é utilizado o cookie para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como validação inicial e as posteriores adequações conforme a necessidade
+  - Para visualizar esse simples fluxo de armazenamento do valor nos cookies, basta visualizar o componente localizado em `./src/components/plans/button-hire-card.ts`
 
 - Para acessar o fluxo de exemplo implementado, é necessário solicitar acesso ao email **`tech@clickmore.org`**, tendo o email logado no browser, basta autenticar utilizando o Google.
