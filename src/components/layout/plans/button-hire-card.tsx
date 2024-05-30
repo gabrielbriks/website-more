@@ -19,13 +19,13 @@ export default function ButtonHireCard({
 	const redirectToUrlTargetPlan = (url: string) => {
 		const planSelected = url && url.split('?').toString().split('=')[1];
 
-		console.log('planSelected', planSelected);
+		// console.log('planSelected', planSelected);
 
 		if (planSelected) cookies.set('planSelected', planSelected);
 		else {
 			toast('Ops! Not found plan selected. ', {
 				description:
-					'Oops!  Not found selection of plan. Refresh the page for select plan again1',
+					'Oops!  Not found selection of plan. Refresh the page for select plan again.',
 				duration: 5000,
 				icon: <AlertCircle className="bg-red-700" />,
 			});

@@ -1,13 +1,12 @@
 import Faq from '@/components/faq';
 import Footer from '@/components/layout/footer/footer';
 import PlanCard from '@/components/layout/plans/plan-card';
-import { Button } from '@/components/ui/button';
 import VideoComponent from '@/components/video-component';
-import { ArrowUpRight } from 'akar-icons';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ButtonPrimePlan from '@/components/layout/plans/button-prime-plan';
 import { getPlansClickAdsense } from '@/dictionaries/others/plans/click-adsense';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
@@ -119,18 +118,12 @@ export default async function ClickAdsensePage({
 									{dictionary.pages.clickAdsense.areaPrime.textDescription}
 								</p>
 							</div>
-							<Button className=" flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
-								<span className="uppercase">
-									{
-										dictionary.pages.clickAdsense.areaPrime
-											.nameButtonAppointment
-									}
-								</span>
-								<ArrowUpRight
-									size={20}
-									className="stroke-white transition duration-700"
-								/>
-							</Button>
+							<ButtonPrimePlan
+								text={
+									dictionary.pages.clickAdsense.areaPrime.nameButtonAppointment
+								}
+								urlTarget={`/${params.lang}/subscription`}
+							/>
 						</div>
 					</div>
 				</div>

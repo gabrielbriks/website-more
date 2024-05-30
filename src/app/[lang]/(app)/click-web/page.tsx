@@ -1,9 +1,7 @@
 import Faq from '@/components/faq';
 import Footer from '@/components/layout/footer/footer';
 import PlanCard from '@/components/layout/plans/plan-card';
-import { Button } from '@/components/ui/button';
 import VideoComponent from '@/components/video-component';
-import { ArrowUpRight } from 'akar-icons';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,6 +11,7 @@ import bgCoverTitleTopPage from '@/assets/layout/bg-cover-title-pages.png';
 import leftArrowClickPhrase from '@/assets/left-arrow-click-phrase.svg';
 import clickMoreAskedQuestions from '@/assets/pages/click-web/asked-questions-image.png';
 import clickWebHeader from '@/assets/pages/click-web/click-web-bg-header.webp';
+import ButtonPrimePlan from '@/components/layout/plans/button-prime-plan';
 import { getPlansClickWeb } from '@/dictionaries/others/plans/click-web';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
@@ -117,18 +116,10 @@ export default async function ClickWeb({ params }: ClickWebProps) {
 									{dictionary.pages.clickAdsense.areaPrime.textDescription}
 								</p>
 							</div>
-							<Button className=" flex h-14 justify-center gap-2.5 rounded-[45px] border-pink-600 bg-cm-gradient-imgcolor px-8 py-5 text-white transition duration-500 hover:text-white hover:opacity-90 max-md:px-5">
-								<span className="uppercase">
-									{
-										dictionary.pages.clickAdsense.areaPrime
-											.nameButtonAppointment
-									}
-								</span>
-								<ArrowUpRight
-									size={20}
-									className="stroke-white transition duration-700"
-								/>
-							</Button>
+							<ButtonPrimePlan
+								text={dictionary.pages.clickWeb.areaPrime.nameButtonAppointment}
+								urlTarget={`/${params.lang}/subscription`}
+							/>
 						</div>
 					</div>
 				</div>
