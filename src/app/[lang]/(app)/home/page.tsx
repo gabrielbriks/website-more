@@ -4,8 +4,6 @@ import Faq from '@/components/faq';
 import Footer from '@/components/layout/footer/footer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import VideoComponent from '@/components/video-component';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
@@ -27,6 +25,7 @@ import PointerClickRight from '@/assets/pointer-click-right.svg';
 // import ValuesClickMOre from '@/assets/image-values.svg';
 import ValuesClickMOre from '@/assets/pages/home/img-atributes-click-more.svg';
 import BGImageWorldMap from '@/assets/pages/home/map-background.svg';
+import ContactForm from '@/components/contact-form';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -375,91 +374,7 @@ export default async function Home(props: HomeProps) {
 					>
 						<div className="flex gap-5 max-lg:flex-col max-md:gap-0">
 							<div className="flex w-full max-w-screen-lg flex-col max-md:ml-0">
-								<form className="relative flex w-full grow flex-col rounded-2xl border-2 border-solid border-purple-800 bg-white py-12 pl-16 pr-2.5 text-base text-gray-500 shadow-lg max-md:mt-10 max-md:max-w-full max-md:pl-5">
-									<div className="mt-3 flex gap-1 self-start whitespace-nowrap font-medium uppercase text-purple-800">
-										<Image
-											alt="any"
-											loading="lazy"
-											src={LeftArrowClickPhrase}
-											className="aspect-square w-5"
-										/>
-										<h3 className="my-auto grow">
-											{
-												dictionary['pages'].home['section-contact']
-													.areaSendMessage.subTitleTop
-											}
-										</h3>
-									</div>
-
-									<h2 className="mt-4 text-5xl font-bold uppercase leading-[58.08px] text-gray-800 max-md:max-w-full max-md:text-3xl">
-										{
-											dictionary['pages'].home['section-contact']
-												.areaSendMessage.title
-										}
-									</h2>
-
-									<div className="mt-11 justify-center whitespace-nowrap border-b border-solid border-b-slate-200 max-md:mt-10 max-md:max-w-full">
-										<Input
-											placeholder={
-												dictionary['pages'].home['section-contact']
-													.areaSendMessage.inputsPlaceholders.name
-											}
-											className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
-										/>
-									</div>
-
-									<div className="mt-11 flex justify-between gap-5 whitespace-nowrap max-md:mt-10 max-md:max-w-full max-md:flex-wrap">
-										<div className="flex flex-1 flex-col justify-center">
-											<div className="justify-center border-b border-solid border-b-slate-200">
-												<Input
-													placeholder={
-														dictionary['pages'].home['section-contact']
-															.areaSendMessage.inputsPlaceholders.email
-													}
-													className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
-												/>
-											</div>
-										</div>
-
-										<div className="flex flex-1 flex-col justify-center">
-											<div className="justify-center border-b border-solid border-b-slate-200">
-												<Input
-													placeholder={
-														dictionary['pages'].home['section-contact']
-															.areaSendMessage.inputsPlaceholders.phone
-													}
-													className="border-none py-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
-												/>
-											</div>
-										</div>
-									</div>
-
-									<div className="mt-11 w-full self-start border-b border-solid border-b-slate-200 max-md:mt-10">
-										<Textarea
-											placeholder={
-												dictionary['pages'].home['section-contact']
-													.areaSendMessage.inputsPlaceholders.msgText
-											}
-											className="min-w-full border-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700  focus-visible:ring-offset-1"
-										/>
-									</div>
-
-									<div className="flex w-full items-start justify-start">
-										<Button
-											type="submit"
-											className="mt-10 h-11 gap-1 rounded-full border-purple-900 bg-cm-primary uppercase hover:bg-purple-700"
-										>
-											{
-												dictionary['pages'].home['section-contact']
-													.areaSendMessage.buttonSubmitName
-											}
-											<ArrowUpRight
-												size={20}
-												className="stroke-white transition duration-700 group-hover:stroke-black"
-											/>
-										</Button>
-									</div>
-								</form>
+								<ContactForm />
 							</div>
 
 							<div className="ml-5 flex w-6/12 flex-col max-lg:ml-0 max-lg:w-full">

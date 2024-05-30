@@ -70,7 +70,7 @@ export default function RootLayout({
 					<SpeedInsights />
 					<Analytics />
 				</Suspense>
-				<Toaster position="top-right" />
+				<Toaster position="top-right" richColors />
 			</body>
 		</html>
 	);
