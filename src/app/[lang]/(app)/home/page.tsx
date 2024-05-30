@@ -3,7 +3,6 @@ import CardServices from '@/components/card-services';
 import Faq from '@/components/faq';
 import Footer from '@/components/layout/footer/footer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
 import VideoComponent from '@/components/video-component';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
@@ -26,6 +25,7 @@ import PointerClickRight from '@/assets/pointer-click-right.svg';
 import ValuesClickMOre from '@/assets/pages/home/img-atributes-click-more.svg';
 import BGImageWorldMap from '@/assets/pages/home/map-background.svg';
 import ContactForm from '@/components/contact-form';
+import Link from 'next/link';
 
 interface HomeProps {
 	params: { lang: Locale };
@@ -75,9 +75,9 @@ export default async function Home(props: HomeProps) {
 									</p>
 
 									<div className="mt-8 flex justify-between gap-5 whitespace-nowrap uppercase max-lg:mb-10 max-lg:w-full max-lg:justify-center lg:self-start">
-										<Button
-											variant="outline"
-											className="flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-950 bg-cm-primary px-8 py-5 text-white transition duration-500 hover:bg-purple-800  hover:text-white max-md:px-5"
+										<Link
+											href="#who-we-are"
+											className="flex h-14 items-center justify-between gap-2.5 rounded-[45px] border-purple-950 bg-cm-primary px-8 py-5 text-center text-white transition duration-500 hover:bg-purple-800  hover:text-white max-md:px-5"
 										>
 											<span className="uppercase">
 												{dictionary['layout'].buttons.learnMore}
@@ -86,10 +86,10 @@ export default async function Home(props: HomeProps) {
 												size={20}
 												className="stroke-white transition duration-700"
 											/>
-										</Button>
-										<Button
-											variant="outline"
-											className="group flex h-14 justify-between gap-2.5 rounded-[45px] border-purple-900 bg-transparent px-8 py-5 text-purple-900 transition  hover:bg-cm-primary  hover:text-white hover:transition-colors hover:duration-1000 max-md:px-5"
+										</Link>
+										<Link
+											href="#services"
+											className="group flex h-14 items-center justify-between gap-2.5 rounded-[45px] border border-purple-900 bg-transparent px-8 py-5 text-purple-900 transition  hover:bg-cm-primary  hover:text-white hover:transition-colors hover:duration-1000 max-md:px-5"
 										>
 											<span className="uppercase text-purple-900 hover:duration-700 group-hover:text-white">
 												{dictionary['layout'].buttons.hireNow}
@@ -98,7 +98,7 @@ export default async function Home(props: HomeProps) {
 												size={20}
 												className="stroke-purple-900 transition duration-700 group-hover:stroke-white"
 											/>
-										</Button>
+										</Link>
 									</div>
 								</div>
 							</div>
