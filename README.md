@@ -55,7 +55,7 @@ _Ao criar qualquer interface nesse projeto, deve ser implementado também as res
 
 ### Formulário de Contato - Configuração
 
-O formulário de contato implementado na interface `home` utiliza o `nodemailer` para o enviar as mensagens de contato para o email configurado. E para realizar a configuração desse email, é necessário seguir alguns passos para gerar uma senha especifica e então configura-la no arquivo `.env`
+O formulário de contato implementado na interface `home` utiliza o `nodemailer` para enviar as mensagens de contato para o email configurado. E para realizar a configuração desse email, é necessário seguir alguns passos para gerar uma senha especifica e então configura-la no arquivo `.env`
 
 **Configuração `.env`**
 
@@ -78,15 +78,15 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
 
 ### Utilização do Typebot.io
 
-- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de utiliza-lo para a implementação do pré-briefing com fim de validação inicial. _Eu `gabriel`, vejo essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponto com ilimitadas integrações e utilização de inúmeras a abordagens_
+- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de como utiliza-lo na implementação do fluxo pré-briefing, com fim de validação inicial. _Eu `gabriel`, vejo essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponto com ilimitadas integrações e utilização de inúmeras abordagens_
 
 #### Exemplificação para implementação
 
-- Ao selecionar um dos planos foi implementado o redirecionamento para uma interface que utiliza a integração de exemplo com o [typebot.io](https://app.typebot.io/pt-BR), de forma que ele é aberto automaticamente dando inicio a colhimento das informações iniciais utilizadas para exemplificação.
-  Dessa forma será possível implementar o fluxo de forma completamente personalizável conforme a necessidade ou plano selecionado.
+- Ao selecionar um dos planos foi implementado o redirecionamento para uma interface que utiliza a integração de exemplo com o [typebot.io](https://app.typebot.io/pt-BR), de forma, ele é aberto automaticamente ao acessar a interface, dando início a captura das informações iniciais solicitadas para exemplificação.
+  Dessa forma será possível implementar o fluxo completo e totalmente personalizável conforme a necessidade/plano selecionado.
 
-  - Atualmente nesse fluxo de exemplo do `typebot.io`, é utilizado os cookies para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como exemplo inicial, deixando completamente livre para as posteriores adequações, conforme a necessidade.
+  - Atualmente nesse fluxo de exemplo do `typebot.io`, é utilizado os cookies para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como exemplo inicial, deixando completamente livre para as posteriores adequações/melhorias.
 
-  - Para visualizar esse simples fluxo que mencionei acima, que armazena o valor representativo do plano selecionado nos cookies, que o typebot consegue recuperar, pode ser visualizado no componente localizado em `./src/components/plans/button-hire-card.ts`. E para visualizar a logica de recuperação disso do lado do typebot, basta acessar o fluxo de exemplo direto na plataforma.
+  - Para visualizar esse simples fluxo que mencionei acima, que armazena o valor representativo do plano selecionado nos cookies, que o typebot consegue recuperar, pode ser visualizado no componente localizado em `./src/components/plans/button-hire-card.ts`. E para visualizar a lógica de recuperação desse valor do lado do typebot, basta acessar o fluxo de exemplo pela plataforma.
 
 - Para acessar o fluxo de exemplo implementado na plataforma `typebot`, é necessário solicitar acesso ao email **`tech@clickmore.org`**, tendo o email logado no browser, basta autenticar utilizando o Google.
