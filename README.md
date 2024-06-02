@@ -49,17 +49,17 @@ _Site Click More, que oferece soluções digitais para empresas de todos os port
 
 _Ao criar qualquer interface nesse projeto, deve ser implementado também as respectivas variações de idiomas, seguindo a sequencia descritas abaixo:_
 
-- Deve-se especificar sua tipagem da estrutura a ser implementada em `./src/types/dictionary-18next-type.ts`
-- Em seguida replicar a estrutura para os _dictionaries_ de cada idioma localizados em `./src/dictionaries`
-- Para implementação/uso nas interfaces, basta observar abordagem já utilizada nas interfaces e componentes já existentes
+- Deve-se especificar a tipagem da estrutura a ser implementada em `./src/types/dictionary-18next-type.ts`(_estrutura dos textos existentes na interface_)
+- Em seguida replicar a estrutura/campos com os devidos textos para os _dictionaries_ de cada idioma localizados em `./src/dictionaries`
+- Para implementação/uso nas interfaces, basta observar abordagem já utilizada nas interfaces e componentes já existentes.
 
 ### Formulário de Contato - Configuração
 
-O formulário de contato implementado na interface `home` utiliza o `nodemailer` para o envio da mensagem para o email configurado. E para realizar a configuração desse email, é necessário seguir alguns passos para gerar uma senha especifica e então configura-la no arquivo `.env`
+O formulário de contato implementado na interface `home` utiliza o `nodemailer` para o enviar as mensagens de contato para o email configurado. E para realizar a configuração desse email, é necessário seguir alguns passos para gerar uma senha especifica e então configura-la no arquivo `.env`
 
 **Configuração `.env`**
 
-- Nesse arquivo deve ser informado o **email** e o **app password** para autenticação do email. Esse email escolhido deve ser do Google.
+- Nesse arquivo deve ser informado o **email** e o **app password** para autenticação do email. Esse email escolhido deve ser do Google, ou seja, `@gmail`(_Mas é possível personalizar a configuração para outros_).
 
   **Variáveis:**
 
@@ -78,10 +78,15 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
 
 ### Utilização do Typebot.io
 
-- Ao selecionar um dos planos foi implementado a uma integração de exemplo com o [typebot.io](https://app.typebot.io/pt-BR)
+- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de utiliza-lo para a implementação do pré-briefing com fim de validação inicial. _Eu `gabriel`, vejo essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponto com ilimitadas integrações e utilização de inúmeras a abordagens_
+
+#### Exemplificação para implementação
+
+- Ao selecionar um dos planos foi implementado o redirecionamento para uma interface que utiliza a integração de exemplo com o [typebot.io](https://app.typebot.io/pt-BR), de forma que ele é aberto automaticamente dando inicio a colhimento das informações iniciais utilizadas para exemplificação.
   Dessa forma será possível implementar o fluxo de forma completamente personalizável conforme a necessidade ou plano selecionado.
 
-  - Atualmente no fluxo do `typebot.io` é utilizado o cookie para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como validação inicial e as posteriores adequações conforme a necessidade
-  - Para visualizar esse simples fluxo de armazenamento do valor nos cookies, basta visualizar o componente localizado em `./src/components/plans/button-hire-card.ts`
+  - Atualmente nesse fluxo de exemplo do `typebot.io`, é utilizado os cookies para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como exemplo inicial, deixando completamente livre para as posteriores adequações, conforme a necessidade.
 
-- Para acessar o fluxo de exemplo implementado, é necessário solicitar acesso ao email **`tech@clickmore.org`**, tendo o email logado no browser, basta autenticar utilizando o Google.
+  - Para visualizar esse simples fluxo que mencionei acima, que armazena o valor representativo do plano selecionado nos cookies, que o typebot consegue recuperar, pode ser visualizado no componente localizado em `./src/components/plans/button-hire-card.ts`. E para visualizar a logica de recuperação disso do lado do typebot, basta acessar o fluxo de exemplo direto na plataforma.
+
+- Para acessar o fluxo de exemplo implementado na plataforma `typebot`, é necessário solicitar acesso ao email **`tech@clickmore.org`**, tendo o email logado no browser, basta autenticar utilizando o Google.
