@@ -1,4 +1,5 @@
 import '@/app/globals.css';
+import CookieConsent from '@/components/layout/cookie-consent';
 import FallbackLoading from '@/components/layout/loadings/fallback-loading';
 import { Toaster } from '@/components/ui/sonner';
 import { DictionaryProvider } from '@/contexts/dictionaryContext';
@@ -29,7 +30,7 @@ const opens_sans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-	// metadataBase: new URL("https://clickmore.com"),
+	metadataBase: new URL('https://clickmore.org'),
 	title: {
 		default: 'Click More',
 		template: '%s | clickmore.com',
@@ -42,10 +43,27 @@ export const metadata: Metadata = {
 			pt: '/pt',
 		},
 	},
-	// openGraph: {
-	//   images: "/og-image.png",
-	// },
-	// keywords: ['Next.js', 'React', 'JavaScript'],
+	openGraph: {
+		images: '/open-graph-image.png',
+		description: 'CLICKMORE - CHANGING CLICKS INTO BUSINESS OPPORTUNITIES',
+		alternateLocale: ['en', 'ja', 'pt'],
+		siteName: 'click more',
+	},
+	keywords: [
+		'click more',
+		'marketing',
+		'digital services',
+		'social media',
+		'traffic analysis',
+	],
+};
+
+export const viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	maximumScale: 1,
+	userScalable: false,
+	themeColor: '#fff',
 };
 
 export async function generateStaticParams() {
@@ -65,7 +83,10 @@ export default function RootLayout({
 				className={`${nunito.variable} ${kanit.variable} ${opens_sans.variable}`}
 			>
 				<Suspense fallback={<FallbackLoading />}>
-					<DictionaryProvider lang={params.lang}>{children}</DictionaryProvider>
+					<DictionaryProvider lang={params.lang}>
+						{children}
+						<CookieConsent demo={false} />
+					</DictionaryProvider>
 					{/* {children} */}
 					<SpeedInsights />
 					<Analytics />
