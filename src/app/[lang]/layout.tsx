@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	metadataBase: new URL('https://clickmore.org'),
 	title: {
 		default: 'Click More',
-		template: '%s | clickmore.com',
+		template: '%s | clickmore.org',
 	},
 	alternates: {
 		canonical: '/',

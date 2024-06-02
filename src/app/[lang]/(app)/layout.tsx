@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	metadataBase: new URL('https://clickmore.org'),
 	title: {
 		default: 'Click More',
-		template: '%s | clickmore.com',
+		template: '%s | clickmore.org',
 	},
 	alternates: {
 		canonical: '/',
@@ -24,10 +24,27 @@ export const metadata: Metadata = {
 			pt: '/pt',
 		},
 	},
-	// openGraph: {
-	//   images: "/og-image.png",
-	// },
-	// keywords: ['Next.js', 'React', 'JavaScript'],
+	openGraph: {
+		images: '/open-graph-image.png',
+		description: 'CLICKMORE - CHANGING CLICKS INTO BUSINESS OPPORTUNITIES',
+		alternateLocale: ['en', 'ja', 'pt'],
+		siteName: 'click more',
+	},
+	keywords: [
+		'click more',
+		'marketing',
+		'digital services',
+		'social media',
+		'traffic analysis',
+	],
+};
+
+export const viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	maximumScale: 1,
+	userScalable: false,
+	themeColor: '#fff',
 };
 
 export async function generateStaticParams() {
