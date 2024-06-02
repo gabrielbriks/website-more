@@ -78,11 +78,11 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
 
 ### Utilização do Typebot.io
 
-- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de como utiliza-lo na implementação do fluxo pré-briefing, com fim de validação inicial. _Eu `gabriel`, vejo essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponto com ilimitadas integrações e utilização de inúmeras abordagens_
+- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de como utiliza-lo na implementação do fluxo pré-briefing, com fim de validação inicial. _Eu `gabriel`, vejo essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponta com ilimitadas integrações e utilização de inúmeras abordagens_
 
 #### Exemplificação para implementação
 
-- Ao selecionar um dos planos foi implementado o redirecionamento para uma interface que utiliza a integração de exemplo com o [typebot.io](https://app.typebot.io/pt-BR), de forma, ele é aberto automaticamente ao acessar a interface, dando início a captura das informações iniciais solicitadas para exemplificação.
+- Ao selecionar um dos planos foi implementado o redirecionamento para uma interface que utiliza a integração de exemplo com o [typebot.io](https://app.typebot.io/pt-BR), onde ele é aberto automaticamente após o carregamento completo da interface, dando início a captura das informações iniciais solicitadas para exemplificação.
   Dessa forma será possível implementar o fluxo completo e totalmente personalizável conforme a necessidade/plano selecionado.
 
   - Atualmente nesse fluxo de exemplo do `typebot.io`, é utilizado os cookies para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como exemplo inicial, deixando completamente livre para as posteriores adequações/melhorias.
