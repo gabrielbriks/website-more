@@ -1,11 +1,11 @@
-# Click More
+# Website com internacionalização 
 
-_Site Click More, que oferece soluções digitais para empresas de todos os portes, com implementação de 3 idiomas Japonês, Inglês e Português_
+_Site que oferece soluções digitais para empresas de todos os portes, com implementação de 3 idiomas Japonês, Inglês e Português_
 
 **CONVERTENDO CLIQUES EM OPORTUNIDADES DE NEGÓCIO**
 **Mais que um clique, mais do que imagina, na medida que sua empresa precisa...**
 
-**CLICKMORE - CHANGING CLICKS INTO BUSINESS OPPORTUNITIES**
+**CHANGING CLICKS INTO BUSINESS OPPORTUNITIES**
 **More than a click, more than you think, to the extent your company needs...**
 
 **クリックを変える ビジネスチャンス**
@@ -59,7 +59,7 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
 
 **Configuração `.env`**
 
-- Nesse arquivo deve ser informado o **email** e o **app password** para autenticação do email. Esse email escolhido deve ser do Google, ou seja, `@gmail`(_Mas é possível personalizar a configuração para outros_).
+- Nesse arquivo deve ser informado o **email** e o **app password** para autenticação do email. Esse email escolhido deve ser do Google, ou seja, `@gmail`(_Mas é possível personalizar a configuração para outros nesse primeiro momento_).
 
   **Variáveis:**
 
@@ -78,7 +78,7 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
 
 ### Utilização do Typebot.io
 
-- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de como utiliza-lo na implementação do fluxo pré-briefing, com fim de validação inicial. _Eu `gabriel`, vejo essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponta com ilimitadas integrações e utilização de inúmeras abordagens_
+- Foi implementada a integração com [typebot.io](https://app.typebot.io/pt-BR) para exemplificar uma forma simples de como utiliza-lo na implementação do fluxo pré-briefing, com fim de validação inicial. _Considero essa abordagem como uma PoC que deve anteceder a implementação do fluxo completo posteriormente, por ser uma abordagem testável, simples e de baixo custo. O `typebot` possibilita ajustes rápidos e uma personalização de ponta a ponta com variadas integrações e utilização de inúmeras abordagens_
 
 #### Exemplificação para implementação
 
@@ -87,6 +87,4 @@ O formulário de contato implementado na interface `home` utiliza o `nodemailer`
 
   - Atualmente nesse fluxo de exemplo do `typebot.io`, é utilizado os cookies para identificar o plano selecionado. Esse aspecto foi implementado de forma mais simples possível, para utilizar como exemplo inicial, deixando completamente livre para as posteriores adequações/melhorias.
 
-  - Para visualizar esse simples fluxo que mencionei acima, que armazena o valor representativo do plano selecionado nos cookies, que o typebot consegue recuperar, pode ser visualizado no componente localizado em `./src/components/plans/button-hire-card.ts`. E para visualizar a lógica de recuperação desse valor do lado do typebot, basta acessar o fluxo de exemplo pela plataforma.
-
-- Para acessar o fluxo de exemplo implementado na plataforma `typebot`, é necessário solicitar acesso ao email **`tech@clickmore.org`**, tendo o email logado no browser, basta autenticar utilizando o Google.
+  - Para visualizar esse simples fluxo que mencionei acima, que armazena o valor representativo do plano selecionado nos cookies, que o typebot consegue recuperar, pode ser visualizado no componente localizado em `./src/components/plans/button-hire-card.ts`. A visualização da lógica de recuperação desse valor do lado do typebot, estrá privada
